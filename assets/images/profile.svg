@@ -1,0 +1,13 @@
+<svg width="640" height="760" viewBox="0 0 640 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Profile placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d5e5e3"/>
+      <stop offset="100%" stop-color="#f2e8db"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="760" rx="36" fill="url(#bg)"/>
+  <circle cx="320" cy="280" r="140" fill="#ffffff" opacity="0.85"/>
+  <path d="M160 660c40-140 280-140 320 0" fill="#ffffff" opacity="0.85"/>
+  <text x="50%" y="300" text-anchor="middle" font-family="'Work Sans', sans-serif" font-size="54" fill="#2b5e5a">VM</text>
+  <text x="50%" y="360" text-anchor="middle" font-family="'Work Sans', sans-serif" font-size="20" fill="#5c5c5c">replace with photo</text>
+</svg>
