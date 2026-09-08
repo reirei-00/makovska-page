@@ -15,7 +15,7 @@ Interactive strings live in `assets/js/copy.js` and `assets/js/kaleidoscope.js`.
 
 ## Paper explainers
 
-Every catalogue entry has a generated page under `research/<slug>/`, with matching Ukrainian and Traditional Chinese routes. Edit the explanations, diagram labels, findings, and limitations in `data/papers.json`; edit shared explainer labels in `data/paper-ui.json`. Each localized string contains `en`, `uk`, and `zh-Hant-TW` values. These files feed the same build and validation commands above.
+Every catalogue entry has a generated page under `research/<slug>/`, with matching Ukrainian and Traditional Chinese routes. Edit the explanations, diagram labels, and findings in `data/papers.json`; edit shared explainer labels in `data/paper-ui.json`. Each localized string contains `en`, `uk`, and `zh-Hant-TW` values. These files feed the same build and validation commands above.
 
 `scripts/build_papers.py` reuses titles, authors, dates, resource links, and citations from the English Research catalogue. It generates the English source in memory before `build_locales.py` validates every translation and writes all pages. Do not edit generated paper pages directly. Keep each explanation's source URL and section references with its content.
 

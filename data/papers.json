@@ -23,11 +23,6 @@
       "uk": "Відібрані контрольні точки зменшували відтворення наративів поза прямими навчальними запитами, зберігаючи змістовні відповіді. Вдала точка залежала від моделі, мови, наративу й методу. У відповідях на абстрактні запити моделі все ще могли називати пов’язаних із наративом реальних осіб, держави чи організації.",
       "zh-Hant-TW": "選出的檢查點能在直接訓練提示以外降低敘事重現，同時保留有內容的回答。合適的檢查點因模型、語言、敘事與方法而異；面對抽象提示時，模型仍可能說出相關真實人物、國家或組織的名稱。"
     },
-    "limit": {
-      "en": "This is a behavioral diagnostic, not proof that a representation has been erased. Weak labels are noisy, utility tests are small, and the full evaluation pool includes checkpoint-selection prompts. L3 entity recovery is reported separately from L0–L2 suppression.",
-      "uk": "Це поведінкова діагностика, а не доказ стирання представлення. Автоматичні мітки містять похибки, тести корисності невеликі, а повна вибірка оцінювання включає запити для відбору контрольних точок. Відновлення назв та імен на L3 оцінюється окремо від пригнічення на L0–L2.",
-      "zh-Hant-TW": "這是行為診斷，不能證明內部表徵已被抹除。弱標籤有雜訊，效用測試規模有限，完整評估集也包含選擇檢查點用過的提示。L3 的實體名稱重現與 L0–L2 的抑制結果分開呈現。"
-    },
     "visual_title": {
       "en": "One narrative, four prompting contexts",
       "uk": "Один наратив, чотири контексти запиту",
@@ -112,11 +107,6 @@
       "en": "Semantic links identify similar content across channels even when native forwarding metadata records no connection. The two graph layers give different views of channel connectivity, showing why explicit forwards alone may understate narrative circulation.",
       "uk": "Семантичні зв’язки виявляють подібний зміст у різних каналах, навіть коли метадані пересилань не містять зв’язку між ними. Два шари графа показують різні аспекти зв’язності каналів: урахування лише явних пересилань може призводити до недооцінки поширення наративів.",
       "zh-Hant-TW": "即使原生轉傳中繼資料沒有記錄連結，語意連結仍能辨識不同頻道中的相似內容。兩個圖層呈現不同的頻道連通性，說明只追蹤明確轉傳可能低估敘事的流通。"
-    },
-    "limit": {
-      "en": "Weak labels can be wrong and narrative categories change over time. A semantic connection suggests related content; it does not establish who copied whom or prove coordination. The framework supports research and human review.",
-      "uk": "Слабкі мітки можуть бути помилковими, а категорії наративів змінюються з часом. Семантичний зв’язок свідчить про споріднений зміст, але не встановлює, хто кого скопіював, і не доводить координацію. Метод підтримує дослідження та перевірку людьми.",
-      "zh-Hant-TW": "弱標籤可能出錯，敘事分類也會隨時間改變。語意連結表示內容相關，不能據此判定轉貼來源或證明協同行動。此框架用於研究與人工檢視。"
     },
     "visual_title": {
       "en": "Two ways to see a connection",
@@ -203,11 +193,6 @@
       "uk": "Адаптована модель використовує приблизно дві третини початкової кількості токенів для того самого тексту — у статті зазначено зменшення в 1,5 раза. Також наведено сильні результати на українських тестах та інструкційних завданнях і відкрито моделі, дані, класифікатори й код.",
       "zh-Hant-TW": "改良後的模型處理相同文字約需原模型三分之二的 token；論文報告原模型的用量約為其 1.5 倍。研究亦呈現良好的烏克蘭語基準與指令任務結果，並釋出模型、資料、分類器及程式碼。"
     },
-    "limit": {
-      "en": "The recipe is evaluated as a Ukrainian case study. Token savings are not a direct measurement of latency or cost, and transferring the recipe to another language still requires validation.",
-      "uk": "Підхід оцінено на прикладі української мови. Економія токенів не є прямим вимірюванням затримки чи вартості, а перенесення на іншу мову потребує перевірки.",
-      "zh-Hant-TW": "這套流程以烏克蘭語為案例進行評估。token 節省量並不直接等於延遲或成本降幅；套用到其他語言仍須驗證。"
-    },
     "visual_title": {
       "en": "Three changes to the data pipeline",
       "uk": "Три зміни в роботі з даними",
@@ -280,11 +265,6 @@
       "en": "Two initial 90-minute pilots, with five participants each, revealed a tendency to jump into technical solutions before representing stakeholder voices. These observations led to clearer advocacy roles, simpler starting scenarios, and more explicit checks for missing perspectives.",
       "uk": "Два початкові 90-хвилинні пілотні воркшопи по п’ять учасників виявили схильність переходити до технічних рішень, ще не врахувавши поглядів зацікавлених сторін. Це спонукало уточнити ролі захисту інтересів, спростити стартові сценарії та додати чіткі перевірки того, чи не бракує важливих поглядів.",
       "zh-Hant-TW": "兩場各五人的 90 分鐘初期試辦發現，參與者常在充分呈現利害關係人聲音前，就跳入技術解法。因此，研究團隊明確化角色的倡議立場、簡化初始情境，並加強缺漏觀點的檢查。"
-    },
-    "limit": {
-      "en": "The workshops provided formative feedback for improving materials. They do not establish a causal improvement in learning outcomes or a general guarantee of inclusive models.",
-      "uk": "Воркшопи дали формувальний зворотний зв’язок для вдосконалення матеріалів. Вони не доводять причинного поліпшення навчальних результатів і не гарантують інклюзивності будь-якої моделі.",
-      "zh-Hant-TW": "工作坊提供的是改善教材的形成性回饋，並未證明學習成效的因果提升，也不保證任何模型都能具備包容性。"
     },
     "visual_title": {
       "en": "From a role card to a visible design decision",
@@ -370,11 +350,6 @@
       "en": "The contribution is an openly reusable course design: five progressive layers, quizzes and tests, Kaggle assignments, and a final project. Starter code and free cloud resources help accommodate students with different backgrounds.",
       "uk": "Внесок роботи — відкритий для повторного використання дизайн курсу: п’ять послідовних рівнів, короткі опитування й тести, завдання Kaggle та фінальний проєкт. Стартовий код і безкоштовні хмарні ресурси підтримують студентів із різною підготовкою.",
       "zh-Hant-TW": "主要貢獻是可公開再利用的課程設計：五個漸進層次、小測驗與考試、Kaggle 作業，以及期末專題。起始程式碼和免費雲端資源支援不同背景的學生。"
-    },
-    "limit": {
-      "en": "This is a report of course design and teaching experience, not a controlled comparison of learning gains. Free-tier computing limits model scale, and fast-moving NLP requires continual updates to the materials.",
-      "uk": "Це звіт про дизайн курсу та викладацький досвід, а не контрольоване порівняння навчальних досягнень. Безкоштовні обчислювальні ресурси обмежують розмір моделей, а швидкі зміни NLP вимагають оновлення матеріалів.",
-      "zh-Hant-TW": "這是課程設計與教學經驗報告，並非學習進步的控制實驗。免費算力限制了模型規模，快速發展的 NLP 也要求教材持續更新。"
     },
     "visual_title": {
       "en": "A curriculum in five layers",
@@ -473,11 +448,6 @@
       "uk": "Стаття пропонує поняття для розрізнення цих механізмів і обґрунтовує підзвітність рішень про збереження чи виключення. Оцінювання забування охоплює права, владу та представлення поряд із технічною корисністю.",
       "zh-Hant-TW": "論文提供區分這些機制的詞彙，並主張對保留與排除的決策負責。因此，評估遺忘須同時考量權利、權力與代表性，以及技術效用。"
     },
-    "limit": {
-      "en": "This is a conceptual argument and research agenda. It does not introduce an experimentally validated unlearning algorithm or establish that deleting data removes its influence from every downstream system.",
-      "uk": "Це концептуальний аргумент і дослідницький порядок денний. Стаття не пропонує експериментально перевіреного алгоритму забування й не доводить, що видалення даних усуває їхній вплив з усіх похідних систем.",
-      "zh-Hant-TW": "這是概念論述與研究議程，並未提出經實驗驗證的遺忘演算法，也未證明刪除資料就能消除其對所有下游系統的影響。"
-    },
     "visual_title": {
       "en": "Four terms that should not be collapsed into one",
       "uk": "Чотири поняття, які не варто ототожнювати",
@@ -562,11 +532,6 @@
       "en": "Workshops with Donor UA and UCU’s Volunteers Lab surfaced overlooked relationships and “invisible” entities. Participants could trace contributions into the resulting models and described changes in their understanding of other roles.",
       "uk": "Воркшопи з Donor UA та Волонтерською лабораторією УКУ виявили непомічені зв’язки й «невидимі» сутності. Учасники простежували свої внески в підсумкових моделях і описували зміни в розумінні інших ролей.",
       "zh-Hant-TW": "與 Donor UA 及 UCU 志工實驗室的工作坊揭露了被忽略的關係與「隱形」實體。參與者能追溯自己的貢獻如何進入模型，也描述了對其他角色理解上的變化。"
-    },
-    "limit": {
-      "en": "The evidence comes from small, facilitated case studies. Inclusion depends on recruitment, group dynamics, and facilitator skill. The work does not establish a universal or quantified reduction in designer bias.",
-      "uk": "Докази походять із невеликих фасилітованих досліджень випадків. Інклюзивність залежить від добору учасників, групової динаміки й навичок фасилітатора. Робота не встановлює універсального або кількісного зменшення упереджень проєктувальника.",
-      "zh-Hant-TW": "證據來自小規模、由引導者主持的個案研究。包容性取決於招募、團體互動及引導者能力；研究並未確立普遍或量化的設計者偏誤降低效果。"
     },
     "visual_title": {
       "en": "From lived experience to a formal model",
@@ -665,11 +630,6 @@
       "uk": "Попередній аналіз виявив спільні редагування, прийняті в копії, але часто скасовані в офіційній Вікіпедії. Це підтримує подальше дослідження сигналів із копії як доповнення до виявлення вандалізму.",
       "zh-Hant-TW": "探索性分析發現，分支接受的部分相同編輯，在正式維基百科中經常被撤銷。這支持進一步研究如何以分支衍生的訊號補充破壞行為偵測。"
     },
-    "limit": {
-      "en": "This paper reports preliminary analysis, with model development and extended evaluation listed as future work. Topic imbalance and selective coverage can bias the signal; a revert is not a direct ground-truth label for propaganda.",
-      "uk": "Стаття подає попередній аналіз; розробку моделі й розширене оцінювання визначено як майбутню роботу. Нерівномірність тем і вибіркове покриття можуть зміщувати сигнал; скасування не є прямою еталонною міткою пропаганди.",
-      "zh-Hant-TW": "此文報告初步分析，模型開發與擴大評估仍列為未來工作。主題不平衡與選擇性涵蓋可能使訊號偏斜；編輯被撤銷並不直接等於被證實為宣傳。"
-    },
     "visual_title": {
       "en": "Compare content changes with editorial decisions",
       "uk": "Порівняти зміни змісту з редакторськими рішеннями",
@@ -755,11 +715,6 @@
       "uk": "Запропонована програма поєднує статистичну та механістичну перевірку з архітектурними рішеннями: розділенням джерел, відстеженням походження й збереженням змін параметрів під час навчання. Механістична інтерпретованість є одним зі способів дослідити сліди, які може не виявити саме лише спостереження за поведінкою.",
       "zh-Hant-TW": "研究議程結合統計與機制層面的驗證，以及來源分離、來源追蹤和保留訓練更新等架構選擇。機制可解釋性被提出為一種途徑，用來檢查僅觀察行為可能遺漏的痕跡。"
     },
-    "limit": {
-      "en": "These are proposed directions and expected contributions, not completed experimental results. Verification tools can supply evidence about persistence; the proposal does not claim a universal proof of complete forgetting.",
-      "uk": "Це запропоновані напрями й очікувані внески, а не завершені експериментальні результати. Інструменти перевірки можуть давати свідчення про збереження слідів; пропозиція не заявляє універсального доказу повного забування.",
-      "zh-Hant-TW": "這些是擬議方向與預期貢獻，而非已完成的實驗結果。驗證工具可提供痕跡持續存在的證據；本計畫並未宣稱能普遍證明完全遺忘。"
-    },
     "visual_title": {
       "en": "Three connected research directions",
       "uk": "Три пов’язані дослідницькі напрями",
@@ -832,11 +787,6 @@
       "en": "Combined signals improved aspects of agreement and calibration in the Wikipedia experiments. On a separate Ukrainian-language news dataset labeled for propaganda, the combined classifier reached F1 0.91, compared with 0.89 using vandalism features and 0.82 using manipulation features alone.",
       "uk": "Поєднані сигнали поліпшили окремі показники узгодженості й калібрування в експериментах із Вікіпедією. На окремому наборі українськомовних новин для виявлення пропаганди комбінований класифікатор досяг F1 0,91 проти 0,89 для ознак вандалізму та 0,82 лише для ознак маніпуляції.",
       "zh-Hant-TW": "合併訊號改善了維基百科實驗中的部分一致性與校準表現。在另一個用於宣傳偵測的烏克蘭語新聞資料集上，合併分類器的 F1 為 0.91，使用破壞特徵為 0.89，僅用操弄特徵則為 0.82。"
-    },
-    "limit": {
-      "en": "Reverts are imperfect supervision: editors undo changes for many reasons, and subtle manipulation may remain unreverted. The reported models cover two languages. The news results are a separate transfer experiment, not Wikipedia scores.",
-      "uk": "Скасування — недосконале джерело навчальних міток: редактори скасовують зміни з різних причин, а тонкі маніпуляції можуть лишатися. Моделі охоплюють дві мови. Результати на новинах — окремий експеримент перенесення, а не показники Вікіпедії.",
-      "zh-Hant-TW": "撤銷紀錄不是完美的監督訊號：編輯者撤回修改的原因很多，細微操弄也可能未被撤銷。模型涵蓋兩種語言。新聞結果是獨立的遷移實驗，並非維基百科分數。"
     },
     "visual_title": {
       "en": "Two signals, one combined prediction",
