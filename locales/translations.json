@@ -339,17 +339,9 @@
     "uk": "Vandalism or Propaganda? Enhancing Vandalism Detection in Ukrainian and Russian Wikipedia through Knowledge Manipulation Filtering",
     "zh-Hant-TW": "Vandalism or Propaganda? Enhancing Vandalism Detection in Ukrainian and Russian Wikipedia through Knowledge Manipulation Filtering"
   },
-  "· Month unspecified · PhD proposal": {
-    "uk": "· Місяць не уточнено · Дисертаційна пропозиція",
-    "zh-Hant-TW": "· 月份未確認 · 博士研究計畫"
-  },
   "Forgetting Machines: Responsibility by Design in Machine Unlearning": {
     "uk": "Forgetting Machines: Responsibility by Design in Machine Unlearning",
     "zh-Hant-TW": "Forgetting Machines: Responsibility by Design in Machine Unlearning"
-  },
-  "· Month unspecified · Master’s thesis": {
-    "uk": "· Місяць не уточнено · Магістерська робота",
-    "zh-Hant-TW": "· 月份未確認 · 碩士論文"
   },
   "Vandalism or Knowledge Manipulation? Detecting Narratives in Wikipedia Edits": {
     "uk": "Vandalism or Knowledge Manipulation? Detecting Narratives in Wikipedia Edits",
@@ -911,10 +903,6 @@
     "uk": "Магістерська робота та план дисертаційного дослідження",
     "zh-Hant-TW": "碩士論文與博士研究計畫"
   },
-  "· Month unspecified": {
-    "uk": "· Місяць не уточнено",
-    "zh-Hant-TW": "· 月份未確認"
-  },
   "PhD proposal": {
     "uk": "План дисертаційного дослідження",
     "zh-Hant-TW": "博士研究計畫"
@@ -1310,5 +1298,9 @@
   "Listed by publication month, newest first. Presentation dates are given separately; the master’s thesis record specifies only the year.": {
     "uk": "Роботи впорядковано за місяцем публікації, від новіших до старіших. Дати виступів зазначено окремо; у записі магістерської роботи вказано лише рік.",
     "zh-Hant-TW": "依出版月份由新到舊排列。發表演講的日期另行標示；碩士論文的典藏紀錄僅提供年份。"
+  },
+  "· Master’s thesis": {
+    "uk": "· Магістерська робота",
+    "zh-Hant-TW": "· 碩士論文"
   }
 }
