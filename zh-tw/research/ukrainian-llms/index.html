@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="如何讓多語言模型更有效率地使用烏克蘭語？">
+<meta name="description" content="我們如何打造適用於烏克蘭語的 Lapa LLM？">
 <title>Data-Efficient Adaptation of Multilingual LLMs to Ukrainian</title>
 <link rel="canonical" href="https://reirei-00.github.io/makovska-page/zh-tw/research/ukrainian-llms/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../../assets/css/site.css">
-<link rel="stylesheet" href="../../../assets/css/papers.css"><!-- locale-head:start -->
+<link rel="stylesheet" href="../../../assets/css/papers.css"><link rel="stylesheet" href="../../../assets/css/paper-ink.css"><script src="../../../assets/js/paper-ink.js" defer></script><!-- locale-head:start -->
 <link rel="alternate" hreflang="en" href="https://reirei-00.github.io/makovska-page/research/ukrainian-llms/">
 <link rel="alternate" hreflang="uk" href="https://reirei-00.github.io/makovska-page/uk/research/ukrainian-llms/">
 <link rel="alternate" hreflang="zh-Hant-TW" href="https://reirei-00.github.io/makovska-page/zh-tw/research/ukrainian-llms/">
@@ -28,7 +28,7 @@
 <a href="../../../assets/cv/viktoriia_makovska_cv.pdf">履歷（英文） <span class="file-label">PDF</span></a>
 </nav><!-- locale-switch:start --><nav class="language-switch" aria-label="語言"><a href="../../../research/ukrainian-llms/" lang="en" hreflang="en" data-language-link>English</a><a href="../../../uk/research/ukrainian-llms/" lang="uk" hreflang="uk" data-language-link>Українська</a><a href="./" lang="zh-Hant-TW" hreflang="zh-Hant-TW" data-language-link aria-current="true">繁體中文（台灣）</a></nav><!-- locale-switch:end --></div></header>
 <main id="main" class="editorial-container page-content paper-explainer">
-<section class="page-intro paper-intro"><a class="back-link" href="../#ukrainian-llms">← <span>所有研究</span></a><p class="editorial-eyebrow">論文導讀</p>
+<section class="page-intro paper-intro"><a class="back-link" href="../#ukrainian-llms">← <span>所有研究</span></a><p class="editorial-eyebrow">Lapa LLM</p>
 <div class="paper-meta"><span class="tag"><time datetime="2026-05">2026年5月</time></span><span class="tag">UNLP 2026</span>
               <span class="tag">ACL Anthology</span>
               <span class="tag">烏克蘭語 LLM</span>
@@ -36,9 +36,30 @@
               Yurii Paniv, Bohdan Didenko, Mykola Haltiuk, Vladyslav Humennyy, Andrian Kravchenko,
               Roman Kyslyi, Viktoriia Makovska, Artem Orlovskyi, Bohdan Ruban, Maksym-Yurii Rudko,
               Anastasiia Senyk, Nazarii Drushchak, Dmytro Chaplynskyi, Mariana Romanyshyn
-            </p><p class="lead-copy">如何讓多語言模型更有效率地使用烏克蘭語？</p>
-<nav class="detail-links" aria-label="論文導讀"><a href="#question">研究問題</a><a href="#approach">視覺導讀</a><a href="#findings">研究貢獻</a><a href="#sources">閱讀原文</a></nav></section>
-<section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">研究問題</p><h2 id="question-title">研究動機</h2></div></div><p class="explanation-copy">模型在地化不只是翻譯提示。這篇論文以 Gemma-3-12B 為例，提出可重現的流程，處理斷詞效率不佳、高品質資料不足及指令樣本稀缺等問題。</p></section>
+            </p><p class="lead-copy">我們如何打造適用於烏克蘭語的 Lapa LLM？</p>
+<nav class="detail-links" aria-label="論文導讀"><a href="#question">研究問題</a><a href="#approach">視覺導讀</a><a href="#findings">研究貢獻</a><a href="#sources">閱讀原文</a></nav><figure class="paper-ink" data-ink-scene="ukrainian-llms">
+<pre class="paper-ink-art" data-ink-art aria-hidden="true" lang="en"><span class="paper-ink-still">             .-.
+            ( Ґ )    .-.
+             '-'    ( Є )
+                     '-'
+       .-.                 .-.
+      ( І )   .           ( Ї )
+       '-'                 '-'
+
+               .---.
+             .'     '.
+           .'         '.
+          /             \
+         /               \
+        (     LAPA LLM    )
+         \               /
+          '._   ___   _.'
+             '-'   '-'
+
+
+                слово</span></pre>
+<div class="paper-ink-controls"><button class="paper-ink-toggle" type="button" data-ink-toggle hidden><span data-ink-pause>暫停動畫</span><span data-ink-play hidden>播放動畫</span></button></div></figure></section>
+<section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">研究問題</p><h2 id="question-title">研究動機</h2></div></div><p class="explanation-copy">這篇論文介紹 Lapa LLM 的資料處理流程。Lapa LLM 是以 Gemma-3-12B 為基礎、公開釋出的烏克蘭語語言模型，旨在處理斷詞效率不佳、高品質資料不足及指令樣本稀缺等問題。專案為烏克蘭語 NLP 社群提供可重用的模型、訓練資料、品質分類器與程式碼。</p><p class="source-note">Lapa LLM 以烏克蘭研究者 Valentyn Lapa 的姓氏命名，向他致敬。 <a href="https://github.com/lapa-llm/lapa-llm">專案背景 ↗</a></p></section>
 <section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">研究方法</p><h2 id="approach-title">視覺導讀</h2></div></div><figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">資料流程的三項改進</h3><ol class="method-diagram diagram-pipeline"><li><span class="diagram-index" aria-hidden="true">01</span><h3>詞彙表調整</h3><p>改善烏克蘭語斷詞，不必從頭訓練整個模型。</p></li><li><span class="diagram-index" aria-hidden="true">02</span><h3>品質篩選</h3><p>透過翻譯資料，跨語言移轉品質判別能力。</p></li><li><span class="diagram-index" aria-hidden="true">03</span><h3>指令資料</h3><p>結合翻譯、任務轉換與針對性合成。</p></li></ol><div class="result-chart"><h3>相同文字，更少 token</h3><p class="figure-note">相對 token 用量 · 調適後模型 = 1</p><div class="result-row"><span>原始模型</span><div class="result-track"><span style="width:100.0000%"></span></div><strong>1.5</strong></div><div class="result-row"><span>調適後模型</span><div class="result-track"><span style="width:66.6667%"></span></div><strong>1</strong></div></div><figcaption>模型在地化概念流程。斷詞比較呈現論文報告的比例，並非某個例句的實測值。 <span class="figure-source"><a href="https://aclanthology.org/2026.unlp-1.14.pdf">摘要與第 3–10 節</a></span></figcaption></figure></section>
 <section class="explainer-section" id="findings" aria-labelledby="findings-title"><div class="section-heading"><h2 id="findings-title">研究貢獻</h2></div><p class="explanation-copy">改良後的模型處理相同文字約需原模型三分之二的 token；論文報告原模型的用量約為其 1.5 倍。研究亦呈現良好的烏克蘭語基準與指令任務結果，並釋出模型、資料、分類器及程式碼。</p><p class="source-note"><a href="https://aclanthology.org/2026.unlp-1.14.pdf">摘要與第 3–10 節</a></p></section>
 <section class="explainer-section" id="sources" aria-labelledby="sources-title"><div class="section-heading"><h2 id="sources-title">原始論文與資源</h2></div><p class="paper-venue">

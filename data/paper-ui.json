@@ -268,5 +268,20 @@
     "en": "0.608",
     "uk": "0,608",
     "zh-Hant-TW": "0.608"
+  },
+  {
+    "en": "Pause animation",
+    "uk": "Призупинити анімацію",
+    "zh-Hant-TW": "暫停動畫"
+  },
+  {
+    "en": "Play animation",
+    "uk": "Увімкнути анімацію",
+    "zh-Hant-TW": "播放動畫"
+  },
+  {
+    "en": "Project background ↗",
+    "uk": "Про проєкт ↗",
+    "zh-Hant-TW": "專案背景 ↗"
   }
 ]

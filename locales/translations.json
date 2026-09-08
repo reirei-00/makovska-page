@@ -1143,18 +1143,6 @@
     "uk": "29 червня 2026",
     "zh-Hant-TW": "2026年6月29日"
   },
-  "· Research Tandems": {
-    "uk": "· Дослідницькі тандеми",
-    "zh-Hant-TW": "· Research Tandems"
-  },
-  "Research collaboration with Anastasiia Mahera": {
-    "uk": "Дослідницька співпраця з Анастасією Магерою",
-    "zh-Hant-TW": "與 Anastasiia Mahera 的研究合作"
-  },
-  "We took part in the Research Tandems programme and presented our work at its public showcase.": {
-    "uk": "Ми взяли участь у програмі «Дослідницькі тандеми» та представили нашу роботу на її публічній презентації.",
-    "zh-Hant-TW": "我們參與了 Research Tandems 計畫，並在公開發表會上介紹我們的工作。"
-  },
   "Event announcement ↗": {
     "uk": "Анонс події ↗",
     "zh-Hant-TW": "活動公告 ↗"
@@ -1298,6 +1286,18 @@
   "Listed by publication month, newest first. Presentation dates are given separately; the master’s thesis record specifies only the year.": {
     "uk": "Роботи впорядковано за місяцем публікації, від новіших до старіших. Дати виступів зазначено окремо; у записі магістерської роботи вказано лише рік.",
     "zh-Hant-TW": "依出版月份由新到舊排列。發表演講的日期另行標示；碩士論文的典藏紀錄僅提供年份。"
+  },
+  "room for new things": {
+    "uk": "місце для нового",
+    "zh-Hant-TW": "為新事物留點空間"
+  },
+  "Pause garden": {
+    "uk": "Призупинити анімацію",
+    "zh-Hant-TW": "暫停花園動畫"
+  },
+  "Play garden": {
+    "uk": "Увімкнути анімацію",
+    "zh-Hant-TW": "播放花園動畫"
   },
   "· Master’s thesis": {
     "uk": "· Магістерська робота",

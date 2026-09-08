@@ -23,7 +23,7 @@ class Page(HTMLParser):
         self.tags.append((tag, attrs))
         if 'id' in attrs:
             self.ids.append(attrs['id'])
-        if tag == 'pre':
+        if tag == 'pre' and 'paper-citation' in attrs.get('class', '').split():
             self.pre = attrs.get('id')
             self.citations[self.pre] = ''
 

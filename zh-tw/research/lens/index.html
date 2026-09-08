@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../../assets/css/site.css">
-<link rel="stylesheet" href="../../../assets/css/papers.css"><!-- locale-head:start -->
+<link rel="stylesheet" href="../../../assets/css/papers.css"><link rel="stylesheet" href="../../../assets/css/paper-ink.css"><script src="../../../assets/js/paper-ink.js" defer></script><!-- locale-head:start -->
 <link rel="alternate" hreflang="en" href="https://reirei-00.github.io/makovska-page/research/lens/">
 <link rel="alternate" hreflang="uk" href="https://reirei-00.github.io/makovska-page/uk/research/lens/">
 <link rel="alternate" hreflang="zh-Hant-TW" href="https://reirei-00.github.io/makovska-page/zh-tw/research/lens/">
@@ -30,7 +30,28 @@
 <main id="main" class="editorial-container page-content paper-explainer">
 <section class="page-intro paper-intro"><a class="back-link" href="../#lens">← <span>所有研究</span></a><p class="editorial-eyebrow">論文導讀</p>
 <div class="paper-meta"><span class="tag"><time datetime="2026-07">2026年7月</time></span><span class="tag">工作坊發表</span><span class="tag">機器遺忘</span></div><h1 lang="en"><span lang="en">Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS</span></h1><p class="paper-authors" lang="en">Viktoriia Makovska, George Fletcher</p><p class="lead-copy">模型不再重複某種敘事時，是遺忘了，還是無法再提供有用的回答？</p>
-<nav class="detail-links" aria-label="論文導讀"><a href="#question">研究問題</a><a href="#approach">視覺導讀</a><a href="#findings">研究貢獻</a><a href="#sources">閱讀原文</a></nav></section>
+<nav class="detail-links" aria-label="論文導讀"><a href="#question">研究問題</a><a href="#approach">視覺導讀</a><a href="#findings">研究貢獻</a><a href="#sources">閱讀原文</a></nav><figure class="paper-ink" data-ink-scene="lens">
+<pre class="paper-ink-art" data-ink-art aria-hidden="true" lang="en"><span class="paper-ink-still">
+
+
+                   ~.~~~.~story~.~
+              ~~.~~               +~.~
+  ~+.~~story.~                    |
+   |                               |
+    |                              |
+    |        ~ ~. ~~. ~~.memory    |
+     |  .~~~.                 ~~    |
+  ~~.+memory                     ~~ +
+     |                              |
+    |                              |
+    |  trace.~~~.~~~.              |
+  ~+.~~              ~~~.~trace   |
+                           ~.~~~.~+~.~
+
+
+
+</span></pre>
+<div class="paper-ink-controls"><button class="paper-ink-toggle" type="button" data-ink-toggle hidden><span data-ink-pause>暫停動畫</span><span data-ink-play hidden>播放動畫</span></button></div></figure></section>
 <section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">研究問題</p><h2 id="question-title">研究動機</h2></div></div><p class="explanation-copy">LENS 檢驗機器遺忘後的敘事重現。研究以兩種帶有不實資訊的敘事框架測試四個多語言指令模型，並用不同提問方式探查相同的深層敘事。</p></section>
 <section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">研究方法</p><h2 id="approach-title">視覺導讀</h2></div></div><figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">同一敘事，四種提問情境</h3><ol class="method-diagram diagram-levels"><li><span class="diagram-index" aria-hidden="true">01</span><h3>L0 · 直接</h3><p>直接要求目標敘事的解釋。</p></li><li><span class="diagram-index" aria-hidden="true">02</span><h3>L1 · 引述</h3><p>詢問他人提出的解釋。</p></li><li><span class="diagram-index" aria-hidden="true">03</span><h3>L2 · 對照</h3><p>將目標框架與另一種解釋並列。</p></li><li><span class="diagram-index" aria-hidden="true">04</span><h3>L3 · 抽象</h3><p>隱去行動者名稱，保留因果結構。</p></li></ol><figcaption>LENS 概念圖：L0 提供遺忘樣本，L1–L2 測試效果遷移，L3 探查抽象框架與實體名稱重現。這些是提問層次，並非量化的難度分數。 <span class="figure-source"><a href="https://arxiv.org/html/2607.22657v2">第 4、6–8 節</a></span></figcaption></figure><section class="score-explorer" id="score" aria-labelledby="score-title">
 <p class="section-marker">示範計算器 · 100 則回答</p><h3 id="score-title">探索抑制分數</h3>

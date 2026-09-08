@@ -1,11 +1,11 @@
 /* Shared editorial styles for all four pages. No framework or page-specific cascade. */
 :root {
-  --page-bg: #fbfaf7;
-  --ink: #242824;
-  --muted: #606760;
-  --accent: #315d54;
-  --rule: #d7ddd4;
-  --soft: #eef1e9;
+  --page-bg: #f7f3e8;
+  --ink: #304971;
+  --muted: #5e687a;
+  --accent: #80536f;
+  --rule: #d6d1c5;
+  --soft: #efeade;
   --column: 1040px;
   --sans: "IBM Plex Sans", Arial, sans-serif;
   --mono: "IBM Plex Mono", monospace;
@@ -26,7 +26,7 @@ a, p, h1, h2, h3, strong { overflow-wrap: break-word; }
 a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
 button { font: inherit; cursor: pointer; }
 img { max-width: 100%; }
-::selection { background: #dce8d4; color: var(--ink); }
+::selection { background: #e6d8e1; color: var(--ink); }
 .editorial-container { width: min(100% - 64px, var(--column)); margin-inline: auto; }
 .skip-link { position: fixed; top: -90px; left: 16px; background: var(--ink); color: white; padding: 12px 18px; z-index: 200; }
 .skip-link:focus { top: 12px; }

@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="How can a multilingual model use Ukrainian more efficiently?">
+<meta name="description" content="How did we build Lapa LLM for Ukrainian?">
 <title>Data-Efficient Adaptation of Multilingual LLMs to Ukrainian</title>
 <link rel="canonical" href="https://reirei-00.github.io/makovska-page/research/ukrainian-llms/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/site.css">
-<link rel="stylesheet" href="../../assets/css/papers.css"><!-- locale-head:start -->
+<link rel="stylesheet" href="../../assets/css/papers.css"><link rel="stylesheet" href="../../assets/css/paper-ink.css"><script src="../../assets/js/paper-ink.js" defer></script><!-- locale-head:start -->
 <link rel="alternate" hreflang="en" href="https://reirei-00.github.io/makovska-page/research/ukrainian-llms/">
 <link rel="alternate" hreflang="uk" href="https://reirei-00.github.io/makovska-page/uk/research/ukrainian-llms/">
 <link rel="alternate" hreflang="zh-Hant-TW" href="https://reirei-00.github.io/makovska-page/zh-tw/research/ukrainian-llms/">
@@ -28,7 +28,7 @@
 <a href="../../assets/cv/viktoriia_makovska_cv.pdf">CV <span class="file-label">PDF</span></a>
 </nav><!-- locale-switch:start --><nav class="language-switch" aria-label="Language"><a href="./" lang="en" hreflang="en" data-language-link aria-current="true">English</a><a href="../../uk/research/ukrainian-llms/" lang="uk" hreflang="uk" data-language-link>Українська</a><a href="../../zh-tw/research/ukrainian-llms/" lang="zh-Hant-TW" hreflang="zh-Hant-TW" data-language-link>繁體中文（台灣）</a></nav><!-- locale-switch:end --></div></header>
 <main id="main" class="editorial-container page-content paper-explainer">
-<section class="page-intro paper-intro"><a class="back-link" href="../#ukrainian-llms">← <span>All research</span></a><p class="editorial-eyebrow">Paper explained</p>
+<section class="page-intro paper-intro"><a class="back-link" href="../#ukrainian-llms">← <span>All research</span></a><p class="editorial-eyebrow">Lapa LLM</p>
 <div class="paper-meta"><span class="tag"><time datetime="2026-05">May 2026</time></span><span class="tag">UNLP 2026</span>
               <span class="tag">ACL Anthology</span>
               <span class="tag">Ukrainian LLMs</span>
@@ -36,9 +36,30 @@
               Yurii Paniv, Bohdan Didenko, Mykola Haltiuk, Vladyslav Humennyy, Andrian Kravchenko,
               Roman Kyslyi, Viktoriia Makovska, Artem Orlovskyi, Bohdan Ruban, Maksym-Yurii Rudko,
               Anastasiia Senyk, Nazarii Drushchak, Dmytro Chaplynskyi, Mariana Romanyshyn
-            </p><p class="lead-copy">How can a multilingual model use Ukrainian more efficiently?</p>
-<nav class="detail-links" aria-label="Paper explained"><a href="#question">The question</a><a href="#approach">A visual guide</a><a href="#findings">What the work contributes</a><a href="#sources">Read the source</a></nav></section>
-<section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">The question</p><h2 id="question-title">Why this work</h2></div></div><p class="explanation-copy">Adapting a model involves more than translating prompts. This paper addresses inefficient tokenization, limited high-quality data, and scarce instruction examples through a reproducible recipe applied to Gemma-3-12B.</p></section>
+            </p><p class="lead-copy">How did we build Lapa LLM for Ukrainian?</p>
+<nav class="detail-links" aria-label="Paper explained"><a href="#question">The question</a><a href="#approach">A visual guide</a><a href="#findings">What the work contributes</a><a href="#sources">Read the source</a></nav><figure class="paper-ink" data-ink-scene="ukrainian-llms">
+<pre class="paper-ink-art" data-ink-art aria-hidden="true"><span class="paper-ink-still">             .-.
+            ( Ґ )    .-.
+             &#x27;-&#x27;    ( Є )
+                     &#x27;-&#x27;
+       .-.                 .-.
+      ( І )   .           ( Ї )
+       &#x27;-&#x27;                 &#x27;-&#x27;
+
+               .---.
+             .&#x27;     &#x27;.
+           .&#x27;         &#x27;.
+          /             \
+         /               \
+        (     LAPA LLM    )
+         \               /
+          &#x27;._   ___   _.&#x27;
+             &#x27;-&#x27;   &#x27;-&#x27;
+
+
+                слово</span></pre>
+<div class="paper-ink-controls"><button class="paper-ink-toggle" type="button" data-ink-toggle hidden><span data-ink-pause>Pause animation</span><span data-ink-play hidden>Play animation</span></button></div></figure></section>
+<section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">The question</p><h2 id="question-title">Why this work</h2></div></div><p class="explanation-copy">This paper presents the data pipeline behind Lapa LLM, an openly released Ukrainian language model built on Gemma-3-12B. It tackles inefficient tokenization, limited high-quality data, and scarce instruction examples. The project gives the Ukrainian NLP community reusable models, training data, quality classifiers, and code.</p><p class="source-note">Lapa LLM is named in honor of Ukrainian researcher Valentyn Lapa. <a href="https://github.com/lapa-llm/lapa-llm">Project background ↗</a></p></section>
 <section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">The approach</p><h2 id="approach-title">A visual guide</h2></div></div><figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">Three changes to the data pipeline</h3><ol class="method-diagram diagram-pipeline"><li><span class="diagram-index" aria-hidden="true">01</span><h3>Vocabulary surgery</h3><p>Improve Ukrainian tokenization without retraining the whole model from scratch.</p></li><li><span class="diagram-index" aria-hidden="true">02</span><h3>Quality filtering</h3><p>Transfer quality signals across languages through translated data.</p></li><li><span class="diagram-index" aria-hidden="true">03</span><h3>Instruction data</h3><p>Combine translation, task conversion, and targeted synthesis.</p></li></ol><div class="result-chart"><h3>Same text, fewer tokens</h3><p class="figure-note">Relative token use · adapted model = 1</p><div class="result-row"><span>Original model</span><div class="result-track"><span style="width:100.0000%"></span></div><strong>1.5</strong></div><div class="result-row"><span>Adapted model</span><div class="result-track"><span style="width:66.6667%"></span></div><strong>1</strong></div></div><figcaption>Conceptual adaptation pipeline. The tokenizer comparison expresses the reported ratio, not a measurement of an example sentence. <span class="figure-source"><a href="https://aclanthology.org/2026.unlp-1.14.pdf">Abstract and Sections 3–10</a></span></figcaption></figure></section>
 <section class="explainer-section" id="findings" aria-labelledby="findings-title"><div class="section-heading"><h2 id="findings-title">What the work contributes</h2></div><p class="explanation-copy">The adapted model uses about two-thirds as many tokens for the same text as the original model—the paper reports 1.5× fewer tokens. It also reports strong Ukrainian benchmark and instruction-task results, and releases models, data, classifiers, and code.</p><p class="source-note"><a href="https://aclanthology.org/2026.unlp-1.14.pdf">Abstract and Sections 3–10</a></p></section>
 <section class="explainer-section" id="sources" aria-labelledby="sources-title"><div class="section-heading"><h2 id="sources-title">Original paper &amp; resources</h2></div><p class="paper-venue">

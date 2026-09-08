@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../../assets/css/site.css">
-<link rel="stylesheet" href="../../../assets/css/papers.css"><!-- locale-head:start -->
+<link rel="stylesheet" href="../../../assets/css/papers.css"><link rel="stylesheet" href="../../../assets/css/paper-ink.css"><script src="../../../assets/js/paper-ink.js" defer></script><!-- locale-head:start -->
 <link rel="alternate" hreflang="en" href="https://reirei-00.github.io/makovska-page/research/telegram-narratives/">
 <link rel="alternate" hreflang="uk" href="https://reirei-00.github.io/makovska-page/uk/research/telegram-narratives/">
 <link rel="alternate" hreflang="zh-Hant-TW" href="https://reirei-00.github.io/makovska-page/zh-tw/research/telegram-narratives/">
@@ -35,7 +35,28 @@
             </div><h1 lang="en"><span lang="en">Graph-Based Detection of Disinformation Narrative Diffusion between Russian and Ukrainian Telegram Channels</span></h1><p class="paper-authors" lang="en">
               Yuliia Vistak, Viktoriia Makovska, Vera Schmitt, Veronika Solopova
             </p><p class="lead-copy">敘事不斷被改寫與轉貼時，如何追蹤它的傳播？</p>
-<nav class="detail-links" aria-label="論文導讀"><a href="#question">研究問題</a><a href="#approach">視覺導讀</a><a href="#findings">研究貢獻</a><a href="#sources">閱讀原文</a></nav></section>
+<nav class="detail-links" aria-label="論文導讀"><a href="#question">研究問題</a><a href="#approach">視覺導讀</a><a href="#findings">研究貢獻</a><a href="#sources">閱讀原文</a></nav><figure class="paper-ink" data-ink-scene="telegram-narratives">
+<pre class="paper-ink-art" data-ink-art aria-hidden="true" lang="en"><span class="paper-ink-still">
+
+
+          (o)
+         //  ---                 -(o)
+        /       --            --
+       /          ---    - --      |
+     //              (*)-          |
+   (o)
+      \            //  |           |
+       \                |          |
+         \\      /
+            \   /        |         |
+             (o)-        |        (o)
+                 - --           --
+                      --  |  --
+                         -(o)
+
+
+</span></pre>
+<div class="paper-ink-controls"><button class="paper-ink-toggle" type="button" data-ink-toggle hidden><span data-ink-pause>暫停動畫</span><span data-ink-play hidden>播放動畫</span></button></div></figure></section>
 <section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">研究問題</p><h2 id="question-title">研究動機</h2></div></div><p class="explanation-copy">單則訊息只能呈現不實資訊活動的一部分。這篇論文結合敘事標籤與圖結構，研究相關說法如何在俄語及烏克蘭語 Telegram 頻道間流通。</p></section>
 <section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">研究方法</p><h2 id="approach-title">視覺導讀</h2></div></div><figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">看見連結的兩種方式</h3><div class="network-map" aria-hidden="true"><svg viewbox="0 0 720 190" focusable="false"><path class="edge-recorded" d="M110 50 L330 140 L600 50"></path><path class="edge-semantic" d="M110 50 L600 50 M330 140 L600 140"></path></svg><span class="node node-a">頻道 A</span><span class="node node-b">頻道 B</span><span class="node node-c">頻道 C</span><span class="node node-d">頻道 D</span></div><div class="network-key"><span>有記錄的轉傳</span><span>語意相似</span></div><ol class="method-diagram diagram-network"><li><span class="diagram-index" aria-hidden="true">01</span><h3>訊息</h3><p>蒐集公開貼文與轉傳中繼資料。</p></li><li><span class="diagram-index" aria-hidden="true">02</span><h3>敘事標籤</h3><p>以弱監督將相關說法對應至敘事分類。</p></li><li><span class="diagram-index" aria-hidden="true">03</span><h3>明確轉傳</h3><p>利用記錄中的來源頻道連結。</p></li><li><span class="diagram-index" aria-hidden="true">04</span><h3>語意連結</h3><p>即使沒有轉傳標記，也能找出跨頻道的相似訊息。</p></li></ol><figcaption>此為概念網路，並非實際頻道資料。實線表示有記錄的轉傳，虛線表示語意相似。 <span class="figure-source"><a href="https://aclanthology.org/2026.unlp-1.9.pdf">第 3–5 節與限制</a></span></figcaption></figure></section>
 <section class="explainer-section" id="findings" aria-labelledby="findings-title"><div class="section-heading"><h2 id="findings-title">研究貢獻</h2></div><p class="explanation-copy">即使原生轉傳中繼資料沒有記錄連結，語意連結仍能辨識不同頻道中的相似內容。兩個圖層呈現不同的頻道連通性，說明只追蹤明確轉傳可能低估敘事的流通。</p><p class="source-note"><a href="https://aclanthology.org/2026.unlp-1.9.pdf">第 3–5 節與限制</a></p></section>

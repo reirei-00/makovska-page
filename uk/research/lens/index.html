@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../../assets/css/site.css">
-<link rel="stylesheet" href="../../../assets/css/papers.css"><!-- locale-head:start -->
+<link rel="stylesheet" href="../../../assets/css/papers.css"><link rel="stylesheet" href="../../../assets/css/paper-ink.css"><script src="../../../assets/js/paper-ink.js" defer></script><!-- locale-head:start -->
 <link rel="alternate" hreflang="en" href="https://reirei-00.github.io/makovska-page/research/lens/">
 <link rel="alternate" hreflang="uk" href="https://reirei-00.github.io/makovska-page/uk/research/lens/">
 <link rel="alternate" hreflang="zh-Hant-TW" href="https://reirei-00.github.io/makovska-page/zh-tw/research/lens/">
@@ -30,7 +30,28 @@
 <main id="main" class="editorial-container page-content paper-explainer">
 <section class="page-intro paper-intro"><a class="back-link" href="../#lens">← <span>Усі дослідження</span></a><p class="editorial-eyebrow">Пояснення роботи</p>
 <div class="paper-meta"><span class="tag"><time datetime="2026-07">Липень 2026</time></span><span class="tag">Доповідь на воркшопі</span><span class="tag">Машинне забування</span></div><h1 lang="en"><span lang="en">Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS</span></h1><p class="paper-authors" lang="en">Viktoriia Makovska, George Fletcher</p><p class="lead-copy">Коли модель перестає відтворювати наратив, вона забула його чи перестала відповідати змістовно?</p>
-<nav class="detail-links" aria-label="Пояснення роботи"><a href="#question">Питання</a><a href="#approach">Візуальне пояснення</a><a href="#findings">Внесок роботи</a><a href="#sources">Читати джерело</a></nav></section>
+<nav class="detail-links" aria-label="Пояснення роботи"><a href="#question">Питання</a><a href="#approach">Візуальне пояснення</a><a href="#findings">Внесок роботи</a><a href="#sources">Читати джерело</a></nav><figure class="paper-ink" data-ink-scene="lens">
+<pre class="paper-ink-art" data-ink-art aria-hidden="true" lang="en"><span class="paper-ink-still">
+
+
+                   ~.~~~.~story~.~
+              ~~.~~               +~.~
+  ~+.~~story.~                    |
+   |                               |
+    |                              |
+    |        ~ ~. ~~. ~~.memory    |
+     |  .~~~.                 ~~    |
+  ~~.+memory                     ~~ +
+     |                              |
+    |                              |
+    |  trace.~~~.~~~.              |
+  ~+.~~              ~~~.~trace   |
+                           ~.~~~.~+~.~
+
+
+
+</span></pre>
+<div class="paper-ink-controls"><button class="paper-ink-toggle" type="button" data-ink-toggle hidden><span data-ink-pause>Призупинити анімацію</span><span data-ink-play hidden>Увімкнути анімацію</span></button></div></figure></section>
 <section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">Питання</p><h2 id="question-title">Навіщо ця робота</h2></div></div><p class="explanation-copy">LENS досліджує відтворення наративів після машинного забування. У роботі оцінено чотири багатомовні моделі, навчені виконувати інструкції. Для перевірки використано дві дезінформаційні рамки та різні способи запитати про той самий наратив.</p></section>
 <section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">Підхід</p><h2 id="approach-title">Візуальне пояснення</h2></div></div><figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">Один наратив, чотири контексти запиту</h3><ol class="method-diagram diagram-levels"><li><span class="diagram-index" aria-hidden="true">01</span><h3>L0 · Прямий</h3><p>Прямо попросити цільове пояснення.</p></li><li><span class="diagram-index" aria-hidden="true">02</span><h3>L1 · Приписаний</h3><p>Запитати про пояснення, приписане іншим.</p></li><li><span class="diagram-index" aria-hidden="true">03</span><h3>L2 · Порівняльний</h3><p>Зіставити цільову рамку з альтернативним поясненням.</p></li><li><span class="diagram-index" aria-hidden="true">04</span><h3>L3 · Абстрактний</h3><p>Приховати імена та назви учасників наративу, зберігаючи причинну структуру.</p></li></ol><figcaption>Схема LENS: L0 дає приклади для забування; L1–L2 перевіряють перенесення ефекту; L3 досліджує абстракцію та відновлення назв та імен. Це рівні контексту запитів, а не числові оцінки складності. <span class="figure-source"><a href="https://arxiv.org/html/2607.22657v2">Розділи 4, 6–8</a></span></figcaption></figure><section class="score-explorer" id="score" aria-labelledby="score-title">
 <p class="section-marker">Навчальний калькулятор · 100 відповідей</p><h3 id="score-title">Дослідити оцінку пригнічення</h3>

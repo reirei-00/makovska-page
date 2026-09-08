@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/site.css">
-<link rel="stylesheet" href="../../assets/css/papers.css"><!-- locale-head:start -->
+<link rel="stylesheet" href="../../assets/css/papers.css"><link rel="stylesheet" href="../../assets/css/paper-ink.css"><script src="../../assets/js/paper-ink.js" defer></script><!-- locale-head:start -->
 <link rel="alternate" hreflang="en" href="https://reirei-00.github.io/makovska-page/research/telegram-narratives/">
 <link rel="alternate" hreflang="uk" href="https://reirei-00.github.io/makovska-page/uk/research/telegram-narratives/">
 <link rel="alternate" hreflang="zh-Hant-TW" href="https://reirei-00.github.io/makovska-page/zh-tw/research/telegram-narratives/">
@@ -35,7 +35,28 @@
             </div><h1 lang="en">Graph-Based Detection of Disinformation Narrative Diffusion between Russian and Ukrainian Telegram Channels</h1><p class="paper-authors">
               Yuliia Vistak, Viktoriia Makovska, Vera Schmitt, Veronika Solopova
             </p><p class="lead-copy">How do you follow a narrative when it is paraphrased and reposted?</p>
-<nav class="detail-links" aria-label="Paper explained"><a href="#question">The question</a><a href="#approach">A visual guide</a><a href="#findings">What the work contributes</a><a href="#sources">Read the source</a></nav></section>
+<nav class="detail-links" aria-label="Paper explained"><a href="#question">The question</a><a href="#approach">A visual guide</a><a href="#findings">What the work contributes</a><a href="#sources">Read the source</a></nav><figure class="paper-ink" data-ink-scene="telegram-narratives">
+<pre class="paper-ink-art" data-ink-art aria-hidden="true"><span class="paper-ink-still">
+
+
+          (o)
+         //  ---                 -(o)
+        /       --            --
+       /          ---    - --      |
+     //              (*)-          |
+   (o)
+      \            //  |           |
+       \                |          |
+         \\      /
+            \   /        |         |
+             (o)-        |        (o)
+                 - --           --
+                      --  |  --
+                         -(o)
+
+
+</span></pre>
+<div class="paper-ink-controls"><button class="paper-ink-toggle" type="button" data-ink-toggle hidden><span data-ink-pause>Pause animation</span><span data-ink-play hidden>Play animation</span></button></div></figure></section>
 <section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">The question</p><h2 id="question-title">Why this work</h2></div></div><p class="explanation-copy">Individual messages reveal only part of a disinformation campaign. This paper combines narrative labels with graph structure to examine how related claims circulate between Russian-language and Ukrainian-language Telegram channels.</p></section>
 <section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">The approach</p><h2 id="approach-title">A visual guide</h2></div></div><figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">Two ways to see a connection</h3><div class="network-map" aria-hidden="true"><svg viewBox="0 0 720 190" focusable="false"><path class="edge-recorded" d="M110 50 L330 140 L600 50"/><path class="edge-semantic" d="M110 50 L600 50 M330 140 L600 140"/></svg><span class="node node-a">Channel A</span><span class="node node-b">Channel B</span><span class="node node-c">Channel C</span><span class="node node-d">Channel D</span></div><div class="network-key"><span>Recorded forwarding</span><span>Semantic similarity</span></div><ol class="method-diagram diagram-network"><li><span class="diagram-index" aria-hidden="true">01</span><h3>Messages</h3><p>Collect public posts and forwarding metadata.</p></li><li><span class="diagram-index" aria-hidden="true">02</span><h3>Narrative labels</h3><p>Assign related claims to a narrative inventory using weak supervision.</p></li><li><span class="diagram-index" aria-hidden="true">03</span><h3>Explicit forwards</h3><p>Use recorded source-channel links.</p></li><li><span class="diagram-index" aria-hidden="true">04</span><h3>Semantic links</h3><p>Find similar messages across channels even without a forward label.</p></li></ol><figcaption>Schematic network, not observed channel data. Solid links represent recorded forwarding; dashed links represent semantic similarity. <span class="figure-source"><a href="https://aclanthology.org/2026.unlp-1.9.pdf">Sections 3–5 and Limitations</a></span></figcaption></figure></section>
 <section class="explainer-section" id="findings" aria-labelledby="findings-title"><div class="section-heading"><h2 id="findings-title">What the work contributes</h2></div><p class="explanation-copy">Semantic links identify similar content across channels even when native forwarding metadata records no connection. The two graph layers give different views of channel connectivity, showing why explicit forwards alone may understate narrative circulation.</p><p class="source-note"><a href="https://aclanthology.org/2026.unlp-1.9.pdf">Sections 3–5 and Limitations</a></p></section>

@@ -179,14 +179,14 @@
       "lens"
     ],
     "question": {
-      "en": "How can a multilingual model use Ukrainian more efficiently?",
-      "uk": "Як зробити багатомовну модель ефективнішою для української?",
-      "zh-Hant-TW": "如何讓多語言模型更有效率地使用烏克蘭語？"
+      "en": "How did we build Lapa LLM for Ukrainian?",
+      "uk": "Як ми створили Lapa LLM для української мови?",
+      "zh-Hant-TW": "我們如何打造適用於烏克蘭語的 Lapa LLM？"
     },
     "overview": {
-      "en": "Adapting a model involves more than translating prompts. This paper addresses inefficient tokenization, limited high-quality data, and scarce instruction examples through a reproducible recipe applied to Gemma-3-12B.",
-      "uk": "Адаптація моделі — це більше, ніж переклад запитів. Робота розв’язує проблеми неефективної токенізації, нестачі якісних даних та інструкційних прикладів за допомогою відтворюваного підходу для Gemma-3-12B.",
-      "zh-Hant-TW": "模型在地化不只是翻譯提示。這篇論文以 Gemma-3-12B 為例，提出可重現的流程，處理斷詞效率不佳、高品質資料不足及指令樣本稀缺等問題。"
+      "en": "This paper presents the data pipeline behind Lapa LLM, an openly released Ukrainian language model built on Gemma-3-12B. It tackles inefficient tokenization, limited high-quality data, and scarce instruction examples. The project gives the Ukrainian NLP community reusable models, training data, quality classifiers, and code.",
+      "uk": "Ця стаття описує роботу з даними, на якій ґрунтується Lapa LLM — українська мовна модель з відкритим доступом на основі Gemma-3-12B. У ній розглянуто неефективну токенізацію, нестачу якісних даних та інструкційних прикладів. Проєкт надає українській NLP-спільноті моделі, навчальні дані, класифікатори якості й код для подальшого використання.",
+      "zh-Hant-TW": "這篇論文介紹 Lapa LLM 的資料處理流程。Lapa LLM 是以 Gemma-3-12B 為基礎、公開釋出的烏克蘭語語言模型，旨在處理斷詞效率不佳、高品質資料不足及指令樣本稀缺等問題。專案為烏克蘭語 NLP 社群提供可重用的模型、訓練資料、品質分類器與程式碼。"
     },
     "finding": {
       "en": "The adapted model uses about two-thirds as many tokens for the same text as the original model—the paper reports 1.5× fewer tokens. It also reports strong Ukrainian benchmark and instruction-task results, and releases models, data, classifiers, and code.",
@@ -240,7 +240,18 @@
           "zh-Hant-TW": "結合翻譯、任務轉換與針對性合成。"
         }
       }
-    ]
+    ],
+    "project_name": {
+      "en": "Lapa LLM",
+      "uk": "Lapa LLM",
+      "zh-Hant-TW": "Lapa LLM"
+    },
+    "project_note": {
+      "en": "Lapa LLM is named in honor of Ukrainian researcher Valentyn Lapa.",
+      "uk": "Lapa LLM названо на честь українського дослідника Валентина Лапи.",
+      "zh-Hant-TW": "Lapa LLM 以烏克蘭研究者 Valentyn Lapa 的姓氏命名，向他致敬。"
+    },
+    "project_url": "https://github.com/lapa-llm/lapa-llm"
   },
   {
     "slug": "garlic",
@@ -643,9 +654,9 @@
     "steps": [
       {
         "title": {
-          "en": "Government-backed fork",
-          "uk": "Копія за підтримки держави",
-          "zh-Hant-TW": "政府支持的分支"
+          "en": "RWFork",
+          "uk": "RWFork",
+          "zh-Hant-TW": "RWFork"
         },
         "body": {
           "en": "Inspect inserted, removed, and changed text.",

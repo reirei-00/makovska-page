@@ -19,4 +19,8 @@ Every catalogue entry has a generated page under `research/<slug>/`, with matchi
 
 `scripts/build_papers.py` reuses titles, authors, dates, resource links, and citations from the English Research catalogue. It generates the English source in memory before `build_locales.py` validates every translation and writes all pages. Do not edit generated paper pages directly. Keep each explanation's source URL and section references with its content.
 
-Diagrams use accessible HTML/CSS and a small decorative SVG network. Chart values come from the cited papers. LENS's optional score explorer uses explicitly hypothetical counts and works with keyboard input; all explanations remain readable without JavaScript. Its behavior lives in `assets/js/paper-explorer.js`.
+Diagrams use accessible HTML/CSS with SVG illustrations and connectors. The Wikipedia comparison diagram joins two parallel sources before the overlap analysis and candidate signals; its labels come from the paper's translated steps. Chart values come from the cited papers. LENS's optional score explorer uses explicitly hypothetical counts and works with keyboard input; all explanations remain readable without JavaScript. Its behavior lives in `assets/js/paper-explorer.js`.
+
+The decorative ASCII scenes use `assets/js/paper-ink.js` and `assets/css/paper-ink.css`. Their pause/play labels are in `data/paper-ui.json`; their compact static drawings are in `data/ink-fallbacks.json`. The builder includes the appropriate scene for each paper. Keep these drawings separate from bibliographic citations and research figures.
+
+The About page's garden lives in `assets/js/garden.js` and `assets/css/garden.css`. It grows with the furthest scroll position reached, accompanies the reader along the bottom edge, and returns to the document above the footer. Both kinds of animation support reduced motion, a keyboard-accessible pause control, and static content without JavaScript.

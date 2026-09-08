@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/site.css">
-<link rel="stylesheet" href="../../assets/css/papers.css"><!-- locale-head:start -->
+<link rel="stylesheet" href="../../assets/css/papers.css"><link rel="stylesheet" href="../../assets/css/paper-ink.css"><script src="../../assets/js/paper-ink.js" defer></script><!-- locale-head:start -->
 <link rel="alternate" hreflang="en" href="https://reirei-00.github.io/makovska-page/research/lens/">
 <link rel="alternate" hreflang="uk" href="https://reirei-00.github.io/makovska-page/uk/research/lens/">
 <link rel="alternate" hreflang="zh-Hant-TW" href="https://reirei-00.github.io/makovska-page/zh-tw/research/lens/">
@@ -30,7 +30,28 @@
 <main id="main" class="editorial-container page-content paper-explainer">
 <section class="page-intro paper-intro"><a class="back-link" href="../#lens">← <span>All research</span></a><p class="editorial-eyebrow">Paper explained</p>
 <div class="paper-meta"><span class="tag"><time datetime="2026-07">July 2026</time></span><span class="tag">Workshop presentation</span><span class="tag">Machine unlearning</span></div><h1 lang="en">Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS</h1><p class="paper-authors">Viktoriia Makovska, George Fletcher</p><p class="lead-copy">When a model stops repeating a narrative, has it forgotten—or stopped answering usefully?</p>
-<nav class="detail-links" aria-label="Paper explained"><a href="#question">The question</a><a href="#approach">A visual guide</a><a href="#findings">What the work contributes</a><a href="#sources">Read the source</a></nav></section>
+<nav class="detail-links" aria-label="Paper explained"><a href="#question">The question</a><a href="#approach">A visual guide</a><a href="#findings">What the work contributes</a><a href="#sources">Read the source</a></nav><figure class="paper-ink" data-ink-scene="lens">
+<pre class="paper-ink-art" data-ink-art aria-hidden="true"><span class="paper-ink-still">
+
+
+                   ~.~~~.~story~.~
+              ~~.~~               +~.~
+  ~+.~~story.~                    |
+   |                               |
+    |                              |
+    |        ~ ~. ~~. ~~.memory    |
+     |  .~~~.                 ~~    |
+  ~~.+memory                     ~~ +
+     |                              |
+    |                              |
+    |  trace.~~~.~~~.              |
+  ~+.~~              ~~~.~trace   |
+                           ~.~~~.~+~.~
+
+
+
+</span></pre>
+<div class="paper-ink-controls"><button class="paper-ink-toggle" type="button" data-ink-toggle hidden><span data-ink-pause>Pause animation</span><span data-ink-play hidden>Play animation</span></button></div></figure></section>
 <section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">The question</p><h2 id="question-title">Why this work</h2></div></div><p class="explanation-copy">LENS examines narrative reproduction after machine unlearning. The study tests four multilingual instruction models on two disinformation-aligned frames, using several ways of asking about the same underlying narrative.</p></section>
 <section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">The approach</p><h2 id="approach-title">A visual guide</h2></div></div><figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">One narrative, four prompting contexts</h3><ol class="method-diagram diagram-levels"><li><span class="diagram-index" aria-hidden="true">01</span><h3>L0 · Direct</h3><p>Ask for the target explanation directly.</p></li><li><span class="diagram-index" aria-hidden="true">02</span><h3>L1 · Attributed</h3><p>Ask about an explanation attributed to someone else.</p></li><li><span class="diagram-index" aria-hidden="true">03</span><h3>L2 · Contrastive</h3><p>Place the target frame beside a competing explanation.</p></li><li><span class="diagram-index" aria-hidden="true">04</span><h3>L3 · Abstract</h3><p>Mask actor names while preserving the causal structure.</p></li></ol><figcaption>Conceptual guide to LENS. L0 supplies the forget examples; L1–L2 test transfer; L3 probes abstraction and entity recovery. These are prompting levels, not numerical difficulty scores. <span class="figure-source"><a href="https://arxiv.org/html/2607.22657v2">Sections 4, 6–8</a></span></figcaption></figure><section class="score-explorer" id="score" aria-labelledby="score-title">
 <p class="section-marker">Illustrative calculator · 100 responses</p><h3 id="score-title">Explore the suppression score</h3>
