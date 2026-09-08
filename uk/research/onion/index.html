@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Як людям упізнати власні потреби у формальній моделі даних?">
+<title>ONION: A Multi-Layered Framework for Participatory ER Design</title>
+<link rel="canonical" href="https://reirei-00.github.io/makovska-page/uk/research/onion/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<link rel="stylesheet" href="../../../assets/css/papers.css"><!-- locale-head:start -->
+<link rel="alternate" hreflang="en" href="https://reirei-00.github.io/makovska-page/research/onion/">
+<link rel="alternate" hreflang="uk" href="https://reirei-00.github.io/makovska-page/uk/research/onion/">
+<link rel="alternate" hreflang="zh-Hant-TW" href="https://reirei-00.github.io/makovska-page/zh-tw/research/onion/">
+<link rel="alternate" hreflang="x-default" href="https://reirei-00.github.io/makovska-page/research/onion/">
+<script src="../../../assets/js/languages.js" defer></script>
+<!-- locale-head:end --></head>
+<body class="editorial-home" id="top">
+<a class="skip-link" href="#main">Перейти до вмісту</a>
+<header class="editorial-header"><div class="editorial-container header-inner">
+<a class="wordmark" href="../../about/" aria-label="Вікторія Маковська — головна">VM<span aria-hidden="true">.</span></a>
+<nav class="editorial-nav" aria-label="Основна навігація"><a href="../../about/">Про мене</a>
+<a href="../" aria-current="page">Дослідження</a>
+<a href="../../teaching/">Викладання</a>
+<a href="../../media/">Виступи та медіа</a>
+<a href="../../../assets/cv/viktoriia_makovska_cv.pdf">Резюме (англійською) <span class="file-label">PDF</span></a>
+</nav><!-- locale-switch:start --><nav class="language-switch" aria-label="Мова"><a href="../../../research/onion/" lang="en" hreflang="en" data-language-link>English</a><a href="./" lang="uk" hreflang="uk" data-language-link aria-current="true">Українська</a><a href="../../../zh-tw/research/onion/" lang="zh-Hant-TW" hreflang="zh-Hant-TW" data-language-link>繁體中文（台灣）</a></nav><!-- locale-switch:end --></div></header>
+<main id="main" class="editorial-container page-content paper-explainer">
+<section class="page-intro paper-intro"><a class="back-link" href="../#onion">← <span>Усі дослідження</span></a><p class="editorial-eyebrow">Пояснення роботи</p>
+<div class="paper-meta"><span class="tag"><time datetime="2025-06">Червень 2025</time></span><span class="tag">HILDA 2025</span>
+              <span class="tag">Партисипативне ER-моделювання</span>
+            </div><h1 lang="en"><span lang="en">ONION: A Multi-Layered Framework for Participatory ER Design</span></h1><p class="paper-authors" lang="en">
+              Viktoriia Makovska, <a href="https://gfletche.win.tue.nl/" target="_blank" rel="noopener">George Fletcher</a>,
+              <a href="https://stoyanovich.org/" target="_blank" rel="noopener">Julia Stoyanovich</a>
+            </p><p class="lead-copy">Як людям упізнати власні потреби у формальній моделі даних?</p>
+<nav class="detail-links" aria-label="Пояснення роботи"><a href="#question">Питання</a><a href="#approach">Візуальне пояснення</a><a href="#findings">Внесок роботи</a><a href="#sources">Читати джерело</a></nav></section>
+<section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">Питання</p><h2 id="question-title">Навіщо ця робота</h2></div></div><p class="explanation-copy">ONION організовує партисипативне ER-проєктування у п’ять етапів. Відкриті розповіді учасників переходять у структуровану модель із можливістю перевірити, чи не втрачено важливе під час технічного узагальнення.</p></section>
+<section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">Підхід</p><h2 id="approach-title">Візуальне пояснення</h2></div></div><figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">Від життєвого досвіду до формальної моделі</h3><ol class="method-diagram diagram-onion"><li><span class="diagram-index" aria-hidden="true">01</span><h3>Observe · Спостерігати</h3><p>Зібрати відкриті описи потреб і досвіду.</p></li><li><span class="diagram-index" aria-hidden="true">02</span><h3>Nurture · Плекати</h3><p>Розвинути спільні історії та ескізи.</p></li><li><span class="diagram-index" aria-hidden="true">03</span><h3>Інтегрувати</h3><p>Перетворити внески на чернетку ER-моделі.</p></li><li><span class="diagram-index" aria-hidden="true">04</span><h3>Optimize · Уточнити</h3><p>Перевірити чернетку з учасниками та уточнити її.</p></li><li><span class="diagram-index" aria-hidden="true">05</span><h3>Normalize · Формалізувати</h3><p>Створити стандартну ER-модель із зовнішньою технічною перевіркою.</p></li></ol><figcaption>П’ять етапів ONION показано як поступову формалізацію. Учасники перевіряють чернетку до зовнішньої технічної оцінки. Форма є концептуальною, а не мірою збереженої інформації. <span class="figure-source"><a href="https://arxiv.org/html/2507.08702">Розділи 3–6</a></span></figcaption></figure></section>
+<section class="explainer-section" id="findings" aria-labelledby="findings-title"><div class="section-heading"><h2 id="findings-title">Внесок роботи</h2></div><p class="explanation-copy">Воркшопи з Donor UA та Волонтерською лабораторією УКУ виявили непомічені зв’язки й «невидимі» сутності. Учасники простежували свої внески в підсумкових моделях і описували зміни в розумінні інших ролей.</p><p class="source-note"><a href="https://arxiv.org/html/2507.08702">Розділи 3–6</a></p><aside class="evidence-note" aria-labelledby="limits-title"><h3 id="limits-title">Докази та межі</h3><p>Докази походять із невеликих фасилітованих досліджень випадків. Інклюзивність залежить від добору учасників, групової динаміки й навичок фасилітатора. Робота не встановлює універсального або кількісного зменшення упереджень проєктувальника.</p></aside></section>
+<section class="explainer-section" id="sources" aria-labelledby="sources-title"><div class="section-heading"><h2 id="sources-title">Оригінальна робота й ресурси</h2></div><p class="paper-venue">
+              У збірнику <em><span lang="en">Proceedings of the Workshop on Human-In-the-Loop Data Analytics (HILDA '25)</span></em>, 22 червня 2025, Берлін, Німеччина.
+            </p><div class="paper-links">
+              <a class="paper-link" href="https://dl.acm.org/doi/10.1145/3736733.3736736" target="_blank" rel="noopener">DOI</a>
+              <a class="paper-link" href="https://arxiv.org/abs/2507.08702" target="_blank" rel="noopener">arXiv</a>
+              <a class="paper-link" href="https://arxiv.org/pdf/2507.08702" target="_blank" rel="noopener">PDF</a>
+            </div><details class="paper-details">
+              <summary>Цитування</summary>
+              <div class="copy-row">
+                <button class="copy-button" data-copy-target="cite-onion">Копіювати цитування</button>
+              </div>
+              <pre class="paper-citation" id="cite-onion" lang="en">Makovska, V., Fletcher, G., &amp; Stoyanovich, J. (2025). ONION: A Multi-Layered Framework for Participatory ER Design. In Proceedings of the Workshop on Human-In-the-Loop Data Analytics (HILDA '25). https://doi.org/10.1145/3736733.3736736</pre>
+            </details><details class="paper-details">
+              <summary>BibTeX</summary>
+              <div class="copy-row">
+                <button class="copy-button" data-copy-target="bib-onion">Копіювати BibTeX</button>
+              </div>
+              <pre class="paper-citation" id="bib-onion" lang="en">@inproceedings{Makovska2025ONION,
+  author = {Makovska, Viktoriia and Fletcher, George and Stoyanovich, Julia},
+  title = {ONION: A Multi-Layered Framework for Participatory ER Design},
+  booktitle = {Proceedings of the Workshop on Human-In-the-Loop Data Analytics (HILDA '25)},
+  year = {2025},
+  doi = {10.1145/3736733.3736736}
+}</pre>
+            </details></section>
+<section class="explainer-section" id="related" aria-labelledby="related-title"><div class="section-heading"><div><p class="section-marker">Досліджувати далі</p><h2 id="related-title">Пов’язані роботи</h2></div></div><div class="related-papers"><a href="../garlic/"><span lang="en">Seasoning Data Modeling Education with GARLIC: A Participatory Co-Design Framework </span><span aria-hidden="true">↗</span></a><a href="../memory-undone/"><span lang="en">Memory Undone: Between Knowing and Not Knowing in Data Systems </span><span aria-hidden="true">↗</span></a></div></section></main><footer class="editorial-footer"><div class="editorial-container footer-grid">
+<div><p class="footer-name">Вікторія Маковська</p><p>Аспірантка · Український католицький університет<br>Інженерка-дослідниця · Lapa LLM</p></div>
+<div class="footer-links" aria-label="Контакти та профілі">
+<a href="mailto:makovska.pn@ucu.edu.ua">Електронна пошта</a>
+<a href="https://scholar.google.com/citations?user=UUR3TbAAAAAJ&amp;hl=en">Google Scholar</a>
+<a href="https://orcid.org/0009-0003-7622-9143">ORCID</a>
+<a href="https://apps.ucu.edu.ua/en/teachers/viktoriia-makovska/">Профіль УКУ</a>
+<a href="https://www.researchgate.net/profile/Viktoriia-Makovska">ResearchGate</a>
+<a href="https://openreview.net/profile?id=%7EViktoriia_Makovska1">OpenReview</a>
+<a href="https://github.com/reirei-00">GitHub</a>
+<a href="https://huggingface.co/reirei01">Hugging Face</a>
+<a href="https://www.linkedin.com/in/victoriadiachenko/">LinkedIn</a>
+<a href="https://t.me/forgetting_machines">Telegram · @forgetting_machines</a>
+</div></div></footer>
+
+<script src="../../../assets/js/copy.js" defer></script>
+</body>
+</html>

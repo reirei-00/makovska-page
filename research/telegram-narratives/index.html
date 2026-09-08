@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How do you follow a narrative when it is paraphrased and reposted?">
+<title>Graph-Based Detection of Disinformation Narrative Diffusion between Russian and Ukrainian Telegram Channels</title>
+<link rel="canonical" href="https://reirei-00.github.io/makovska-page/research/telegram-narratives/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/papers.css"><!-- locale-head:start -->
+<link rel="alternate" hreflang="en" href="https://reirei-00.github.io/makovska-page/research/telegram-narratives/">
+<link rel="alternate" hreflang="uk" href="https://reirei-00.github.io/makovska-page/uk/research/telegram-narratives/">
+<link rel="alternate" hreflang="zh-Hant-TW" href="https://reirei-00.github.io/makovska-page/zh-tw/research/telegram-narratives/">
+<link rel="alternate" hreflang="x-default" href="https://reirei-00.github.io/makovska-page/research/telegram-narratives/">
+<script src="../../assets/js/languages.js" defer></script>
+<!-- locale-head:end --></head>
+<body class="editorial-home" id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="editorial-header"><div class="editorial-container header-inner">
+<a class="wordmark" href="../../about/" aria-label="Viktoriia Makovska home">VM<span aria-hidden="true">.</span></a>
+<nav class="editorial-nav" aria-label="Primary navigation"><a href="../../about/">About</a>
+<a href="../" aria-current="page">Research</a>
+<a href="../../teaching/">Teaching</a>
+<a href="../../media/">Talks & Media</a>
+<a href="../../assets/cv/viktoriia_makovska_cv.pdf">CV <span class="file-label">PDF</span></a>
+</nav><!-- locale-switch:start --><nav class="language-switch" aria-label="Language"><a href="./" lang="en" hreflang="en" data-language-link aria-current="true">English</a><a href="../../uk/research/telegram-narratives/" lang="uk" hreflang="uk" data-language-link>Українська</a><a href="../../zh-tw/research/telegram-narratives/" lang="zh-Hant-TW" hreflang="zh-Hant-TW" data-language-link>繁體中文（台灣）</a></nav><!-- locale-switch:end --></div></header>
+<main id="main" class="editorial-container page-content paper-explainer">
+<section class="page-intro paper-intro"><a class="back-link" href="../#telegram-narratives">← <span>All research</span></a><p class="editorial-eyebrow">Paper explained</p>
+<div class="paper-meta"><span class="tag"><time datetime="2026-05">May 2026</time></span><span class="tag">UNLP 2026</span>
+              <span class="tag">ACL Anthology</span>
+              <span class="tag">Disinformation analysis</span>
+            </div><h1 lang="en">Graph-Based Detection of Disinformation Narrative Diffusion between Russian and Ukrainian Telegram Channels</h1><p class="paper-authors">
+              Yuliia Vistak, Viktoriia Makovska, Vera Schmitt, Veronika Solopova
+            </p><p class="lead-copy">How do you follow a narrative when it is paraphrased and reposted?</p>
+<nav class="detail-links" aria-label="Paper explained"><a href="#question">The question</a><a href="#approach">A visual guide</a><a href="#findings">What the work contributes</a><a href="#sources">Read the source</a></nav></section>
+<section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">The question</p><h2 id="question-title">Why this work</h2></div></div><p class="explanation-copy">Individual messages reveal only part of a disinformation campaign. This paper combines narrative labels with graph structure to examine how related claims circulate between Russian and Ukrainian Telegram channels.</p></section>
+<section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">The approach</p><h2 id="approach-title">A visual guide</h2></div></div><figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">Two ways to see a connection</h3><div class="network-map" aria-hidden="true"><svg viewBox="0 0 720 190" focusable="false"><path class="edge-recorded" d="M110 50 L330 140 L600 50"/><path class="edge-semantic" d="M110 50 L600 50 M330 140 L600 140"/></svg><span class="node node-a">Channel A</span><span class="node node-b">Channel B</span><span class="node node-c">Channel C</span><span class="node node-d">Channel D</span></div><div class="network-key"><span>Recorded forwarding</span><span>Semantic similarity</span></div><ol class="method-diagram diagram-network"><li><span class="diagram-index" aria-hidden="true">01</span><h3>Messages</h3><p>Collect public posts and forwarding metadata.</p></li><li><span class="diagram-index" aria-hidden="true">02</span><h3>Narrative labels</h3><p>Assign related claims to a narrative inventory using weak supervision.</p></li><li><span class="diagram-index" aria-hidden="true">03</span><h3>Explicit forwards</h3><p>Use recorded source-channel links.</p></li><li><span class="diagram-index" aria-hidden="true">04</span><h3>Semantic links</h3><p>Find similar messages across channels even without a forward label.</p></li></ol><figcaption>Schematic network, not observed channel data. Solid links represent recorded forwarding; dashed links represent semantic similarity. <span class="figure-source"><a href="https://aclanthology.org/2026.unlp-1.9.pdf">Sections 3–5 and Limitations</a></span></figcaption></figure></section>
+<section class="explainer-section" id="findings" aria-labelledby="findings-title"><div class="section-heading"><h2 id="findings-title">What the work contributes</h2></div><p class="explanation-copy">Semantic links expose repost-like connections that native forwarding metadata misses. The two graph layers give different views of channel connectivity, revealing why tracking explicit forwards alone can understate narrative circulation.</p><p class="source-note"><a href="https://aclanthology.org/2026.unlp-1.9.pdf">Sections 3–5 and Limitations</a></p><aside class="evidence-note" aria-labelledby="limits-title"><h3 id="limits-title">Evidence &amp; limits</h3><p>Weak labels can be wrong and narrative categories change over time. A semantic connection suggests related content; it does not establish who copied whom or prove coordination. The framework supports research and human review.</p></aside></section>
+<section class="explainer-section" id="sources" aria-labelledby="sources-title"><div class="section-heading"><h2 id="sources-title">Original paper &amp; resources</h2></div><p class="paper-venue">
+              In <em>Proceedings of the Fifth Ukrainian Natural Language Processing Conference (UNLP 2026)</em>,
+              pages 80-96, Lviv, Ukraine. Association for Computational Linguistics.
+            </p><div class="paper-links">
+              <a class="paper-link" href="https://aclanthology.org/2026.unlp-1.9/" target="_blank" rel="noopener">ACL Anthology</a>
+              <a class="paper-link" href="https://aclanthology.org/2026.unlp-1.9.pdf" target="_blank" rel="noopener">PDF</a>
+            </div><details class="paper-details">
+              <summary>Citation</summary>
+              <div class="copy-row">
+                <button class="copy-button" data-copy-target="cite-graph-disinformation">Copy citation</button>
+              </div>
+              <pre class="paper-citation" id="cite-graph-disinformation">Vistak, Y., Makovska, V., Schmitt, V., &amp; Solopova, V. (2026). Graph-Based Detection of Disinformation Narrative Diffusion between Russian and Ukrainian Telegram Channels. In Proceedings of the Fifth Ukrainian Natural Language Processing Conference (UNLP 2026), 80-96. Association for Computational Linguistics. https://aclanthology.org/2026.unlp-1.9/</pre>
+            </details><details class="paper-details">
+              <summary>BibTeX</summary>
+              <div class="copy-row">
+                <button class="copy-button" data-copy-target="bib-graph-disinformation">Copy BibTeX</button>
+              </div>
+              <pre class="paper-citation" id="bib-graph-disinformation">@inproceedings{vistak-etal-2026-graph,
+  title = {Graph-Based Detection of Disinformation Narrative Diffusion between {R}ussian and {U}krainian {T}elegram Channels},
+  author = {Vistak, Yuliia and Makovska, Viktoriia and Schmitt, Vera and Solopova, Veronika},
+  booktitle = {Proceedings of the Fifth {U}krainian Natural Language Processing Conference ({UNLP} 2026)},
+  year = {2026},
+  address = {Lviv, Ukraine},
+  publisher = {Association for Computational Linguistics},
+  pages = {80--96},
+  url = {https://aclanthology.org/2026.unlp-1.9/}
+}</pre>
+            </details></section>
+<section class="explainer-section" id="related" aria-labelledby="related-title"><div class="section-heading"><div><p class="section-marker">Continue exploring</p><h2 id="related-title">Related work</h2></div></div><div class="related-papers"><a href="../vandalism-propaganda/">Vandalism or Propaganda? Enhancing Vandalism Detection in Ukrainian and Russian Wikipedia through Knowledge Manipulation Filtering <span aria-hidden="true">↗</span></a><a href="../masters-thesis/">Vandalism or Knowledge Manipulation? Detecting Narratives in Wikipedia Edits <span aria-hidden="true">↗</span></a></div></section></main><footer class="editorial-footer"><div class="editorial-container footer-grid">
+<div><p class="footer-name">Viktoriia Makovska</p><p>PhD researcher · Ukrainian Catholic University<br>Research Engineer · Lapa LLM</p></div>
+<div class="footer-links" aria-label="Contact and profiles">
+<a href="mailto:makovska.pn@ucu.edu.ua">Email</a>
+<a href="https://scholar.google.com/citations?user=UUR3TbAAAAAJ&amp;hl=en">Google Scholar</a>
+<a href="https://orcid.org/0009-0003-7622-9143">ORCID</a>
+<a href="https://apps.ucu.edu.ua/en/teachers/viktoriia-makovska/">UCU profile</a>
+<a href="https://www.researchgate.net/profile/Viktoriia-Makovska">ResearchGate</a>
+<a href="https://openreview.net/profile?id=%7EViktoriia_Makovska1">OpenReview</a>
+<a href="https://github.com/reirei-00">GitHub</a>
+<a href="https://huggingface.co/reirei01">Hugging Face</a>
+<a href="https://www.linkedin.com/in/victoriadiachenko/">LinkedIn</a>
+<a href="https://t.me/forgetting_machines">Telegram · @forgetting_machines</a>
+</div></div></footer>
+
+<script src="../../assets/js/copy.js" defer></script>
+</body>
+</html>

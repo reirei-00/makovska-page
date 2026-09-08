@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="如何讓多語言模型更有效率地使用烏克蘭語？">
+<title>Data-Efficient Adaptation of Multilingual LLMs to Ukrainian</title>
+<link rel="canonical" href="https://reirei-00.github.io/makovska-page/zh-tw/research/ukrainian-llms/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<link rel="stylesheet" href="../../../assets/css/papers.css"><!-- locale-head:start -->
+<link rel="alternate" hreflang="en" href="https://reirei-00.github.io/makovska-page/research/ukrainian-llms/">
+<link rel="alternate" hreflang="uk" href="https://reirei-00.github.io/makovska-page/uk/research/ukrainian-llms/">
+<link rel="alternate" hreflang="zh-Hant-TW" href="https://reirei-00.github.io/makovska-page/zh-tw/research/ukrainian-llms/">
+<link rel="alternate" hreflang="x-default" href="https://reirei-00.github.io/makovska-page/research/ukrainian-llms/">
+<script src="../../../assets/js/languages.js" defer></script>
+<!-- locale-head:end --></head>
+<body class="editorial-home" id="top">
+<a class="skip-link" href="#main">跳至主要內容</a>
+<header class="editorial-header"><div class="editorial-container header-inner">
+<a class="wordmark" href="../../about/" aria-label="Viktoriia Makovska 首頁">VM<span aria-hidden="true">.</span></a>
+<nav class="editorial-nav" aria-label="主要導覽"><a href="../../about/">關於我</a>
+<a href="../" aria-current="page">研究</a>
+<a href="../../teaching/">教學</a>
+<a href="../../media/">演講與媒體</a>
+<a href="../../../assets/cv/viktoriia_makovska_cv.pdf">履歷（英文） <span class="file-label">PDF</span></a>
+</nav><!-- locale-switch:start --><nav class="language-switch" aria-label="語言"><a href="../../../research/ukrainian-llms/" lang="en" hreflang="en" data-language-link>English</a><a href="../../../uk/research/ukrainian-llms/" lang="uk" hreflang="uk" data-language-link>Українська</a><a href="./" lang="zh-Hant-TW" hreflang="zh-Hant-TW" data-language-link aria-current="true">繁體中文（台灣）</a></nav><!-- locale-switch:end --></div></header>
+<main id="main" class="editorial-container page-content paper-explainer">
+<section class="page-intro paper-intro"><a class="back-link" href="../#ukrainian-llms">← <span>所有研究</span></a><p class="editorial-eyebrow">論文導讀</p>
+<div class="paper-meta"><span class="tag"><time datetime="2026-05">2026年5月</time></span><span class="tag">UNLP 2026</span>
+              <span class="tag">ACL Anthology</span>
+              <span class="tag">烏克蘭語 LLM</span>
+            </div><h1 lang="en"><span lang="en">Data-Efficient Adaptation of Multilingual LLMs to Ukrainian</span></h1><p class="paper-authors" lang="en">
+              Yurii Paniv, Bohdan Didenko, Mykola Haltiuk, Vladyslav Humennyy, Andrian Kravchenko,
+              Roman Kyslyi, Viktoriia Makovska, Artem Orlovskyi, Bohdan Ruban, Maksym-Yurii Rudko,
+              Anastasiia Senyk, Nazarii Drushchak, Dmytro Chaplynskyi, Mariana Romanyshyn
+            </p><p class="lead-copy">如何讓多語言模型更有效率地使用烏克蘭語？</p>
+<nav class="detail-links" aria-label="論文導讀"><a href="#question">研究問題</a><a href="#approach">視覺導讀</a><a href="#findings">研究貢獻</a><a href="#sources">閱讀原文</a></nav></section>
+<section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">研究問題</p><h2 id="question-title">研究動機</h2></div></div><p class="explanation-copy">模型在地化不只是翻譯提示。這篇論文以 Gemma-3-12B 為例，提出可重現的流程，處理斷詞效率不佳、高品質資料不足及指令樣本稀缺等問題。</p></section>
+<section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">研究方法</p><h2 id="approach-title">視覺導讀</h2></div></div><figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">資料流程的三項改進</h3><ol class="method-diagram diagram-pipeline"><li><span class="diagram-index" aria-hidden="true">01</span><h3>詞彙表調整</h3><p>改善烏克蘭語斷詞，不必從頭訓練整個模型。</p></li><li><span class="diagram-index" aria-hidden="true">02</span><h3>品質篩選</h3><p>透過翻譯資料，跨語言移轉品質判別能力。</p></li><li><span class="diagram-index" aria-hidden="true">03</span><h3>指令資料</h3><p>結合翻譯、任務轉換與針對性合成。</p></li></ol><div class="result-chart"><h3>相同文字，更少 token</h3><p class="figure-note">相對 token 用量 · 調適後模型 = 1</p><div class="result-row"><span>原始模型</span><div class="result-track"><span style="width:100.0000%"></span></div><strong>1.5</strong></div><div class="result-row"><span>調適後模型</span><div class="result-track"><span style="width:66.6667%"></span></div><strong>1</strong></div></div><figcaption>模型在地化概念流程。下方的斷詞比較呈現論文報告的比例，並非某個例句的實測值。 <span class="figure-source"><a href="https://aclanthology.org/2026.unlp-1.14.pdf">摘要與第 3–10 節</a></span></figcaption></figure></section>
+<section class="explainer-section" id="findings" aria-labelledby="findings-title"><div class="section-heading"><h2 id="findings-title">研究貢獻</h2></div><p class="explanation-copy">改良後的模型處理相同文字約需原模型三分之二的 token；論文報告原模型的用量約為其 1.5 倍。研究亦呈現良好的烏克蘭語基準與指令任務結果，並釋出模型、資料、分類器及程式碼。</p><p class="source-note"><a href="https://aclanthology.org/2026.unlp-1.14.pdf">摘要與第 3–10 節</a></p><aside class="evidence-note" aria-labelledby="limits-title"><h3 id="limits-title">證據與限制</h3><p>這套流程以烏克蘭語為案例進行評估。token 節省量並不直接等於延遲或成本降幅；套用到其他語言仍須驗證。</p></aside></section>
+<section class="explainer-section" id="sources" aria-labelledby="sources-title"><div class="section-heading"><h2 id="sources-title">原始論文與資源</h2></div><p class="paper-venue">
+              收錄於 <em><span lang="en">Proceedings of the Fifth Ukrainian Natural Language Processing Conference (UNLP 2026)</span></em>，第 155–168 頁，烏克蘭利維夫。計算語言學協會。
+            </p><div class="paper-links">
+              <a class="paper-link" href="https://aclanthology.org/2026.unlp-1.14/" target="_blank" rel="noopener">ACL Anthology</a>
+              <a class="paper-link" href="https://aclanthology.org/2026.unlp-1.14.pdf" target="_blank" rel="noopener">PDF</a>
+            </div><details class="paper-details">
+              <summary>引用</summary>
+              <div class="copy-row">
+                <button class="copy-button" data-copy-target="cite-ukrainian-llm-adaptation">複製引用</button>
+              </div>
+              <pre class="paper-citation" id="cite-ukrainian-llm-adaptation" lang="en">Paniv, Y., Didenko, B., Haltiuk, M., Humennyy, V., Kravchenko, A., Kyslyi, R., Makovska, V., Orlovskyi, A., Ruban, B., Rudko, M.-Y., Senyk, A., Drushchak, N., Chaplynskyi, D., &amp; Romanyshyn, M. (2026). Data-Efficient Adaptation of Multilingual LLMs to Ukrainian. In Proceedings of the Fifth Ukrainian Natural Language Processing Conference (UNLP 2026), 155-168. Association for Computational Linguistics. https://aclanthology.org/2026.unlp-1.14/</pre>
+            </details><details class="paper-details">
+              <summary>BibTeX</summary>
+              <div class="copy-row">
+                <button class="copy-button" data-copy-target="bib-ukrainian-llm-adaptation">複製 BibTeX</button>
+              </div>
+              <pre class="paper-citation" id="bib-ukrainian-llm-adaptation" lang="en">@inproceedings{paniv-etal-2026-data,
+  title = {Data-Efficient Adaptation of Multilingual {LLM}s to {U}krainian},
+  author = {Paniv, Yurii and Didenko, Bohdan and Haltiuk, Mykola and Humennyy, Vladyslav and Kravchenko, Andrian and Kyslyi, Roman and Makovska, Viktoriia and Orlovskyi, Artem and Ruban, Bohdan and Rudko, Maksym-Yurii and Senyk, Anastasiia and Drushchak, Nazarii and Chaplynskyi, Dmytro and Romanyshyn, Mariana},
+  booktitle = {Proceedings of the Fifth {U}krainian Natural Language Processing Conference ({UNLP} 2026)},
+  year = {2026},
+  address = {Lviv, Ukraine},
+  publisher = {Association for Computational Linguistics},
+  pages = {155--168},
+  url = {https://aclanthology.org/2026.unlp-1.14/}
+}</pre>
+            </details></section>
+<section class="explainer-section" id="related" aria-labelledby="related-title"><div class="section-heading"><div><p class="section-marker">繼續探索</p><h2 id="related-title">相關研究</h2></div></div><div class="related-papers"><a href="../nlp-education/"><span lang="en">Bridging Applied Experience and Research Contexts in Ukrainian NLP Education </span><span aria-hidden="true">↗</span></a><a href="../lens/"><span lang="en">Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS </span><span aria-hidden="true">↗</span></a></div></section></main><footer class="editorial-footer"><div class="editorial-container footer-grid">
+<div><p class="footer-name">Viktoriia Makovska</p><p>博士生 · 烏克蘭天主教大學<br>研究工程師 · Lapa LLM</p></div>
+<div class="footer-links" aria-label="聯絡方式與個人檔案">
+<a href="mailto:makovska.pn@ucu.edu.ua">電子郵件</a>
+<a href="https://scholar.google.com/citations?user=UUR3TbAAAAAJ&amp;hl=en">Google Scholar</a>
+<a href="https://orcid.org/0009-0003-7622-9143">ORCID</a>
+<a href="https://apps.ucu.edu.ua/en/teachers/viktoriia-makovska/">UCU 個人頁面</a>
+<a href="https://www.researchgate.net/profile/Viktoriia-Makovska">ResearchGate</a>
+<a href="https://openreview.net/profile?id=%7EViktoriia_Makovska1">OpenReview</a>
+<a href="https://github.com/reirei-00">GitHub</a>
+<a href="https://huggingface.co/reirei01">Hugging Face</a>
+<a href="https://www.linkedin.com/in/victoriadiachenko/">LinkedIn</a>
+<a href="https://t.me/forgetting_machines">Telegram · @forgetting_machines</a>
+</div></div></footer>
+
+<script src="../../../assets/js/copy.js" defer></script>
+</body>
+</html>

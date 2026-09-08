@@ -1,1 +1,9 @@
 .DS_Store
+
+# Local previews and generated Python caches.
+.local-serve/
+__pycache__/
+*.py[cod]
+
+# Internal research and review notes; site maintenance is in locales/README.md.
+/docs/website-review.md

@@ -1,5 +1,17 @@
 (function () {
+  var labels = {
+    en: { copied: "Copied!", failed: "Copy failed", manual: "Copy failed. Select the text to copy it manually." },
+    uk: { copied: "Скопійовано!", failed: "Не вдалося скопіювати", manual: "Не вдалося скопіювати. Виділіть текст і скопіюйте його вручну." },
+    "zh-Hant-TW": { copied: "已複製！", failed: "複製失敗", manual: "複製失敗。請選取文字並手動複製。" }
+  };
+  var messages = labels[document.documentElement.lang] || labels.en;
+  var feedback = document.createElement("span");
+  feedback.className = "visually-hidden";
+  feedback.setAttribute("role", "status");
+  document.body.appendChild(feedback);
+
   function setFeedback(btn, message) {
+    feedback.textContent = message;
     var original = btn.getAttribute("data-original-label");
     if (!original) {
       btn.setAttribute("data-original-label", btn.textContent);
@@ -24,20 +36,20 @@
       selection.removeAllRanges();
       selection.addRange(range);
       try {
-        document.execCommand("copy");
-        if (btn) setFeedback(btn, "Copied!");
+        if (!document.execCommand("copy")) throw new Error("Copy unavailable");
+        if (btn) setFeedback(btn, messages.copied);
       } catch (err) {
-        if (btn) setFeedback(btn, "Copy failed");
+        if (btn) setFeedback(btn, messages.failed);
       }
       selection.removeAllRanges();
       return;
     }
     navigator.clipboard.writeText(text).then(
       function () {
-        if (btn) setFeedback(btn, "Copied!");
+        if (btn) setFeedback(btn, messages.copied);
       },
       function () {
-        if (btn) setFeedback(btn, "Copy failed");
+        if (btn) setFeedback(btn, messages.failed);
       }
     );
   }
@@ -54,7 +66,7 @@
         document.body.appendChild(temp);
         temp.select();
         try {
-          document.execCommand("copy");
+          if (!document.execCommand("copy")) throw new Error("Copy unavailable");
           document.body.removeChild(temp);
           resolve();
         } catch (err) {
@@ -117,18 +129,15 @@
           if (role === "icon") {
             setIconFeedback(el);
           } else {
-            setInlineFeedback(el, "Copied!");
+            setInlineFeedback(el, messages.copied);
           }
           icons.forEach(function (icon) {
             setIconFeedback(icon);
           });
         },
         function () {
-          if (role === "icon") {
-            setIconFeedback(el);
-          } else {
-            setInlineFeedback(el, "Copy failed");
-          }
+          setInlineFeedback(el, messages.failed);
+          feedback.textContent = messages.manual;
         }
       );
     });

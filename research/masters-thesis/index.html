@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="What can manipulation signals add to a vandalism detector?">
+<title>Vandalism or Knowledge Manipulation? Detecting Narratives in Wikipedia Edits</title>
+<link rel="canonical" href="https://reirei-00.github.io/makovska-page/research/masters-thesis/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/papers.css"><!-- locale-head:start -->
+<link rel="alternate" hreflang="en" href="https://reirei-00.github.io/makovska-page/research/masters-thesis/">
+<link rel="alternate" hreflang="uk" href="https://reirei-00.github.io/makovska-page/uk/research/masters-thesis/">
+<link rel="alternate" hreflang="zh-Hant-TW" href="https://reirei-00.github.io/makovska-page/zh-tw/research/masters-thesis/">
+<link rel="alternate" hreflang="x-default" href="https://reirei-00.github.io/makovska-page/research/masters-thesis/">
+<script src="../../assets/js/languages.js" defer></script>
+<!-- locale-head:end --></head>
+<body class="editorial-home" id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="editorial-header"><div class="editorial-container header-inner">
+<a class="wordmark" href="../../about/" aria-label="Viktoriia Makovska home">VM<span aria-hidden="true">.</span></a>
+<nav class="editorial-nav" aria-label="Primary navigation"><a href="../../about/">About</a>
+<a href="../" aria-current="page">Research</a>
+<a href="../../teaching/">Teaching</a>
+<a href="../../media/">Talks & Media</a>
+<a href="../../assets/cv/viktoriia_makovska_cv.pdf">CV <span class="file-label">PDF</span></a>
+</nav><!-- locale-switch:start --><nav class="language-switch" aria-label="Language"><a href="./" lang="en" hreflang="en" data-language-link aria-current="true">English</a><a href="../../uk/research/masters-thesis/" lang="uk" hreflang="uk" data-language-link>Українська</a><a href="../../zh-tw/research/masters-thesis/" lang="zh-Hant-TW" hreflang="zh-Hant-TW" data-language-link>繁體中文（台灣）</a></nav><!-- locale-switch:end --></div></header>
+<main id="main" class="editorial-container page-content paper-explainer">
+<section class="page-intro paper-intro"><a class="back-link" href="../#masters-thesis">← <span>All research</span></a><p class="editorial-eyebrow">Paper explained</p>
+<div class="paper-meta"><span class="tag"><time datetime="2025">2025</time> · Month unspecified</span><span class="tag">Master's thesis</span>
+              <span class="tag">Wikipedia</span>
+            </div><h1 lang="en">Vandalism or Knowledge Manipulation? Detecting Narratives in Wikipedia Edits</h1><p class="paper-authors">Viktoriia Makovska</p><p class="lead-copy">What can manipulation signals add to a vandalism detector?</p>
+<nav class="detail-links" aria-label="Paper explained"><a href="#question">The question</a><a href="#approach">A visual guide</a><a href="#findings">What the work contributes</a><a href="#sources">Read the source</a></nav></section>
+<section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">The question</p><h2 id="question-title">Why this work</h2></div></div><p class="explanation-copy">The thesis develops separate manipulation and vandalism signals, then combines them with revision features. A Russian government-backed Wikipedia fork supplies candidate manipulation examples; Russian and Ukrainian Wikipedia provide the main evaluation setting.</p></section>
+<section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">The approach</p><h2 id="approach-title">A visual guide</h2></div></div><figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">Two signals, one combined prediction</h3><ol class="method-diagram diagram-merge"><li><span class="diagram-index" aria-hidden="true">01</span><h3>Manipulation signal</h3><p>Learn from text changes in the fork.</p></li><li><span class="diagram-index" aria-hidden="true">02</span><h3>Vandalism signal</h3><p>Learn from revision and revert patterns.</p></li><li><span class="diagram-index" aria-hidden="true">03</span><h3>Combine features</h3><p>Add the scores to metadata and semantic features.</p></li><li><span class="diagram-index" aria-hidden="true">04</span><h3>Evaluate</h3><p>Compare predictions, agreement, and calibration.</p></li></ol><div class="result-chart"><h3>Ukrainian news experiment · F1</h3><p class="figure-note">Reported F1, from 0 to 1. Higher is better.</p><div class="result-row"><span>Vandalism features</span><div class="result-track"><span style="width:89.0000%"></span></div><strong>0.89</strong></div><div class="result-row"><span>Manipulation features</span><div class="result-track"><span style="width:82.0000%"></span></div><strong>0.82</strong></div><div class="result-row"><span>Combined features</span><div class="result-track"><span style="width:91.0000%"></span></div><strong>0.91</strong></div></div><figcaption>Schematic of the combined approach. The result chart reproduces Table 5.3 for the separate Ukrainian news dataset; it does not compare Wikipedia test sets. <span class="figure-source"><a href="https://er.ucu.edu.ua/server/api/core/bitstreams/49a948f1-e2fb-48cc-82de-e76acf792bf3/content">Chapters 3, 5–6; Table 5.3</a></span></figcaption></figure></section>
+<section class="explainer-section" id="findings" aria-labelledby="findings-title"><div class="section-heading"><h2 id="findings-title">What the work contributes</h2></div><p class="explanation-copy">Combined signals improved aspects of agreement and calibration in the Wikipedia experiments. On a separate Ukrainian news propaganda dataset, the combined classifier reached F1 0.91, compared with 0.89 using vandalism features and 0.82 using manipulation features alone.</p><p class="source-note"><a href="https://er.ucu.edu.ua/server/api/core/bitstreams/49a948f1-e2fb-48cc-82de-e76acf792bf3/content">Chapters 3, 5–6; Table 5.3</a></p><aside class="evidence-note" aria-labelledby="limits-title"><h3 id="limits-title">Evidence &amp; limits</h3><p>Reverts are imperfect supervision: editors undo changes for many reasons, and subtle manipulation may remain unreverted. The reported models cover two languages. The news results are a separate transfer experiment, not Wikipedia scores.</p></aside></section>
+<section class="explainer-section" id="sources" aria-labelledby="sources-title"><div class="section-heading"><h2 id="sources-title">Original paper &amp; resources</h2></div><p class="paper-venue">Master's thesis, Ukrainian Catholic University, Faculty of Applied Sciences (2025).</p><div class="paper-links">
+              <a class="paper-link" href="https://er.ucu.edu.ua/items/40a7f801-0ecb-4c80-98d4-2257c1462f82" target="_blank" rel="noopener">Repository</a>
+            </div><details class="paper-details">
+              <summary>Citation</summary>
+              <div class="copy-row">
+                <button class="copy-button" data-copy-target="cite-masters-thesis">Copy citation</button>
+              </div>
+              <pre class="paper-citation" id="cite-masters-thesis">Makovska, V. (2025). Vandalism or Knowledge Manipulation? Detecting Narratives in Wikipedia Edits (Master's thesis). Ukrainian Catholic University.</pre>
+            </details></section>
+<section class="explainer-section" id="related" aria-labelledby="related-title"><div class="section-heading"><div><p class="section-marker">Continue exploring</p><h2 id="related-title">Related work</h2></div></div><div class="related-papers"><a href="../vandalism-propaganda/">Vandalism or Propaganda? Enhancing Vandalism Detection in Ukrainian and Russian Wikipedia through Knowledge Manipulation Filtering <span aria-hidden="true">↗</span></a><a href="../telegram-narratives/">Graph-Based Detection of Disinformation Narrative Diffusion between Russian and Ukrainian Telegram Channels <span aria-hidden="true">↗</span></a></div></section></main><footer class="editorial-footer"><div class="editorial-container footer-grid">
+<div><p class="footer-name">Viktoriia Makovska</p><p>PhD researcher · Ukrainian Catholic University<br>Research Engineer · Lapa LLM</p></div>
+<div class="footer-links" aria-label="Contact and profiles">
+<a href="mailto:makovska.pn@ucu.edu.ua">Email</a>
+<a href="https://scholar.google.com/citations?user=UUR3TbAAAAAJ&amp;hl=en">Google Scholar</a>
+<a href="https://orcid.org/0009-0003-7622-9143">ORCID</a>
+<a href="https://apps.ucu.edu.ua/en/teachers/viktoriia-makovska/">UCU profile</a>
+<a href="https://www.researchgate.net/profile/Viktoriia-Makovska">ResearchGate</a>
+<a href="https://openreview.net/profile?id=%7EViktoriia_Makovska1">OpenReview</a>
+<a href="https://github.com/reirei-00">GitHub</a>
+<a href="https://huggingface.co/reirei01">Hugging Face</a>
+<a href="https://www.linkedin.com/in/victoriadiachenko/">LinkedIn</a>
+<a href="https://t.me/forgetting_machines">Telegram · @forgetting_machines</a>
+</div></div></footer>
+
+<script src="../../assets/js/copy.js" defer></script>
+</body>
+</html>

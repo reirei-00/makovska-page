@@ -6,22 +6,19 @@
   --background-color: #ffffff;
   --font-color: #000000;
   --invert-font-color: #ffffff;
-  --primary-color: #2f6f5b;
-  --secondary-color: #3a3d3f;
+  --primary-color: #111111;
+  --secondary-color: #555555;
   --error-color: #d20962;
   --progress-bar-background: #727578;
   --progress-bar-fill: #151515;
-  --code-bg-color: #e8eff2;
+  --code-bg-color: #f0f0ed;
   --block-background-color: #ffffff;
   --page-width: 64em;
 }
 
 body.terminal {
   background-color: var(--background-color);
-  background-image:
-    linear-gradient(rgba(47, 111, 91, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(47, 111, 91, 0.035) 1px, transparent 1px);
-  background-size: 36px 36px;
+  background-image: none;
 }
 
 .top-header {
@@ -533,6 +530,203 @@ body.terminal {
   border: 1px solid var(--secondary-color);
   padding: 10px;
   white-space: pre-wrap;
+}
+
+.kaleidoscope-trigger {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--primary-color);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  justify-content: center;
+  margin-left: 4px;
+  padding: 0 2px;
+  vertical-align: baseline;
+}
+
+.kaleidoscope-trigger span {
+  display: inline-block;
+  font-size: 0.95rem;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.kaleidoscope-trigger:hover span,
+.kaleidoscope-trigger:focus-visible span {
+  transform: rotate(25deg) scale(1.15);
+}
+
+.kaleidoscope-trigger:focus-visible,
+.kaleidoscope-close:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.kaleidoscope-dialog {
+  align-items: center;
+  display: grid;
+  inset: 0;
+  justify-items: center;
+  position: fixed;
+  z-index: 100;
+}
+
+.kaleidoscope-dialog[hidden] {
+  display: none;
+}
+
+.kaleidoscope-backdrop {
+  background: rgba(12, 13, 13, 0.82);
+  inset: 0;
+  position: absolute;
+}
+
+.kaleidoscope-stage {
+  background:
+    linear-gradient(45deg, rgba(255, 255, 255, 0.045) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.045) 75%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.035) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.035) 75%),
+    #161717;
+  background-position: 0 0, 18px 18px, 0 0;
+  background-size: 36px 36px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.48);
+  box-sizing: border-box;
+  color: #f7f7f2;
+  height: min(78vw, 78vh, 680px);
+  overflow: hidden;
+  position: relative;
+  width: min(78vw, 78vh, 680px);
+  z-index: 1;
+}
+
+.kaleidoscope-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  left: 18px;
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  z-index: 2;
+}
+
+.kaleidoscope-header p,
+.kaleidoscope-note {
+  color: rgba(247, 247, 242, 0.76);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.kaleidoscope-close {
+  background: transparent;
+  border: 0;
+  color: #f7f7f2;
+  cursor: pointer;
+  font: 300 1.65rem/1 Arial, sans-serif;
+  height: 28px;
+  padding: 0;
+  width: 28px;
+}
+
+.kaleidoscope-words {
+  inset: 54px 0 50px;
+  position: absolute;
+}
+
+.kaleidoscope-word {
+  color: rgba(247, 247, 242, var(--opacity));
+  font-size: clamp(0.7rem, 1.55vw, 1rem);
+  left: var(--x);
+  letter-spacing: 0.09em;
+  position: absolute;
+  text-transform: uppercase;
+  top: var(--y);
+  transform: translate(-50%, -50%) rotate(var(--rotation));
+  transform-origin: center;
+  white-space: nowrap;
+}
+
+.kaleidoscope-word:nth-child(odd) {
+  color: rgba(201, 205, 202, var(--opacity));
+}
+
+.kaleidoscope-core {
+  align-items: center;
+  border: 1px solid rgba(247, 247, 242, 0.58);
+  border-radius: 50%;
+  color: #f7f7f2;
+  display: flex;
+  font-size: clamp(0.7rem, 1.3vw, 0.9rem);
+  height: 92px;
+  justify-content: center;
+  left: 50%;
+  letter-spacing: 0.12em;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 92px;
+}
+
+.kaleidoscope-core::before,
+.kaleidoscope-core::after {
+  border: 1px solid rgba(247, 247, 242, 0.2);
+  border-radius: 50%;
+  content: "";
+  inset: -18px;
+  position: absolute;
+}
+
+.kaleidoscope-core::after {
+  inset: -40px;
+}
+
+.kaleidoscope-note {
+  bottom: 18px;
+  left: 18px;
+  position: absolute;
+  right: 18px;
+  text-align: center;
+  z-index: 2;
+}
+
+body.has-kaleidoscope {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .kaleidoscope-word {
+    animation: kaleidoscope-drift 8s ease-in-out infinite alternate;
+    animation-delay: var(--delay);
+  }
+
+  .kaleidoscope-core {
+    animation: kaleidoscope-pulse 5s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes kaleidoscope-drift {
+  from {
+    margin-left: -4px;
+    margin-top: 3px;
+  }
+  to {
+    margin-left: 5px;
+    margin-top: -4px;
+  }
+}
+
+@keyframes kaleidoscope-pulse {
+  from {
+    transform: translate(-50%, -50%) scale(0.96);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.04);
+  }
 }
 
 @media (max-width: 900px) {

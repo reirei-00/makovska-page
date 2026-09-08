@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How can a multilingual model use Ukrainian more efficiently?">
+<title>Data-Efficient Adaptation of Multilingual LLMs to Ukrainian</title>
+<link rel="canonical" href="https://reirei-00.github.io/makovska-page/research/ukrainian-llms/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/papers.css"><!-- locale-head:start -->
+<link rel="alternate" hreflang="en" href="https://reirei-00.github.io/makovska-page/research/ukrainian-llms/">
+<link rel="alternate" hreflang="uk" href="https://reirei-00.github.io/makovska-page/uk/research/ukrainian-llms/">
+<link rel="alternate" hreflang="zh-Hant-TW" href="https://reirei-00.github.io/makovska-page/zh-tw/research/ukrainian-llms/">
+<link rel="alternate" hreflang="x-default" href="https://reirei-00.github.io/makovska-page/research/ukrainian-llms/">
+<script src="../../assets/js/languages.js" defer></script>
+<!-- locale-head:end --></head>
+<body class="editorial-home" id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="editorial-header"><div class="editorial-container header-inner">
+<a class="wordmark" href="../../about/" aria-label="Viktoriia Makovska home">VM<span aria-hidden="true">.</span></a>
+<nav class="editorial-nav" aria-label="Primary navigation"><a href="../../about/">About</a>
+<a href="../" aria-current="page">Research</a>
+<a href="../../teaching/">Teaching</a>
+<a href="../../media/">Talks & Media</a>
+<a href="../../assets/cv/viktoriia_makovska_cv.pdf">CV <span class="file-label">PDF</span></a>
+</nav><!-- locale-switch:start --><nav class="language-switch" aria-label="Language"><a href="./" lang="en" hreflang="en" data-language-link aria-current="true">English</a><a href="../../uk/research/ukrainian-llms/" lang="uk" hreflang="uk" data-language-link>Українська</a><a href="../../zh-tw/research/ukrainian-llms/" lang="zh-Hant-TW" hreflang="zh-Hant-TW" data-language-link>繁體中文（台灣）</a></nav><!-- locale-switch:end --></div></header>
+<main id="main" class="editorial-container page-content paper-explainer">
+<section class="page-intro paper-intro"><a class="back-link" href="../#ukrainian-llms">← <span>All research</span></a><p class="editorial-eyebrow">Paper explained</p>
+<div class="paper-meta"><span class="tag"><time datetime="2026-05">May 2026</time></span><span class="tag">UNLP 2026</span>
+              <span class="tag">ACL Anthology</span>
+              <span class="tag">Ukrainian LLMs</span>
+            </div><h1 lang="en">Data-Efficient Adaptation of Multilingual LLMs to Ukrainian</h1><p class="paper-authors">
+              Yurii Paniv, Bohdan Didenko, Mykola Haltiuk, Vladyslav Humennyy, Andrian Kravchenko,
+              Roman Kyslyi, Viktoriia Makovska, Artem Orlovskyi, Bohdan Ruban, Maksym-Yurii Rudko,
+              Anastasiia Senyk, Nazarii Drushchak, Dmytro Chaplynskyi, Mariana Romanyshyn
+            </p><p class="lead-copy">How can a multilingual model use Ukrainian more efficiently?</p>
+<nav class="detail-links" aria-label="Paper explained"><a href="#question">The question</a><a href="#approach">A visual guide</a><a href="#findings">What the work contributes</a><a href="#sources">Read the source</a></nav></section>
+<section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">The question</p><h2 id="question-title">Why this work</h2></div></div><p class="explanation-copy">Adapting a model involves more than translating prompts. This paper addresses inefficient tokenization, limited high-quality data, and scarce instruction examples through a reproducible recipe applied to Gemma-3-12B.</p></section>
+<section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">The approach</p><h2 id="approach-title">A visual guide</h2></div></div><figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">Three changes to the data pipeline</h3><ol class="method-diagram diagram-pipeline"><li><span class="diagram-index" aria-hidden="true">01</span><h3>Vocabulary surgery</h3><p>Improve Ukrainian tokenization without retraining the whole model from scratch.</p></li><li><span class="diagram-index" aria-hidden="true">02</span><h3>Quality filtering</h3><p>Transfer quality signals across languages through translated data.</p></li><li><span class="diagram-index" aria-hidden="true">03</span><h3>Instruction data</h3><p>Combine translation, task conversion, and targeted synthesis.</p></li></ol><div class="result-chart"><h3>Same text, fewer tokens</h3><p class="figure-note">Relative token use · adapted model = 1</p><div class="result-row"><span>Original model</span><div class="result-track"><span style="width:100.0000%"></span></div><strong>1.5</strong></div><div class="result-row"><span>Adapted model</span><div class="result-track"><span style="width:66.6667%"></span></div><strong>1</strong></div></div><figcaption>Conceptual adaptation pipeline. The tokenizer comparison below expresses the reported ratio, not a measured example sentence. <span class="figure-source"><a href="https://aclanthology.org/2026.unlp-1.14.pdf">Abstract and Sections 3–10</a></span></figcaption></figure></section>
+<section class="explainer-section" id="findings" aria-labelledby="findings-title"><div class="section-heading"><h2 id="findings-title">What the work contributes</h2></div><p class="explanation-copy">The adapted model uses about two-thirds as many tokens for the same text as the original model—the paper reports 1.5× fewer tokens. It also reports strong Ukrainian benchmark and instruction-task results, and releases models, data, classifiers, and code.</p><p class="source-note"><a href="https://aclanthology.org/2026.unlp-1.14.pdf">Abstract and Sections 3–10</a></p><aside class="evidence-note" aria-labelledby="limits-title"><h3 id="limits-title">Evidence &amp; limits</h3><p>The recipe is evaluated as a Ukrainian case study. Token savings are not a direct measurement of latency or cost, and transferring the recipe to another language still requires validation.</p></aside></section>
+<section class="explainer-section" id="sources" aria-labelledby="sources-title"><div class="section-heading"><h2 id="sources-title">Original paper &amp; resources</h2></div><p class="paper-venue">
+              In <em>Proceedings of the Fifth Ukrainian Natural Language Processing Conference (UNLP 2026)</em>,
+              pages 155-168, Lviv, Ukraine. Association for Computational Linguistics.
+            </p><div class="paper-links">
+              <a class="paper-link" href="https://aclanthology.org/2026.unlp-1.14/" target="_blank" rel="noopener">ACL Anthology</a>
+              <a class="paper-link" href="https://aclanthology.org/2026.unlp-1.14.pdf" target="_blank" rel="noopener">PDF</a>
+            </div><details class="paper-details">
+              <summary>Citation</summary>
+              <div class="copy-row">
+                <button class="copy-button" data-copy-target="cite-ukrainian-llm-adaptation">Copy citation</button>
+              </div>
+              <pre class="paper-citation" id="cite-ukrainian-llm-adaptation">Paniv, Y., Didenko, B., Haltiuk, M., Humennyy, V., Kravchenko, A., Kyslyi, R., Makovska, V., Orlovskyi, A., Ruban, B., Rudko, M.-Y., Senyk, A., Drushchak, N., Chaplynskyi, D., &amp; Romanyshyn, M. (2026). Data-Efficient Adaptation of Multilingual LLMs to Ukrainian. In Proceedings of the Fifth Ukrainian Natural Language Processing Conference (UNLP 2026), 155-168. Association for Computational Linguistics. https://aclanthology.org/2026.unlp-1.14/</pre>
+            </details><details class="paper-details">
+              <summary>BibTeX</summary>
+              <div class="copy-row">
+                <button class="copy-button" data-copy-target="bib-ukrainian-llm-adaptation">Copy BibTeX</button>
+              </div>
+              <pre class="paper-citation" id="bib-ukrainian-llm-adaptation">@inproceedings{paniv-etal-2026-data,
+  title = {Data-Efficient Adaptation of Multilingual {LLM}s to {U}krainian},
+  author = {Paniv, Yurii and Didenko, Bohdan and Haltiuk, Mykola and Humennyy, Vladyslav and Kravchenko, Andrian and Kyslyi, Roman and Makovska, Viktoriia and Orlovskyi, Artem and Ruban, Bohdan and Rudko, Maksym-Yurii and Senyk, Anastasiia and Drushchak, Nazarii and Chaplynskyi, Dmytro and Romanyshyn, Mariana},
+  booktitle = {Proceedings of the Fifth {U}krainian Natural Language Processing Conference ({UNLP} 2026)},
+  year = {2026},
+  address = {Lviv, Ukraine},
+  publisher = {Association for Computational Linguistics},
+  pages = {155--168},
+  url = {https://aclanthology.org/2026.unlp-1.14/}
+}</pre>
+            </details></section>
+<section class="explainer-section" id="related" aria-labelledby="related-title"><div class="section-heading"><div><p class="section-marker">Continue exploring</p><h2 id="related-title">Related work</h2></div></div><div class="related-papers"><a href="../nlp-education/">Bridging Applied Experience and Research Contexts in Ukrainian NLP Education <span aria-hidden="true">↗</span></a><a href="../lens/">Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS <span aria-hidden="true">↗</span></a></div></section></main><footer class="editorial-footer"><div class="editorial-container footer-grid">
+<div><p class="footer-name">Viktoriia Makovska</p><p>PhD researcher · Ukrainian Catholic University<br>Research Engineer · Lapa LLM</p></div>
+<div class="footer-links" aria-label="Contact and profiles">
+<a href="mailto:makovska.pn@ucu.edu.ua">Email</a>
+<a href="https://scholar.google.com/citations?user=UUR3TbAAAAAJ&amp;hl=en">Google Scholar</a>
+<a href="https://orcid.org/0009-0003-7622-9143">ORCID</a>
+<a href="https://apps.ucu.edu.ua/en/teachers/viktoriia-makovska/">UCU profile</a>
+<a href="https://www.researchgate.net/profile/Viktoriia-Makovska">ResearchGate</a>
+<a href="https://openreview.net/profile?id=%7EViktoriia_Makovska1">OpenReview</a>
+<a href="https://github.com/reirei-00">GitHub</a>
+<a href="https://huggingface.co/reirei01">Hugging Face</a>
+<a href="https://www.linkedin.com/in/victoriadiachenko/">LinkedIn</a>
+<a href="https://t.me/forgetting_machines">Telegram · @forgetting_machines</a>
+</div></div></footer>
+
+<script src="../../assets/js/copy.js" defer></script>
+</body>
+</html>

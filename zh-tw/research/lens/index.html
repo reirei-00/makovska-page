@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="模型不再重複某種敘事時，是遺忘了，還是無法再提供有用的回答？">
+<title>Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS</title>
+<link rel="canonical" href="https://reirei-00.github.io/makovska-page/zh-tw/research/lens/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<link rel="stylesheet" href="../../../assets/css/papers.css"><!-- locale-head:start -->
+<link rel="alternate" hreflang="en" href="https://reirei-00.github.io/makovska-page/research/lens/">
+<link rel="alternate" hreflang="uk" href="https://reirei-00.github.io/makovska-page/uk/research/lens/">
+<link rel="alternate" hreflang="zh-Hant-TW" href="https://reirei-00.github.io/makovska-page/zh-tw/research/lens/">
+<link rel="alternate" hreflang="x-default" href="https://reirei-00.github.io/makovska-page/research/lens/">
+<script src="../../../assets/js/languages.js" defer></script>
+<!-- locale-head:end --></head>
+<body class="editorial-home" id="top">
+<a class="skip-link" href="#main">跳至主要內容</a>
+<header class="editorial-header"><div class="editorial-container header-inner">
+<a class="wordmark" href="../../about/" aria-label="Viktoriia Makovska 首頁">VM<span aria-hidden="true">.</span></a>
+<nav class="editorial-nav" aria-label="主要導覽"><a href="../../about/">關於我</a>
+<a href="../" aria-current="page">研究</a>
+<a href="../../teaching/">教學</a>
+<a href="../../media/">演講與媒體</a>
+<a href="../../../assets/cv/viktoriia_makovska_cv.pdf">履歷（英文） <span class="file-label">PDF</span></a>
+</nav><!-- locale-switch:start --><nav class="language-switch" aria-label="語言"><a href="../../../research/lens/" lang="en" hreflang="en" data-language-link>English</a><a href="../../../uk/research/lens/" lang="uk" hreflang="uk" data-language-link>Українська</a><a href="./" lang="zh-Hant-TW" hreflang="zh-Hant-TW" data-language-link aria-current="true">繁體中文（台灣）</a></nav><!-- locale-switch:end --></div></header>
+<main id="main" class="editorial-container page-content paper-explainer">
+<section class="page-intro paper-intro"><a class="back-link" href="../#lens">← <span>所有研究</span></a><p class="editorial-eyebrow">論文導讀</p>
+<div class="paper-meta"><span class="tag"><time datetime="2026-07">2026年7月</time></span><span class="tag">工作坊發表</span><span class="tag">機器遺忘</span></div><h1 lang="en"><span lang="en">Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS</span></h1><p class="paper-authors" lang="en">Viktoriia Makovska, George Fletcher</p><p class="lead-copy">模型不再重複某種敘事時，是遺忘了，還是無法再提供有用的回答？</p>
+<nav class="detail-links" aria-label="論文導讀"><a href="#question">研究問題</a><a href="#approach">視覺導讀</a><a href="#findings">研究貢獻</a><a href="#sources">閱讀原文</a></nav></section>
+<section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">研究問題</p><h2 id="question-title">研究動機</h2></div></div><p class="explanation-copy">LENS 檢驗機器遺忘後的敘事重現。研究以兩種帶有不實資訊的敘事框架測試四個多語言指令模型，並用不同提問方式探查相同的深層敘事。</p></section>
+<section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">研究方法</p><h2 id="approach-title">視覺導讀</h2></div></div><figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">同一敘事，四種提問情境</h3><ol class="method-diagram diagram-levels"><li><span class="diagram-index" aria-hidden="true">01</span><h3>L0 · 直接</h3><p>直接要求目標敘事的解釋。</p></li><li><span class="diagram-index" aria-hidden="true">02</span><h3>L1 · 引述</h3><p>詢問他人提出的解釋。</p></li><li><span class="diagram-index" aria-hidden="true">03</span><h3>L2 · 對照</h3><p>將目標框架與另一種解釋並列。</p></li><li><span class="diagram-index" aria-hidden="true">04</span><h3>L3 · 抽象</h3><p>隱去行動者名稱，保留因果結構。</p></li></ol><figcaption>LENS 概念圖：L0 提供遺忘樣本，L1–L2 測試效果遷移，L3 探查抽象框架與實體恢復。這些是提問層次，並非量化的難度分數。 <span class="figure-source"><a href="https://arxiv.org/html/2607.22657v2">第 4、6–8 節</a></span></figcaption></figure><section class="score-explorer" id="score" aria-labelledby="score-title">
+<p class="section-marker">示範計算器 · 100 則回答</p><h3 id="score-title">探索抑制分數</h3>
+<p>試著調整數量。這些是假設回答，並非實驗結果。分數獎勵敘事重現的降低，並懲罰品質劣化的回答。</p>
+<div class="score-layout"><div class="score-controls"><label for="sce-before"><span>介入前：敘事重現</span><output id="value-before" for="sce-before">80</output><input id="sce-before" type="range" min="0" max="100" value="80" step="1" disabled></label><label for="sce-after"><span>介入後：仍重現敘事的可用回答</span><output id="value-after" for="sce-after">20</output><input id="sce-after" type="range" min="0" max="90" value="20" step="1" disabled></label><label for="sce-degraded"><span>介入後：品質劣化的回答</span><output id="value-degraded" for="sce-degraded">10</output><input id="sce-degraded" type="range" min="0" max="100" value="10" step="1" disabled></label></div><div class="score-results" aria-live="polite" aria-atomic="true"><p>相對抑制率 <strong id="sce-suppression">75%</strong></p><p>劣化率 <strong id="sce-degradation">10%</strong></p><p>SCE 分數 <strong id="sce-result">0.608</strong></p></div></div>
+<p class="score-formula">SCE = 抑制率 ×（1 − 劣化率）²</p>
+<p class="figure-note">數量受限於 100 則回答。SCE 協助選擇檢查點，並非完全遺忘的證明。</p>
+<noscript>啟用 JavaScript 即可調整範例。目前分數以介入前 80 則重現、介入後 20 則可用重現及 10 則劣化回答計算。</noscript></section></section>
+<section class="explainer-section" id="findings" aria-labelledby="findings-title"><div class="section-heading"><h2 id="findings-title">研究貢獻</h2></div><p class="explanation-copy">選出的檢查點能在直接訓練提示以外降低敘事重現，同時保留有內容的回答。合適的檢查點因模型、語言、敘事與方法而異；抽象提示仍可能喚回相關的真實行動者。</p><p class="source-note"><a href="https://arxiv.org/html/2607.22657v2">第 4、6–8 節</a></p><aside class="evidence-note" aria-labelledby="limits-title"><h3 id="limits-title">證據與限制</h3><p>這是行為診斷，不能證明內部表徵已被抹除。弱標籤有雜訊，效用測試規模有限，完整評估集也包含選擇檢查點用過的提示。L3 的實體恢復與 L0–L2 的抑制結果分開呈現。</p></aside></section>
+<section class="explainer-section" id="sources" aria-labelledby="sources-title"><div class="section-heading"><h2 id="sources-title">原始論文與資源</h2></div><p class="paper-venue">發表於 WIPE-OUT 2（第二屆機器遺忘與隱私保護工作坊），ECML PKDD 2026 · 2026年9月7日 · 義大利那不勒斯。</p><p class="paper-venue">預印本：arXiv:2607.22657 · 2026年7月31日修訂。</p><div class="paper-links"><a href="../../../assets/slides/lens-wipe-out-2026.pdf" type="application/pdf">簡報（PDF，英文） <span aria-hidden="true">↗</span></a><a href="https://aiimlab.org/events/ECML_PKDD_2026_WIPE-OUT_2_Workshop_on_Machine_Unlearning_and_Privacy_Preservation">工作坊議程 <span aria-hidden="true">↗</span></a><a href="https://arxiv.org/abs/2607.22657">arXiv <span aria-hidden="true">↗</span></a><a href="https://arxiv.org/pdf/2607.22657">PDF <span aria-hidden="true">↗</span></a></div><details class="paper-details"><summary>引用</summary><div class="copy-row"><button class="copy-button" data-copy-target="cite-lens">複製引用</button></div><pre class="paper-citation" id="cite-lens" lang="en">Makovska, V., &amp; Fletcher, G. (2026). Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS. arXiv:2607.22657. https://arxiv.org/abs/2607.22657</pre></details><details class="paper-details"><summary>BibTeX</summary><div class="copy-row"><button class="copy-button" data-copy-target="bib-lens">複製 BibTeX</button></div><pre class="paper-citation" id="bib-lens" lang="en">@misc{makovska2026lens,
+  title = {Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS},
+  author = {Makovska, Viktoriia and Fletcher, George},
+  year = {2026},
+  eprint = {2607.22657},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url = {https://arxiv.org/abs/2607.22657}
+}</pre></details></section>
+<section class="explainer-section" id="related" aria-labelledby="related-title"><div class="section-heading"><div><p class="section-marker">繼續探索</p><h2 id="related-title">相關研究</h2></div></div><div class="related-papers"><a href="../phd-proposal/"><span lang="en">Forgetting Machines: Responsibility by Design in Machine Unlearning </span><span aria-hidden="true">↗</span></a><a href="../memory-undone/"><span lang="en">Memory Undone: Between Knowing and Not Knowing in Data Systems </span><span aria-hidden="true">↗</span></a></div></section></main><footer class="editorial-footer"><div class="editorial-container footer-grid">
+<div><p class="footer-name">Viktoriia Makovska</p><p>博士生 · 烏克蘭天主教大學<br>研究工程師 · Lapa LLM</p></div>
+<div class="footer-links" aria-label="聯絡方式與個人檔案">
+<a href="mailto:makovska.pn@ucu.edu.ua">電子郵件</a>
+<a href="https://scholar.google.com/citations?user=UUR3TbAAAAAJ&amp;hl=en">Google Scholar</a>
+<a href="https://orcid.org/0009-0003-7622-9143">ORCID</a>
+<a href="https://apps.ucu.edu.ua/en/teachers/viktoriia-makovska/">UCU 個人頁面</a>
+<a href="https://www.researchgate.net/profile/Viktoriia-Makovska">ResearchGate</a>
+<a href="https://openreview.net/profile?id=%7EViktoriia_Makovska1">OpenReview</a>
+<a href="https://github.com/reirei-00">GitHub</a>
+<a href="https://huggingface.co/reirei01">Hugging Face</a>
+<a href="https://www.linkedin.com/in/victoriadiachenko/">LinkedIn</a>
+<a href="https://t.me/forgetting_machines">Telegram · @forgetting_machines</a>
+</div></div></footer>
+
+<script src="../../../assets/js/copy.js" defer></script>
+<script src="../../../assets/js/paper-explorer.js" defer></script></body>
+</html>

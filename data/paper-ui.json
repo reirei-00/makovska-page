@@ -1,0 +1,252 @@
+[
+  {
+    "en": "Paper explained",
+    "uk": "Пояснення роботи",
+    "zh-Hant-TW": "論文導讀"
+  },
+  {
+    "en": "All research",
+    "uk": "Усі дослідження",
+    "zh-Hant-TW": "所有研究"
+  },
+  {
+    "en": "The question",
+    "uk": "Питання",
+    "zh-Hant-TW": "研究問題"
+  },
+  {
+    "en": "Why this work",
+    "uk": "Навіщо ця робота",
+    "zh-Hant-TW": "研究動機"
+  },
+  {
+    "en": "The approach",
+    "uk": "Підхід",
+    "zh-Hant-TW": "研究方法"
+  },
+  {
+    "en": "A visual guide",
+    "uk": "Візуальне пояснення",
+    "zh-Hant-TW": "視覺導讀"
+  },
+  {
+    "en": "What the work contributes",
+    "uk": "Внесок роботи",
+    "zh-Hant-TW": "研究貢獻"
+  },
+  {
+    "en": "Evidence & limits",
+    "uk": "Докази та межі",
+    "zh-Hant-TW": "證據與限制"
+  },
+  {
+    "en": "Read the source",
+    "uk": "Читати джерело",
+    "zh-Hant-TW": "閱讀原文"
+  },
+  {
+    "en": "Original paper & resources",
+    "uk": "Оригінальна робота й ресурси",
+    "zh-Hant-TW": "原始論文與資源"
+  },
+  {
+    "en": "Continue exploring",
+    "uk": "Досліджувати далі",
+    "zh-Hant-TW": "繼續探索"
+  },
+  {
+    "en": "Related work",
+    "uk": "Пов’язані роботи",
+    "zh-Hant-TW": "相關研究"
+  },
+  {
+    "en": "Source passage",
+    "uk": "Фрагмент джерела",
+    "zh-Hant-TW": "原文段落"
+  },
+  {
+    "en": "Explanation & visuals",
+    "uk": "Пояснення та візуалізації",
+    "zh-Hant-TW": "導讀與圖解"
+  },
+  {
+    "en": "Recorded forwarding",
+    "uk": "Зафіксоване пересилання",
+    "zh-Hant-TW": "有記錄的轉傳"
+  },
+  {
+    "en": "Semantic similarity",
+    "uk": "Семантична подібність",
+    "zh-Hant-TW": "語意相似"
+  },
+  {
+    "en": "Channel A",
+    "uk": "Канал A",
+    "zh-Hant-TW": "頻道 A"
+  },
+  {
+    "en": "Channel B",
+    "uk": "Канал B",
+    "zh-Hant-TW": "頻道 B"
+  },
+  {
+    "en": "Channel C",
+    "uk": "Канал C",
+    "zh-Hant-TW": "頻道 C"
+  },
+  {
+    "en": "Channel D",
+    "uk": "Канал D",
+    "zh-Hant-TW": "頻道 D"
+  },
+  {
+    "en": "Same text, fewer tokens",
+    "uk": "Той самий текст, менше токенів",
+    "zh-Hant-TW": "相同文字，更少 token"
+  },
+  {
+    "en": "Original model",
+    "uk": "Початкова модель",
+    "zh-Hant-TW": "原始模型"
+  },
+  {
+    "en": "Adapted model",
+    "uk": "Адаптована модель",
+    "zh-Hant-TW": "調適後模型"
+  },
+  {
+    "en": "Relative token use · adapted model = 1",
+    "uk": "Відносне використання токенів · адаптована модель = 1",
+    "zh-Hant-TW": "相對 token 用量 · 調適後模型 = 1"
+  },
+  {
+    "en": "Ukrainian news experiment · F1",
+    "uk": "Експеримент на українських новинах · F1",
+    "zh-Hant-TW": "烏克蘭語新聞實驗 · F1"
+  },
+  {
+    "en": "Vandalism features",
+    "uk": "Ознаки вандалізму",
+    "zh-Hant-TW": "破壞特徵"
+  },
+  {
+    "en": "Manipulation features",
+    "uk": "Ознаки маніпуляції",
+    "zh-Hant-TW": "操弄特徵"
+  },
+  {
+    "en": "Combined features",
+    "uk": "Поєднані ознаки",
+    "zh-Hant-TW": "合併特徵"
+  },
+  {
+    "en": "Reported F1, from 0 to 1. Higher is better.",
+    "uk": "F1 зі статті, від 0 до 1. Більше — краще.",
+    "zh-Hant-TW": "論文報告的 F1，範圍為 0 至 1，越高越好。"
+  },
+  {
+    "en": "Explore the suppression score",
+    "uk": "Дослідити оцінку пригнічення",
+    "zh-Hant-TW": "探索抑制分數"
+  },
+  {
+    "en": "Illustrative calculator · 100 responses",
+    "uk": "Навчальний калькулятор · 100 відповідей",
+    "zh-Hant-TW": "示範計算器 · 100 則回答"
+  },
+  {
+    "en": "Try changing the counts. These are hypothetical responses, not experimental results. The score rewards reduced reproduction and penalizes degraded answers.",
+    "uk": "Спробуйте змінити кількості. Це уявні відповіді, а не результати експерименту. Оцінка винагороджує зменшення відтворення й штрафує зіпсовані відповіді.",
+    "zh-Hant-TW": "試著調整數量。這些是假設回答，並非實驗結果。分數獎勵敘事重現的降低，並懲罰品質劣化的回答。"
+  },
+  {
+    "en": "Before: narrative reproduced",
+    "uk": "До: відтворення наративу",
+    "zh-Hant-TW": "介入前：敘事重現"
+  },
+  {
+    "en": "After: usable answers reproducing it",
+    "uk": "Після: змістовні відповіді з наративом",
+    "zh-Hant-TW": "介入後：仍重現敘事的可用回答"
+  },
+  {
+    "en": "After: degraded answers",
+    "uk": "Після: зіпсовані відповіді",
+    "zh-Hant-TW": "介入後：品質劣化的回答"
+  },
+  {
+    "en": "Relative suppression",
+    "uk": "Відносне пригнічення",
+    "zh-Hant-TW": "相對抑制率"
+  },
+  {
+    "en": "Degradation rate",
+    "uk": "Частка зіпсованих відповідей",
+    "zh-Hant-TW": "劣化率"
+  },
+  {
+    "en": "SCE score",
+    "uk": "Оцінка SCE",
+    "zh-Hant-TW": "SCE 分數"
+  },
+  {
+    "en": "SCE = suppression × (1 − degradation)²",
+    "uk": "SCE = пригнічення × (1 − деградація)²",
+    "zh-Hant-TW": "SCE = 抑制率 ×（1 − 劣化率）²"
+  },
+  {
+    "en": "Counts are constrained to 100 responses. SCE is a checkpoint-selection aid, not proof of complete forgetting.",
+    "uk": "Кількості обмежені 100 відповідями. SCE допомагає обирати контрольну точку, а не доводить повне забування.",
+    "zh-Hant-TW": "數量受限於 100 則回答。SCE 協助選擇檢查點，並非完全遺忘的證明。"
+  },
+  {
+    "en": "Enable JavaScript to adjust the example. The displayed score uses 80 before, 20 usable reproductions after, and 10 degraded answers.",
+    "uk": "Увімкніть JavaScript для зміни прикладу. Показана оцінка використовує 80 відтворень до втручання, 20 змістовних відтворень після та 10 зіпсованих відповідей.",
+    "zh-Hant-TW": "啟用 JavaScript 即可調整範例。目前分數以介入前 80 則重現、介入後 20 則可用重現及 10 則劣化回答計算。"
+  },
+  {
+    "en": "Sections 4, 6–8",
+    "uk": "Розділи 4, 6–8",
+    "zh-Hant-TW": "第 4、6–8 節"
+  },
+  {
+    "en": "Sections 3–5 and Limitations",
+    "uk": "Розділи 3–5 та обмеження",
+    "zh-Hant-TW": "第 3–5 節與限制"
+  },
+  {
+    "en": "Abstract and Sections 3–10",
+    "uk": "Анотація та розділи 3–10",
+    "zh-Hant-TW": "摘要與第 3–10 節"
+  },
+  {
+    "en": "Sections 3–5",
+    "uk": "Розділи 3–5",
+    "zh-Hant-TW": "第 3–5 節"
+  },
+  {
+    "en": "Sections 2–4 and Limitations",
+    "uk": "Розділи 2–4 та обмеження",
+    "zh-Hant-TW": "第 2–4 節與限制"
+  },
+  {
+    "en": "Pages 1–3",
+    "uk": "Сторінки 1–3",
+    "zh-Hant-TW": "第 1–3 頁"
+  },
+  {
+    "en": "Sections 3–6",
+    "uk": "Розділи 3–6",
+    "zh-Hant-TW": "第 3–6 節"
+  },
+  {
+    "en": "Sections 3–4",
+    "uk": "Розділи 3–4",
+    "zh-Hant-TW": "第 3–4 節"
+  },
+  {
+    "en": "Chapters 3, 5–6; Table 5.3",
+    "uk": "Розділи 3, 5–6; таблиця 5.3",
+    "zh-Hant-TW": "第 3、5–6 章；表 5.3"
+  }
+]

@@ -1,0 +1,1298 @@
+{
+  "Viktoriia Makovska, PhD researcher at UCU and Research Engineer at Lapa LLM. Research, publications, teaching, and talks on machine unlearning and responsible AI.": {
+    "uk": "Вікторія Маковська — аспірантка УКУ та інженерка-дослідниця Lapa LLM. Дослідження, публікації, викладання й виступи про машинне забування та відповідальний ШІ.",
+    "zh-Hant-TW": "Viktoriia Makovska，烏克蘭天主教大學博士生、Lapa LLM 研究工程師。關於機器遺忘與負責任 AI 的研究、論文、教學與演講。"
+  },
+  "Viktoriia Makovska — Machine Unlearning & Responsible AI": {
+    "uk": "Вікторія Маковська — машинне забування та відповідальний ШІ",
+    "zh-Hant-TW": "Viktoriia Makovska — 機器遺忘與負責任 AI"
+  },
+  "Skip to content": {
+    "uk": "Перейти до вмісту",
+    "zh-Hant-TW": "跳至主要內容"
+  },
+  "Viktoriia Makovska home": {
+    "uk": "Вікторія Маковська — головна",
+    "zh-Hant-TW": "Viktoriia Makovska 首頁"
+  },
+  "VM": {
+    "uk": "VM",
+    "zh-Hant-TW": "VM"
+  },
+  "Primary navigation": {
+    "uk": "Основна навігація",
+    "zh-Hant-TW": "主要導覽"
+  },
+  "About": {
+    "uk": "Про мене",
+    "zh-Hant-TW": "關於我"
+  },
+  "Research": {
+    "uk": "Дослідження",
+    "zh-Hant-TW": "研究"
+  },
+  "Teaching": {
+    "uk": "Викладання",
+    "zh-Hant-TW": "教學"
+  },
+  "Talks & Media": {
+    "uk": "Виступи та медіа",
+    "zh-Hant-TW": "演講與媒體"
+  },
+  "CV": {
+    "uk": "Резюме (англійською)",
+    "zh-Hant-TW": "履歷（英文）"
+  },
+  "PDF": {
+    "uk": "PDF",
+    "zh-Hant-TW": "PDF"
+  },
+  "PhD researcher · UCU / Research Engineer · Lapa LLM": {
+    "uk": "Аспірантка · УКУ / Інженерка-дослідниця · Lapa LLM",
+    "zh-Hant-TW": "博士生 · UCU / 研究工程師 · Lapa LLM"
+  },
+  "Viktoriia Makovska": {
+    "uk": "Вікторія Маковська",
+    "zh-Hant-TW": "Viktoriia Makovska"
+  },
+  "I study what it means for large language models to forget, and how to build models that can.": {
+    "uk": "Я досліджую, що означає для великих мовних моделей забувати та як створювати моделі, здатні на це.",
+    "zh-Hant-TW": "我研究大型語言模型的「遺忘」究竟意味著什麼，以及如何打造能夠遺忘的模型。"
+  },
+  "I’m a PhD researcher at Ukrainian Catholic University and a Research Engineer at Lapa LLM. My work connects machine unlearning, mechanistic interpretability, information integrity, and responsible data systems.": {
+    "uk": "Я аспірантка Українського католицького університету та інженерка-дослідниця Lapa LLM. Моя робота поєднує машинне забування, механістичну інтерпретованість, інформаційну доброчесність і відповідальні системи даних.",
+    "zh-Hant-TW": "我是烏克蘭天主教大學的博士生，也是 Lapa LLM 的研究工程師。我的工作結合機器遺忘、機制可解釋性、資訊完整性與負責任的資料系統。"
+  },
+  "Featured links": {
+    "uk": "Основні посилання",
+    "zh-Hant-TW": "精選連結"
+  },
+  "Research & publications": {
+    "uk": "Дослідження та публікації",
+    "zh-Hant-TW": "研究與論文"
+  },
+  "Telegram channel": {
+    "uk": "Telegram-канал",
+    "zh-Hant-TW": "Telegram 頻道"
+  },
+  "Email me": {
+    "uk": "Написати мені",
+    "zh-Hant-TW": "寄信給我"
+  },
+  "Google Scholar": {
+    "uk": "Google Scholar",
+    "zh-Hant-TW": "Google Scholar"
+  },
+  "Portrait of Viktoriia Makovska": {
+    "uk": "Портрет Вікторії Маковської",
+    "zh-Hant-TW": "Viktoriia Makovska 的肖像"
+  },
+  "Lviv, Ukraine": {
+    "uk": "Львів, Україна",
+    "zh-Hant-TW": "烏克蘭利維夫"
+  },
+  "Intelligent Systems PhD": {
+    "uk": "Аспірантура: інтелектуальні системи",
+    "zh-Hant-TW": "智慧系統博士班"
+  },
+  "Recent activity": {
+    "uk": "Останні події",
+    "zh-Hant-TW": "近期動態"
+  },
+  "News & events": {
+    "uk": "Новини та події",
+    "zh-Hant-TW": "消息與活動"
+  },
+  "All talks & media": {
+    "uk": "Усі виступи та медіа",
+    "zh-Hant-TW": "所有演講與媒體報導"
+  },
+  "7 Sep 2026": {
+    "uk": "7 вер. 2026",
+    "zh-Hant-TW": "2026年9月7日"
+  },
+  "· Workshop presentation": {
+    "uk": "· Доповідь на воркшопі",
+    "zh-Hant-TW": "· 工作坊發表"
+  },
+  "LENS presented at WIPE-OUT 2 / ECML PKDD": {
+    "uk": "LENS представлено на WIPE-OUT 2 / ECML PKDD",
+    "zh-Hant-TW": "於 WIPE-OUT 2 / ECML PKDD 發表 LENS"
+  },
+  "I presented": {
+    "uk": "Я представила статтю",
+    "zh-Hant-TW": "我發表了"
+  },
+  "Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS": {
+    "uk": "Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS",
+    "zh-Hant-TW": "Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS"
+  },
+  ", co-authored with George Fletcher, at the 2nd Workshop on Machine Unlearning and Privacy Preservation in Naples.": {
+    "uk": ", написану спільно з Джорджем Флетчером, на другому воркшопі з машинного забування та захисту приватності в Неаполі.",
+    "zh-Hant-TW": "，這篇與 George Fletcher 合著的論文於那不勒斯舉行的第二屆機器遺忘與隱私保護工作坊發表。"
+  },
+  "Presentation details": {
+    "uk": "Докладніше про доповідь",
+    "zh-Hant-TW": "發表詳情"
+  },
+  "26 Aug 2026": {
+    "uk": "26 серп. 2026",
+    "zh-Hant-TW": "2026年8月26日"
+  },
+  "· Compute award": {
+    "uk": "· Обчислювальний грант",
+    "zh-Hant-TW": "· 運算資源補助"
+  },
+  "FairForget awarded 3,500 node-hours on JUPITER Booster": {
+    "uk": "FairForget отримав 3 500 вузло-годин на JUPITER Booster",
+    "zh-Hant-TW": "FairForget 獲配 JUPITER Booster 的 3,500 節點小時"
+  },
+  "FairForget received a six-month allocation on JUPITER Booster at the Jülich Supercomputing Centre through the EuroHPC Development Access Call. I am the principal investigator for this allocation, which supports our research on fairness in machine unlearning.": {
+    "uk": "FairForget отримав шестимісячний доступ до JUPITER Booster у Юліхському суперкомп’ютерному центрі за програмою EuroHPC Development Access. Я головна дослідниця цього проєкту, який підтримує наші дослідження справедливості в машинному забуванні.",
+    "zh-Hant-TW": "FairForget 透過 EuroHPC Development Access 計畫，獲得尤利希超級運算中心 JUPITER Booster 為期六個月的運算資源。我是這項資源申請計畫的主持人，資源將用於支持我們對機器遺忘公平性的研究。"
+  },
+  "EuroHPC programme": {
+    "uk": "Програма EuroHPC",
+    "zh-Hant-TW": "EuroHPC 計畫"
+  },
+  "2026 · Grant": {
+    "uk": "2026 · Грант",
+    "zh-Hant-TW": "2026年 · 研究補助"
+  },
+  "FairForget supported by Women Led Science": {
+    "uk": "FairForget за підтримки Women Led Science",
+    "zh-Hant-TW": "FairForget 獲得 Women Led Science 支持"
+  },
+  "With Tetiana Zakharchenko, I study how machine unlearning affects fairness and hidden biases.": {
+    "uk": "Разом із Тетяною Захарченко я досліджую, як машинне забування впливає на справедливість і приховані упередження.",
+    "zh-Hant-TW": "我與 Tetiana Zakharchenko 共同研究機器遺忘如何影響公平性與隱藏偏誤。"
+  },
+  "Programme announcement": {
+    "uk": "Оголошення програми",
+    "zh-Hant-TW": "計畫公告"
+  },
+  "20 Aug 2026": {
+    "uk": "20 серп. 2026",
+    "zh-Hant-TW": "2026年8月20日"
+  },
+  "· Talk": {
+    "uk": "· Виступ",
+    "zh-Hant-TW": "· 演講"
+  },
+  "Machine unlearning at AI HOUSE": {
+    "uk": "Машинне забування в AI HOUSE",
+    "zh-Hant-TW": "在 AI HOUSE 談機器遺忘"
+  },
+  "I spoke at": {
+    "uk": "Я виступила на",
+    "zh-Hant-TW": "我在利維夫的"
+  },
+  "Align, Forget, Repeat": {
+    "uk": "Align, Forget, Repeat",
+    "zh-Hant-TW": "Align, Forget, Repeat"
+  },
+  "in Lviv about whether LLMs can forget information while retaining their capabilities.": {
+    "uk": "у Львові з доповіддю про те, чи можуть LLM забувати інформацію, зберігаючи свої можливості.",
+    "zh-Hant-TW": "活動中，探討 LLM 能否在保留能力的同時遺忘資訊。"
+  },
+  "Talk details": {
+    "uk": "Докладніше про виступ",
+    "zh-Hant-TW": "演講詳情"
+  },
+  "Forgetting Machines": {
+    "uk": "Машини, що забувають",
+    "zh-Hant-TW": "能夠遺忘的機器"
+  },
+  "Open text kaleidoscope": {
+    "uk": "Відкрити текстовий калейдоскоп",
+    "zh-Hant-TW": "開啟文字萬花筒"
+  },
+  "Memory, erasure, and responsibility in large language models.": {
+    "uk": "Пам’ять, стирання та відповідальність у великих мовних моделях.",
+    "zh-Hant-TW": "大型語言模型中的記憶、抹除與責任。"
+  },
+  "My PhD asks when an LLM can be said to know something, what changes when that knowledge is targeted for removal, and how forgetting can be verified rather than merely claimed. I study both the technical process of machine unlearning and the responsibilities that follow from deciding what a model should no longer retain. A central question is how mechanistic interpretability can inform unlearning.": {
+    "uk": "У своїй дисертації я запитую, коли можна сказати, що LLM щось знає, що змінюється під час цілеспрямованого видалення цього знання та як перевірити забування, а не лише заявити про нього. Я досліджую і технічний процес машинного забування, і відповідальність, що постає з рішення про те, чого модель більше не має зберігати. Одне з головних питань — як механістична інтерпретованість може допомогти машинному забуванню.",
+    "zh-Hant-TW": "我的博士研究探討：何時能說一個 LLM「知道」某件事？當我們試圖移除這項知識時，會改變什麼？又該如何驗證遺忘確實發生，而非僅僅宣稱如此？我研究機器遺忘的技術過程，也關注決定模型不應再保留哪些內容所帶來的責任。核心問題之一，是機制可解釋性如何為機器遺忘提供依據。"
+  },
+  "Read the PhD proposal": {
+    "uk": "Читати дисертаційну пропозицію",
+    "zh-Hant-TW": "閱讀博士研究計畫"
+  },
+  "Across my work": {
+    "uk": "Напрями моєї роботи",
+    "zh-Hant-TW": "研究主軸"
+  },
+  "Research threads": {
+    "uk": "Дослідницькі напрями",
+    "zh-Hant-TW": "研究方向"
+  },
+  "Related questions I pursue across research and teaching.": {
+    "uk": "Пов’язані питання, над якими я працюю в дослідженнях і викладанні.",
+    "zh-Hant-TW": "貫穿研究與教學的相關問題。"
+  },
+  "LLM memory and forgetting": {
+    "uk": "Пам’ять і забування в LLM",
+    "zh-Hant-TW": "LLM 的記憶與遺忘"
+  },
+  "What models retain, how forgetting can be verified, and how mechanistic interpretability can inform unlearning.": {
+    "uk": "Що зберігають моделі, як перевірити забування та як механістична інтерпретованість може допомогти машинному забуванню.",
+    "zh-Hant-TW": "模型保留了什麼、如何驗證遺忘，以及機制可解釋性如何為遺忘提供依據。"
+  },
+  "Information integrity": {
+    "uk": "Інформаційна доброчесність",
+    "zh-Hant-TW": "資訊完整性"
+  },
+  "Disinformation mitigation, narrative unlearning, and reducing bias through unlearning.": {
+    "uk": "Протидія дезінформації, забування наративів і зменшення упереджень через машинне забування.",
+    "zh-Hant-TW": "透過機器遺忘減輕不實資訊的影響、遺忘敘事並降低偏誤。"
+  },
+  "Participatory data systems": {
+    "uk": "Партисипативні системи даних",
+    "zh-Hant-TW": "參與式資料系統"
+  },
+  "How people, institutions, and invisible entities enter data models.": {
+    "uk": "Як люди, інституції та невидимі сутності потрапляють до моделей даних.",
+    "zh-Hant-TW": "人、機構與未被看見的實體如何納入資料模型。"
+  },
+  "Details & citations": {
+    "uk": "Докладніше та цитування",
+    "zh-Hant-TW": "詳情與引用"
+  },
+  "July 2026": {
+    "uk": "Липень 2026",
+    "zh-Hant-TW": "2026年7月"
+  },
+  "· WIPE-OUT 2 / ECML PKDD": {
+    "uk": "· WIPE-OUT 2 / ECML PKDD",
+    "zh-Hant-TW": "· WIPE-OUT 2 / ECML PKDD"
+  },
+  "May 2026": {
+    "uk": "Травень 2026",
+    "zh-Hant-TW": "2026年5月"
+  },
+  "· UNLP": {
+    "uk": "· UNLP",
+    "zh-Hant-TW": "· UNLP"
+  },
+  "Graph-Based Detection of Disinformation Narrative Diffusion between Russian and Ukrainian Telegram Channels": {
+    "uk": "Graph-Based Detection of Disinformation Narrative Diffusion between Russian and Ukrainian Telegram Channels",
+    "zh-Hant-TW": "Graph-Based Detection of Disinformation Narrative Diffusion between Russian and Ukrainian Telegram Channels"
+  },
+  "Data-Efficient Adaptation of Multilingual LLMs to Ukrainian": {
+    "uk": "Data-Efficient Adaptation of Multilingual LLMs to Ukrainian",
+    "zh-Hant-TW": "Data-Efficient Adaptation of Multilingual LLMs to Ukrainian"
+  },
+  "April 2026": {
+    "uk": "Квітень 2026",
+    "zh-Hant-TW": "2026年4月"
+  },
+  "· DataEd": {
+    "uk": "· DataEd",
+    "zh-Hant-TW": "· DataEd"
+  },
+  "Seasoning Data Modeling Education with GARLIC: A Participatory Co-Design Framework": {
+    "uk": "Seasoning Data Modeling Education with GARLIC: A Participatory Co-Design Framework",
+    "zh-Hant-TW": "Seasoning Data Modeling Education with GARLIC: A Participatory Co-Design Framework"
+  },
+  "March 2026": {
+    "uk": "Березень 2026",
+    "zh-Hant-TW": "2026年3月"
+  },
+  "· TeachNLP": {
+    "uk": "· TeachNLP",
+    "zh-Hant-TW": "· TeachNLP"
+  },
+  "Bridging Applied Experience and Research Contexts in Ukrainian NLP Education": {
+    "uk": "Bridging Applied Experience and Research Contexts in Ukrainian NLP Education",
+    "zh-Hant-TW": "Bridging Applied Experience and Research Contexts in Ukrainian NLP Education"
+  },
+  "February 2026": {
+    "uk": "Лютий 2026",
+    "zh-Hant-TW": "2026年2月"
+  },
+  "· Preprint / Undone CS": {
+    "uk": "· Препринт / Undone CS",
+    "zh-Hant-TW": "· 預印本 / Undone CS"
+  },
+  "Memory Undone: Between Knowing and Not Knowing in Data Systems": {
+    "uk": "Memory Undone: Between Knowing and Not Knowing in Data Systems",
+    "zh-Hant-TW": "Memory Undone: Between Knowing and Not Knowing in Data Systems"
+  },
+  "June 2025": {
+    "uk": "Червень 2025",
+    "zh-Hant-TW": "2025年6月"
+  },
+  "· HILDA": {
+    "uk": "· HILDA",
+    "zh-Hant-TW": "· HILDA"
+  },
+  "ONION: A Multi-Layered Framework for Participatory ER Design": {
+    "uk": "ONION: A Multi-Layered Framework for Participatory ER Design",
+    "zh-Hant-TW": "ONION: A Multi-Layered Framework for Participatory ER Design"
+  },
+  "March 2025": {
+    "uk": "Березень 2025",
+    "zh-Hant-TW": "2025年3月"
+  },
+  "· MS-AMLV": {
+    "uk": "· MS-AMLV",
+    "zh-Hant-TW": "· MS-AMLV"
+  },
+  "Vandalism or Propaganda? Enhancing Vandalism Detection in Ukrainian and Russian Wikipedia through Knowledge Manipulation Filtering": {
+    "uk": "Vandalism or Propaganda? Enhancing Vandalism Detection in Ukrainian and Russian Wikipedia through Knowledge Manipulation Filtering",
+    "zh-Hant-TW": "Vandalism or Propaganda? Enhancing Vandalism Detection in Ukrainian and Russian Wikipedia through Knowledge Manipulation Filtering"
+  },
+  "· Month unspecified · PhD proposal": {
+    "uk": "· Місяць не уточнено · Дисертаційна пропозиція",
+    "zh-Hant-TW": "· 月份未確認 · 博士研究計畫"
+  },
+  "Forgetting Machines: Responsibility by Design in Machine Unlearning": {
+    "uk": "Forgetting Machines: Responsibility by Design in Machine Unlearning",
+    "zh-Hant-TW": "Forgetting Machines: Responsibility by Design in Machine Unlearning"
+  },
+  "· Month unspecified · Master’s thesis": {
+    "uk": "· Місяць не уточнено · Магістерська робота",
+    "zh-Hant-TW": "· 月份未確認 · 碩士論文"
+  },
+  "Vandalism or Knowledge Manipulation? Detecting Narratives in Wikipedia Edits": {
+    "uk": "Vandalism or Knowledge Manipulation? Detecting Narratives in Wikipedia Edits",
+    "zh-Hant-TW": "Vandalism or Knowledge Manipulation? Detecting Narratives in Wikipedia Edits"
+  },
+  "Applied work": {
+    "uk": "Прикладні проєкти",
+    "zh-Hant-TW": "應用專案"
+  },
+  "Open resources and collaborative technical projects.": {
+    "uk": "Відкриті ресурси та спільні технічні проєкти.",
+    "zh-Hant-TW": "開放資源與協作技術專案。"
+  },
+  "FairForget · 2026": {
+    "uk": "FairForget · 2026",
+    "zh-Hant-TW": "FairForget · 2026"
+  },
+  "Ukrainian bias-evaluation datasets": {
+    "uk": "Українські набори даних для оцінювання упереджень",
+    "zh-Hant-TW": "烏克蘭語偏誤評估資料集"
+  },
+  "I co-developed the Ukrainian translation and adaptation of StereoSet with Oleksandra Ostafiichuk and Tetiana Zakharchenko.": {
+    "uk": "Разом з Олександрою Остафійчук і Тетяною Захарченко я працювала над українським перекладом та адаптацією StereoSet.",
+    "zh-Hant-TW": "我與 Oleksandra Ostafiichuk、Tetiana Zakharchenko 共同完成 StereoSet 的烏克蘭語翻譯與調整。"
+  },
+  "StereoSet-UK Eval": {
+    "uk": "StereoSet-UK Eval",
+    "zh-Hant-TW": "StereoSet-UK Eval"
+  },
+  "FairForget datasets": {
+    "uk": "Набори даних FairForget",
+    "zh-Hant-TW": "FairForget 資料集"
+  },
+  "Kaggle · DFS team": {
+    "uk": "Kaggle · Команда DFS",
+    "zh-Hant-TW": "Kaggle · DFS 團隊"
+  },
+  "Handwritten to Data": {
+    "uk": "Handwritten to Data",
+    "zh-Hant-TW": "Handwritten to Data"
+  },
+  "I participated with the DFS team in a challenge on recognizing Ukrainian handwritten documents. We placed fourth on the private leaderboard with a three-stage pipeline for layout detection, crop-specific transcription, and conservative OCR post-processing.": {
+    "uk": "У складі команди DFS я брала участь у змаганні з розпізнавання українських рукописних документів. Ми посіли четверте місце в приватному рейтингу завдяки триетапному підходу: визначення структури сторінки, розпізнавання окремих фрагментів і обережна постобробка результатів OCR.",
+    "zh-Hant-TW": "我與 DFS 團隊參加烏克蘭語手寫文件辨識競賽。我們採用版面偵測、區塊文字辨識及保守的 OCR 後處理三階段流程，在私人排行榜中獲得第四名。"
+  },
+  "Competition": {
+    "uk": "Змагання",
+    "zh-Hant-TW": "競賽"
+  },
+  "Team solution write-up": {
+    "uk": "Опис командного рішення",
+    "zh-Hant-TW": "團隊解題報告"
+  },
+  "Notes": {
+    "uk": "Нотатки",
+    "zh-Hant-TW": "筆記"
+  },
+  "Research notes": {
+    "uk": "Дослідницькі нотатки",
+    "zh-Hant-TW": "研究筆記"
+  },
+  "Working explanations of ideas behind the research.": {
+    "uk": "Пояснення ідей, на яких ґрунтуються дослідження.",
+    "zh-Hant-TW": "研究背後概念的整理與說明。"
+  },
+  "Machine unlearning · 2026": {
+    "uk": "Машинне забування · 2026",
+    "zh-Hant-TW": "機器遺忘 · 2026年"
+  },
+  "What does it mean for a model to forget?": {
+    "uk": "Що означає для моделі забути?",
+    "zh-Hant-TW": "模型的「遺忘」意味著什麼？"
+  },
+  "Deleting a record from storage does not necessarily remove its effect from a trained model. It helps to separate four related ideas: erasure removes or disables access to an artifact; unlearning attempts to remove its influence from a model; exclusion prevents collection in the first place; and forgetting describes the wider technical and institutional process.": {
+    "uk": "Видалення запису зі сховища не обов’язково усуває його вплив на навчену модель. Варто розрізняти чотири пов’язані поняття: стирання видаляє артефакт або закриває доступ до нього; машинне забування намагається прибрати його вплив на модель; виключення запобігає збиранню даних від самого початку; а забування охоплює ширший технічний та інституційний процес.",
+    "zh-Hant-TW": "從儲存空間刪除一筆紀錄，不一定能消除它對已訓練模型的影響。我們可以區分四個相關概念：抹除是移除資料產物或停止存取；機器遺忘試圖移除其對模型的影響；排除是在一開始就不蒐集資料；而遺忘則涵蓋更廣泛的技術與制度過程。"
+  },
+  "The practical problem is verification. A responsible system needs evidence that the requested influence is no longer available, while also documenting what was changed, by whom, and with what effect on the retained model.": {
+    "uk": "Практична проблема полягає в перевірці. Відповідальна система потребує доказів, що цільовий вплив більше не проявляється, а також документації про те, що було змінено, ким і як це позначилося на моделі.",
+    "zh-Hant-TW": "實務上的難題在於驗證。負責任的系統需要證據，證明指定移除的影響已不再存在，同時記錄改了什麼、由誰修改，以及對保留模型造成什麼影響。"
+  },
+  "Related paper": {
+    "uk": "Пов’язана стаття",
+    "zh-Hant-TW": "相關論文"
+  },
+  "Information integrity · 2026": {
+    "uk": "Інформаційна доброчесність · 2026",
+    "zh-Hant-TW": "資訊完整性 · 2026年"
+  },
+  "From individual edits to narrative diffusion": {
+    "uk": "Від окремих редагувань до поширення наративів",
+    "zh-Hant-TW": "從個別編輯到敘事擴散"
+  },
+  "Manipulation is often subtle at the level of one edit or message. A phrase can appear neutral in isolation while still participating in a repeated narrative across sources, channels, or time.": {
+    "uk": "На рівні одного редагування чи повідомлення маніпуляцію часто важко помітити. Окрема фраза може здаватися нейтральною, але водночас бути частиною наративу, що повторюється в різних джерелах, каналах або з часом.",
+    "zh-Hant-TW": "單看一次編輯或一則訊息，往往不容易察覺操弄。某個句子單獨看來可能很中立，卻同時參與了跨來源、頻道或時間反覆出現的敘事。"
+  },
+  "My work on Wikipedia edits and Telegram channels moves between these scales: detecting local textual signals, grouping related claims, and then examining the network through which a narrative is amplified.": {
+    "uk": "У роботі з редагуваннями Вікіпедії та Telegram-каналами я переходжу між цими масштабами: виявляю локальні текстові сигнали, групую пов’язані твердження, а потім досліджую мережу, через яку поширюється наратив.",
+    "zh-Hant-TW": "我對維基百科編輯與 Telegram 頻道的研究，會在這些尺度之間切換：辨識局部文字訊號、彙整相關主張，再檢視敘事被放大的傳播網絡。"
+  },
+  "Master's thesis": {
+    "uk": "Магістерська робота",
+    "zh-Hant-TW": "碩士論文"
+  },
+  "Participatory design · 2026": {
+    "uk": "Партисипативний дизайн · 2026",
+    "zh-Hant-TW": "參與式設計 · 2026年"
+  },
+  "Data models also contain omissions": {
+    "uk": "У моделях даних також є пропуски",
+    "zh-Hant-TW": "資料模型也有遺漏"
+  },
+  "A data model is not a neutral inventory. Decisions about entities, relationships, and levels of abstraction determine what a system can record and what remains invisible.": {
+    "uk": "Модель даних — не нейтральний перелік. Рішення про сутності, зв’язки та рівні абстракції визначають, що система може зафіксувати, а що залишиться невидимим.",
+    "zh-Hant-TW": "資料模型並非中立的清單。關於實體、關係與抽象層次的決定，會界定系統能記錄什麼，以及哪些事物仍不可見。"
+  },
+  "ONION and GARLIC use structured participation to surface those decisions earlier, when a model can still be challenged and revised by the people it represents.": {
+    "uk": "ONION і GARLIC використовують структуровану участь, щоб зробити ці рішення видимими раніше — коли люди, яких представляє модель, ще можуть поставити її під сумнів і змінити.",
+    "zh-Hant-TW": "ONION 與 GARLIC 透過有結構的參與過程，讓這些決定更早浮現，使模型所代表的人仍有機會提出質疑並參與修訂。"
+  },
+  "Background": {
+    "uk": "Освіта та досвід",
+    "zh-Hant-TW": "學經歷"
+  },
+  "Teaching and experience": {
+    "uk": "Викладання та досвід",
+    "zh-Hant-TW": "教學與經歷"
+  },
+  "Research at Lapa": {
+    "uk": "Дослідження в Lapa",
+    "zh-Hant-TW": "Lapa 的研究工作"
+  },
+  "At Lapa LLM, I work on disinformation mitigation strategies, narrative unlearning, and bias mitigation through unlearning.": {
+    "uk": "У Lapa LLM я працюю над стратегіями протидії дезінформації, забуванням наративів і зменшенням упереджень за допомогою машинного забування.",
+    "zh-Hant-TW": "我在 Lapa LLM 研究減輕不實資訊影響的策略、敘事遺忘，以及透過機器遺忘降低偏誤。"
+  },
+  "Lapa LLM project ↗": {
+    "uk": "Проєкт Lapa LLM ↗",
+    "zh-Hant-TW": "Lapa LLM 專案 ↗"
+  },
+  "Mentoring": {
+    "uk": "Менторство",
+    "zh-Hant-TW": "研究指導"
+  },
+  "I am a mentor in Responsible AI for Ukraine, a research programme connecting Ukrainian students with researchers through NYU and UCU.": {
+    "uk": "Я менторка програми Responsible AI for Ukraine, яка через NYU та УКУ об’єднує українських студентів із дослідниками.",
+    "zh-Hant-TW": "我是 Responsible AI for Ukraine 計畫的研究導師。這項計畫透過 NYU 與 UCU，連結烏克蘭學生及研究人員。"
+  },
+  "Mentoring & supervision ↗": {
+    "uk": "Менторство та керівництво роботами ↗",
+    "zh-Hant-TW": "研究與論文指導 ↗"
+  },
+  "Teaching at UCU": {
+    "uk": "Викладання в УКУ",
+    "zh-Hant-TW": "UCU 教學"
+  },
+  "I teach natural language processing at Ukrainian Catholic University, connecting applied tasks with research, ethics, and project-based assessment.": {
+    "uk": "Я викладаю обробку природної мови в Українському католицькому університеті, поєднуючи прикладні завдання з дослідженнями, етикою та проєктним оцінюванням.",
+    "zh-Hant-TW": "我在烏克蘭天主教大學教授自然語言處理，將應用任務、研究、倫理及專題評量結合於課程中。"
+  },
+  "NLP course & materials": {
+    "uk": "Курс NLP та матеріали",
+    "zh-Hant-TW": "NLP 課程與教材"
+  },
+  "Teaching at AUK": {
+    "uk": "Викладання в AUK",
+    "zh-Hant-TW": "AUK 教學"
+  },
+  "As a visiting lecturer at American University Kyiv, I teach Web Enabled Decision Support Systems (SDT 520) in the Technology Leadership & AI master’s programme. I taught the course in spring 2025 and 2026.": {
+    "uk": "Як запрошена викладачка American University Kyiv, я викладаю Web Enabled Decision Support Systems (SDT 520) на магістерській програмі Technology Leadership & AI. Я викладала цей курс навесні 2025 та 2026 років.",
+    "zh-Hant-TW": "我擔任基輔美國大學的客座講師，在 Technology Leadership & AI 碩士學程教授網頁式決策支援系統（SDT 520）。我於 2025 年及 2026 年春季開授這門課。"
+  },
+  "AUK course details": {
+    "uk": "Докладніше про курс AUK",
+    "zh-Hant-TW": "AUK 課程詳情"
+  },
+  "I completed my M.Sc. in Data Science with honors at UCU in June 2025 and began my PhD there in October 2025. I also hold a master’s degree in Radio Engineering from Kharkiv National University of Radio Electronics. Before beginning my PhD, I spent eight years in software engineering and technical leadership, including work at Artur’In.": {
+    "uk": "У червні 2025 року я здобула ступінь магістра наук про дані з відзнакою в УКУ, а в жовтні 2025 року розпочала там навчання в аспірантурі. Також маю ступінь магістра радіотехніки Харківського національного університету радіоелектроніки. До аспірантури я вісім років працювала в розробці програмного забезпечення та технічному керівництві, зокрема в Artur’In.",
+    "zh-Hant-TW": "我於 2025 年 6 月以優異成績取得 UCU 資料科學碩士學位，並於同年 10 月開始博士班研究。我也持有哈爾科夫國立無線電電子大學的無線電工程碩士學位。攻讀博士之前，我有八年的軟體工程與技術領導經驗，包括在 Artur’In 的工作。"
+  },
+  "Curriculum vitae": {
+    "uk": "Резюме (англійською)",
+    "zh-Hant-TW": "履歷（英文）"
+  },
+  "Let’s collaborate": {
+    "uk": "Співпрацюймо",
+    "zh-Hant-TW": "一起合作"
+  },
+  "I’m especially open to research collaborations on LLM forgetting, mechanistic interpretability, and responsible AI. I also welcome speaking invitations, student projects, and other opportunities to work together.": {
+    "uk": "Я особливо відкрита до дослідницької співпраці у сфері забування в LLM, механістичної інтерпретованості та відповідального ШІ. Також рада запрошенням на виступи, студентським проєктам та іншим можливостям працювати разом.",
+    "zh-Hant-TW": "我尤其歡迎在 LLM 遺忘、機制可解釋性與負責任 AI 方面的研究合作，也歡迎演講邀約、學生專題，以及其他共同工作的機會。"
+  },
+  "Get in touch ↗": {
+    "uk": "Зв’язатися ↗",
+    "zh-Hant-TW": "聯絡我 ↗"
+  },
+  "Advisors": {
+    "uk": "Наукові керівники",
+    "zh-Hant-TW": "研究指導老師"
+  },
+  "George Fletcher": {
+    "uk": "Джордж Флетчер",
+    "zh-Hant-TW": "George Fletcher"
+  },
+  "Julia Stoyanovich": {
+    "uk": "Джулія Стоянович",
+    "zh-Hant-TW": "Julia Stoyanovich"
+  },
+  ", and": {
+    "uk": "та",
+    "zh-Hant-TW": "與"
+  },
+  "Tetiana Zakharchenko": {
+    "uk": "Тетяна Захарченко",
+    "zh-Hant-TW": "Tetiana Zakharchenko"
+  },
+  "Research details": {
+    "uk": "Докладніше про дослідження",
+    "zh-Hant-TW": "研究詳情"
+  },
+  "PhD researcher · Ukrainian Catholic University": {
+    "uk": "Аспірантка · Український католицький університет",
+    "zh-Hant-TW": "博士生 · 烏克蘭天主教大學"
+  },
+  "Research Engineer · Lapa LLM": {
+    "uk": "Інженерка-дослідниця · Lapa LLM",
+    "zh-Hant-TW": "研究工程師 · Lapa LLM"
+  },
+  "Contact and profiles": {
+    "uk": "Контакти та профілі",
+    "zh-Hant-TW": "聯絡方式與個人檔案"
+  },
+  "Email": {
+    "uk": "Електронна пошта",
+    "zh-Hant-TW": "電子郵件"
+  },
+  "ORCID": {
+    "uk": "ORCID",
+    "zh-Hant-TW": "ORCID"
+  },
+  "UCU profile": {
+    "uk": "Профіль УКУ",
+    "zh-Hant-TW": "UCU 個人頁面"
+  },
+  "ResearchGate": {
+    "uk": "ResearchGate",
+    "zh-Hant-TW": "ResearchGate"
+  },
+  "OpenReview": {
+    "uk": "OpenReview",
+    "zh-Hant-TW": "OpenReview"
+  },
+  "GitHub": {
+    "uk": "GitHub",
+    "zh-Hant-TW": "GitHub"
+  },
+  "Hugging Face": {
+    "uk": "Hugging Face",
+    "zh-Hant-TW": "Hugging Face"
+  },
+  "LinkedIn": {
+    "uk": "LinkedIn",
+    "zh-Hant-TW": "LinkedIn"
+  },
+  "Telegram · @forgetting_machines": {
+    "uk": "Telegram · @forgetting_machines",
+    "zh-Hant-TW": "Telegram · @forgetting_machines"
+  },
+  "Close text kaleidoscope": {
+    "uk": "Закрити текстовий калейдоскоп",
+    "zh-Hant-TW": "關閉文字萬花筒"
+  },
+  "Close": {
+    "uk": "Закрити",
+    "zh-Hant-TW": "關閉"
+  },
+  "memory / erasure / consent / trace": {
+    "uk": "пам’ять / стирання / згода / слід",
+    "zh-Hant-TW": "記憶 / 抹除 / 同意 / 痕跡"
+  },
+  "Publications, preprints, datasets, and projects by Viktoriia Makovska on machine unlearning, information integrity, and participatory data modeling.": {
+    "uk": "Публікації, препринти, набори даних і проєкти Вікторії Маковської про машинне забування, інформаційну доброчесність і партисипативне моделювання даних.",
+    "zh-Hant-TW": "Viktoriia Makovska 關於機器遺忘、資訊完整性與參與式資料建模的論文、預印本、資料集及專案。"
+  },
+  "Research · Viktoriia Makovska": {
+    "uk": "Дослідження · Вікторія Маковська",
+    "zh-Hant-TW": "研究 · Viktoriia Makovska"
+  },
+  "Machine unlearning · mechanistic interpretability · information integrity": {
+    "uk": "Машинне забування · механістична інтерпретованість · інформаційна доброчесність",
+    "zh-Hant-TW": "機器遺忘 · 機制可解釋性 · 資訊完整性"
+  },
+  "How do data systems remember, forget, and represent the world?": {
+    "uk": "Як системи даних пам’ятають, забувають і представляють світ?",
+    "zh-Hant-TW": "資料系統如何記憶、遺忘並呈現世界？"
+  },
+  "I study how mechanistic interpretability can inform unlearning, alongside work on narrative unlearning, bias mitigation, Ukrainian NLP, and participatory data modeling.": {
+    "uk": "Я досліджую, як механістична інтерпретованість може допомогти машинному забуванню, а також працюю над забуванням наративів, зменшенням упереджень, українським NLP і партисипативним моделюванням даних.",
+    "zh-Hant-TW": "我研究機制可解釋性如何為機器遺忘提供依據，同時投入敘事遺忘、偏誤緩解、烏克蘭語 NLP 與參與式資料建模。"
+  },
+  "Publications & preprints ↓": {
+    "uk": "Публікації та препринти ↓",
+    "zh-Hant-TW": "論文與預印本 ↓"
+  },
+  "Projects & resources ↓": {
+    "uk": "Проєкти та ресурси ↓",
+    "zh-Hant-TW": "專案與資源 ↓"
+  },
+  "Thesis & proposal ↓": {
+    "uk": "Магістерська робота та пропозиція ↓",
+    "zh-Hant-TW": "碩士論文與博士研究計畫 ↓"
+  },
+  "Publications & preprints": {
+    "uk": "Публікації та препринти",
+    "zh-Hant-TW": "論文與預印本"
+  },
+  "Google Scholar ↗": {
+    "uk": "Google Scholar ↗",
+    "zh-Hant-TW": "Google Scholar ↗"
+  },
+  "Workshop presentation": {
+    "uk": "Доповідь на воркшопі",
+    "zh-Hant-TW": "工作坊發表"
+  },
+  "Machine unlearning": {
+    "uk": "Машинне забування",
+    "zh-Hant-TW": "機器遺忘"
+  },
+  "Presented at WIPE-OUT 2 — 2nd Workshop on Machine Unlearning and Privacy Preservation, ECML PKDD 2026 · 7 September 2026 · Naples, Italy.": {
+    "uk": "Представлено на WIPE-OUT 2 — другому воркшопі з машинного забування та захисту приватності, ECML PKDD 2026 · 7 вересня 2026 · Неаполь, Італія.",
+    "zh-Hant-TW": "發表於 WIPE-OUT 2（第二屆機器遺忘與隱私保護工作坊），ECML PKDD 2026 · 2026年9月7日 · 義大利那不勒斯。"
+  },
+  "Preprint: arXiv:2607.22657 · revised 31 July 2026.": {
+    "uk": "Препринт: arXiv:2607.22657 · оновлено 31 липня 2026.",
+    "zh-Hant-TW": "預印本：arXiv:2607.22657 · 2026年7月31日修訂。"
+  },
+  "LENS tests whether models reproduce targeted narratives across different prompting contexts, measuring suppression alongside degraded outputs.": {
+    "uk": "LENS перевіряє, чи відтворюють моделі цільові наративи за різних контекстів запитів, оцінюючи пригнічення наративів разом із погіршенням якості відповідей.",
+    "zh-Hant-TW": "LENS 檢驗模型是否在不同提示情境下重現目標敘事，同時衡量敘事抑制與輸出品質退化。"
+  },
+  "Workshop programme": {
+    "uk": "Програма воркшопу",
+    "zh-Hant-TW": "工作坊議程"
+  },
+  "arXiv": {
+    "uk": "arXiv",
+    "zh-Hant-TW": "arXiv"
+  },
+  "Citation": {
+    "uk": "Цитування",
+    "zh-Hant-TW": "引用"
+  },
+  "Copy citation": {
+    "uk": "Копіювати цитування",
+    "zh-Hant-TW": "複製引用"
+  },
+  "BibTeX": {
+    "uk": "BibTeX",
+    "zh-Hant-TW": "BibTeX"
+  },
+  "Copy BibTeX": {
+    "uk": "Копіювати BibTeX",
+    "zh-Hant-TW": "複製 BibTeX"
+  },
+  "UNLP 2026": {
+    "uk": "UNLP 2026",
+    "zh-Hant-TW": "UNLP 2026"
+  },
+  "ACL Anthology": {
+    "uk": "ACL Anthology",
+    "zh-Hant-TW": "ACL Anthology"
+  },
+  "Disinformation analysis": {
+    "uk": "Аналіз дезінформації",
+    "zh-Hant-TW": "不實資訊分析"
+  },
+  "In": {
+    "uk": "У збірнику",
+    "zh-Hant-TW": "收錄於"
+  },
+  "Proceedings of the Fifth Ukrainian Natural Language Processing Conference (UNLP 2026)": {
+    "uk": "Proceedings of the Fifth Ukrainian Natural Language Processing Conference (UNLP 2026)",
+    "zh-Hant-TW": "Proceedings of the Fifth Ukrainian Natural Language Processing Conference (UNLP 2026)"
+  },
+  ", pages 80-96, Lviv, Ukraine. Association for Computational Linguistics.": {
+    "uk": ", с. 80–96, Львів, Україна. Асоціація комп’ютерної лінгвістики.",
+    "zh-Hant-TW": "，第 80–96 頁，烏克蘭利維夫。計算語言學協會。"
+  },
+  "This work combines weak supervision with propagation-graph analysis to group semantically related claims and study how disinformation narratives move across Russian and Ukrainian Telegram channels.": {
+    "uk": "Ця робота поєднує слабке навчання з учителем та аналіз графів поширення, щоб групувати семантично пов’язані твердження й досліджувати рух дезінформаційних наративів між російськими та українськими Telegram-каналами.",
+    "zh-Hant-TW": "這項研究結合弱監督學習與傳播圖分析，將語意相關的主張分組，並探討不實資訊敘事如何在俄語及烏克蘭語 Telegram 頻道間流動。"
+  },
+  "Ukrainian LLMs": {
+    "uk": "Українські LLM",
+    "zh-Hant-TW": "烏克蘭語 LLM"
+  },
+  ", pages 155-168, Lviv, Ukraine. Association for Computational Linguistics.": {
+    "uk": ", с. 155–168, Львів, Україна. Асоціація комп’ютерної лінгвістики.",
+    "zh-Hant-TW": "，第 155–168 頁，烏克蘭利維夫。計算語言學協會。"
+  },
+  "A reproducible data-centric pipeline for adapting multilingual language models to Ukrainian through vocabulary surgery, cross-lingual quality filtering, and translated and synthetic instruction data.": {
+    "uk": "Відтворюваний підхід до адаптації багатомовних мовних моделей до української мови, зосереджений на даних: модифікація словника, міжмовна фільтрація якості та перекладені й синтетичні інструктивні дані.",
+    "zh-Hant-TW": "以資料為核心、可重現的多語言模型烏克蘭語調適流程，結合詞彙表調整、跨語言品質篩選，以及翻譯與合成的指令資料。"
+  },
+  "DataEd 2026": {
+    "uk": "DataEd 2026",
+    "zh-Hant-TW": "DataEd 2026"
+  },
+  "CEUR-WS": {
+    "uk": "CEUR-WS",
+    "zh-Hant-TW": "CEUR-WS"
+  },
+  "Data modeling education": {
+    "uk": "Навчання моделювання даних",
+    "zh-Hant-TW": "資料建模教育"
+  },
+  "Proceedings of the Workshops of the EDBT/ICDT 2026 Joint Conference": {
+    "uk": "Proceedings of the Workshops of the EDBT/ICDT 2026 Joint Conference",
+    "zh-Hant-TW": "Proceedings of the Workshops of the EDBT/ICDT 2026 Joint Conference"
+  },
+  ", DataEd'26: 5th International Workshop on Data Systems Education, Tampere, Finland. CEUR Workshop Proceedings, Vol. 4192. Published April 2026; workshop held 24 March 2026.": {
+    "uk": ", DataEd'26: п’ятий міжнародний воркшоп з освіти у сфері систем даних, Тампере, Фінляндія. CEUR Workshop Proceedings, том 4192. Опубліковано у квітні 2026; воркшоп відбувся 24 березня 2026.",
+    "zh-Hant-TW": "，DataEd'26：第五屆資料系統教育國際工作坊，芬蘭坦佩雷。CEUR Workshop Proceedings，第 4192 卷。2026年4月出版；工作坊於2026年3月24日舉行。"
+  },
+  "GARLIC adapts the ONION framework into a workshop-based method for teaching participatory entity-relationship modeling through role-play, collaborative synthesis, critique, and iteration.": {
+    "uk": "GARLIC адаптує ONION до навчального воркшопу з партисипативного моделювання «сутність—зв’язок», поєднуючи рольову гру, спільний синтез, критику та ітерації.",
+    "zh-Hant-TW": "GARLIC 將 ONION 架構轉化為工作坊教學方法，透過角色扮演、共同整合、評論與反覆修訂，教授參與式實體關係建模。"
+  },
+  "Workshop materials on GitHub ↗": {
+    "uk": "Матеріали воркшопу на GitHub ↗",
+    "zh-Hant-TW": "GitHub 工作坊教材 ↗"
+  },
+  "CEUR PDF": {
+    "uk": "PDF у CEUR",
+    "zh-Hant-TW": "CEUR 論文 PDF"
+  },
+  "TeachNLP 2026": {
+    "uk": "TeachNLP 2026",
+    "zh-Hant-TW": "TeachNLP 2026"
+  },
+  "Proceedings of the Seventh Workshop on Teaching Natural Language Processing (TeachNLP 2026)": {
+    "uk": "Proceedings of the Seventh Workshop on Teaching Natural Language Processing (TeachNLP 2026)",
+    "zh-Hant-TW": "Proceedings of the Seventh Workshop on Teaching Natural Language Processing (TeachNLP 2026)"
+  },
+  ", pages 78-83, Rabat, Morocco. Association for Computational Linguistics.": {
+    "uk": ", с. 78–83, Рабат, Марокко. Асоціація комп’ютерної лінгвістики.",
+    "zh-Hant-TW": "，第 78–83 頁，摩洛哥拉巴特。計算語言學協會。"
+  },
+  "A report on building an open, bachelor-level NLP course taught in Ukrainian, with culturally adapted tasks, integrated ethics, project-based assessment, and publicly available materials.": {
+    "uk": "Стаття про створення відкритого бакалаврського курсу NLP українською мовою: культурно адаптовані завдання, інтегрована етика, проєктне оцінювання та загальнодоступні матеріали.",
+    "zh-Hant-TW": "介紹一門以烏克蘭語授課的大學部開放 NLP 課程，涵蓋符合在地文化的任務、融入課程的倫理議題、專題評量及公開教材。"
+  },
+  "DOI": {
+    "uk": "DOI",
+    "zh-Hant-TW": "DOI"
+  },
+  "Undone CS 2026": {
+    "uk": "Undone CS 2026",
+    "zh-Hant-TW": "Undone CS 2026"
+  },
+  "arXiv preprint arXiv:2602.21180 [cs.CY], submitted February 24, 2026. Presented at Undone Computer Science 2026.": {
+    "uk": "Препринт arXiv:2602.21180 [cs.CY], подано 24 лютого 2026. Представлено на Undone Computer Science 2026.",
+    "zh-Hant-TW": "arXiv 預印本 arXiv:2602.21180 [cs.CY]，於2026年2月24日提交。曾於 Undone Computer Science 2026 發表。"
+  },
+  "This position paper distinguishes erasure, unlearning, exclusion, and forgetting, and argues that machine unlearning should be evaluated not only by model utility but also by transparency, accountability, and governance.": {
+    "uk": "Ця позиційна стаття розрізняє стирання, машинне забування, виключення та забування й обстоює оцінювання машинного забування не лише за корисністю моделі, а й за прозорістю, підзвітністю та врядуванням.",
+    "zh-Hant-TW": "這篇立場論文區分抹除、機器遺忘、排除與遺忘，主張評估機器遺忘時，除了模型效用，也應考量透明度、課責與治理。"
+  },
+  "Undone CS": {
+    "uk": "Undone CS",
+    "zh-Hant-TW": "Undone CS"
+  },
+  "Abstract": {
+    "uk": "Анотація",
+    "zh-Hant-TW": "摘要"
+  },
+  "HILDA 2025": {
+    "uk": "HILDA 2025",
+    "zh-Hant-TW": "HILDA 2025"
+  },
+  "Participatory ER design": {
+    "uk": "Партисипативне ER-моделювання",
+    "zh-Hant-TW": "參與式 ER 設計"
+  },
+  "Proceedings of the Workshop on Human-In-the-Loop Data Analytics (HILDA '25)": {
+    "uk": "Proceedings of the Workshop on Human-In-the-Loop Data Analytics (HILDA '25)",
+    "zh-Hant-TW": "Proceedings of the Workshop on Human-In-the-Loop Data Analytics (HILDA '25)"
+  },
+  ", June 22, 2025, Berlin, Germany.": {
+    "uk": ", 22 червня 2025, Берлін, Німеччина.",
+    "zh-Hant-TW": "，2025年6月22日，德國柏林。"
+  },
+  "ONION is a five-stage participatory method for moving from unstructured stakeholder input to entity-relationship models while making assumptions, omissions, and designer choices easier to inspect.": {
+    "uk": "ONION — п’ятиетапний партисипативний метод переходу від неструктурованого внеску зацікавлених сторін до моделей «сутність—зв’язок», який полегшує аналіз припущень, пропусків і рішень проєктувальників.",
+    "zh-Hant-TW": "ONION 是五階段的參與式方法，將利害關係人提供的非結構化意見轉化為實體關係模型，讓假設、遺漏與設計者的選擇更容易被檢視。"
+  },
+  "MS-AMLV symposium paper": {
+    "uk": "Стаття симпозіуму MS-AMLV",
+    "zh-Hant-TW": "MS-AMLV 研討會論文"
+  },
+  "Wikipedia": {
+    "uk": "Вікіпедія",
+    "zh-Hant-TW": "維基百科"
+  },
+  "6th Masters Symposium on Advances in Data Mining, Machine Learning, and Computer Vision (MS-AMLV 2025), 28–29 March 2025, Lviv, Ukraine.": {
+    "uk": "Шостий магістерський симпозіум із досягнень у видобуванні даних, машинному навчанні та комп’ютерному зорі (MS-AMLV 2025), 28–29 березня 2025, Львів, Україна.",
+    "zh-Hant-TW": "第六屆資料探勘、機器學習與電腦視覺進展碩士生研討會（MS-AMLV 2025），2025年3月28–29日，烏克蘭利維夫。"
+  },
+  "This work explores how changes in a Russian government-backed Wikipedia fork can provide signals for identifying knowledge manipulation in Ukrainian and Russian Wikipedia edits.": {
+    "uk": "Ця робота досліджує, як зміни в підтримуваному російським урядом відгалуженні Вікіпедії можуть допомогти виявляти маніпуляції знаннями в українських та російських редагуваннях Вікіпедії.",
+    "zh-Hant-TW": "這項研究探討如何利用俄羅斯政府支持的維基百科分支中的變更，作為辨識烏克蘭語與俄語維基百科編輯中知識操弄的訊號。"
+  },
+  "PDF ↗": {
+    "uk": "PDF ↗",
+    "zh-Hant-TW": "PDF ↗"
+  },
+  "Symposium programme ↗": {
+    "uk": "Програма симпозіуму ↗",
+    "zh-Hant-TW": "研討會議程 ↗"
+  },
+  "Open work": {
+    "uk": "Відкриті напрацювання",
+    "zh-Hant-TW": "開放成果"
+  },
+  "Projects & resources": {
+    "uk": "Проєкти та ресурси",
+    "zh-Hant-TW": "專案與資源"
+  },
+  "Lapa LLM": {
+    "uk": "Lapa LLM",
+    "zh-Hant-TW": "Lapa LLM"
+  },
+  "Unlearning for disinformation and bias mitigation": {
+    "uk": "Машинне забування для протидії дезінформації та упередженням",
+    "zh-Hant-TW": "以機器遺忘減輕不實資訊與偏誤"
+  },
+  "As a Research Engineer at Lapa LLM, I work on disinformation mitigation strategies, narrative unlearning, and bias mitigation through unlearning.": {
+    "uk": "Як інженерка-дослідниця Lapa LLM, я працюю над стратегіями протидії дезінформації, забуванням наративів і зменшенням упереджень за допомогою машинного забування.",
+    "zh-Hant-TW": "作為 Lapa LLM 的研究工程師，我研究減輕不實資訊影響的策略、敘事遺忘，以及透過機器遺忘降低偏誤。"
+  },
+  "Lapa LLM repository ↗": {
+    "uk": "Репозиторій Lapa LLM ↗",
+    "zh-Hant-TW": "Lapa LLM 程式碼儲存庫 ↗"
+  },
+  "Related paper ↗": {
+    "uk": "Пов’язана стаття ↗",
+    "zh-Hant-TW": "相關論文 ↗"
+  },
+  "GARLIC · 2026": {
+    "uk": "GARLIC · 2026",
+    "zh-Hant-TW": "GARLIC · 2026"
+  },
+  "Participatory data modeling workshop materials": {
+    "uk": "Матеріали воркшопу з партисипативного моделювання даних",
+    "zh-Hant-TW": "參與式資料建模工作坊教材"
+  },
+  "Open scenario cards, role cards, and facilitation instructions for teaching participatory entity-relationship modeling.": {
+    "uk": "Відкриті картки сценаріїв і ролей та інструкції для фасилітації навчання партисипативного моделювання «сутність—зв’язок».",
+    "zh-Hant-TW": "用於教授參與式實體關係建模的開放情境卡、角色卡與帶領指南。"
+  },
+  "Workshop materials ↗": {
+    "uk": "Матеріали воркшопу ↗",
+    "zh-Hant-TW": "工作坊教材 ↗"
+  },
+  "Paper & citation ↗": {
+    "uk": "Стаття та цитування ↗",
+    "zh-Hant-TW": "論文與引用 ↗"
+  },
+  "FairForget": {
+    "uk": "FairForget",
+    "zh-Hant-TW": "FairForget"
+  },
+  "With Tetiana Zakharchenko, I investigate fairness and hidden biases after machine unlearning. Our project received support through Women Led Science.": {
+    "uk": "Разом із Тетяною Захарченко я досліджую справедливість і приховані упередження після машинного забування. Наш проєкт отримав підтримку Women Led Science.",
+    "zh-Hant-TW": "我與 Tetiana Zakharchenko 研究機器遺忘之後的公平性與隱藏偏誤。我們的專案獲得 Women Led Science 支持。"
+  },
+  "Foundations": {
+    "uk": "Підґрунтя",
+    "zh-Hant-TW": "研究基礎"
+  },
+  "Thesis & PhD proposal": {
+    "uk": "Магістерська робота та дисертаційна пропозиція",
+    "zh-Hant-TW": "碩士論文與博士研究計畫"
+  },
+  "· Month unspecified": {
+    "uk": "· Місяць не уточнено",
+    "zh-Hant-TW": "· 月份未確認"
+  },
+  "PhD proposal": {
+    "uk": "Дисертаційна пропозиція",
+    "zh-Hant-TW": "博士研究計畫"
+  },
+  "Responsible AI": {
+    "uk": "Відповідальний ШІ",
+    "zh-Hant-TW": "負責任 AI"
+  },
+  "PhD Topic Proposal, UCU Applied Sciences Faculty (2025).": {
+    "uk": "Пропозиція теми дисертації, факультет прикладних наук УКУ (2025).",
+    "zh-Hant-TW": "博士論文研究計畫，UCU 應用科學學院（2025年）。"
+  },
+  "Master's thesis, Ukrainian Catholic University, Faculty of Applied Sciences (2025).": {
+    "uk": "Магістерська робота, Український католицький університет, факультет прикладних наук (2025).",
+    "zh-Hant-TW": "碩士論文，烏克蘭天主教大學應用科學學院（2025年）。"
+  },
+  "Repository": {
+    "uk": "Репозиторій",
+    "zh-Hant-TW": "典藏庫"
+  },
+  "Teaching at UCU and American University Kyiv, mentoring in Responsible AI for Ukraine, thesis supervision, and open course materials.": {
+    "uk": "Викладання в УКУ та American University Kyiv, менторство в Responsible AI for Ukraine, керівництво дипломними роботами та відкриті навчальні матеріали.",
+    "zh-Hant-TW": "在 UCU 與基輔美國大學的教學、Responsible AI for Ukraine 研究指導、學位論文指導與開放教材。"
+  },
+  "Teaching · Viktoriia Makovska": {
+    "uk": "Викладання · Вікторія Маковська",
+    "zh-Hant-TW": "教學 · Viktoriia Makovska"
+  },
+  "Ukrainian Catholic University / American University Kyiv": {
+    "uk": "Український католицький університет / American University Kyiv",
+    "zh-Hant-TW": "烏克蘭天主教大學 / 基輔美國大學"
+  },
+  "Connecting practical experience with research and responsible data practice.": {
+    "uk": "Поєдную практичний досвід із дослідженнями та відповідальним використанням даних.",
+    "zh-Hant-TW": "連結實務經驗、研究與負責任的資料實踐。"
+  },
+  "Courses": {
+    "uk": "Курси",
+    "zh-Hant-TW": "課程"
+  },
+  "Teaching & materials": {
+    "uk": "Викладання та матеріали",
+    "zh-Hant-TW": "教學與教材"
+  },
+  "Since September 2025 · Bachelor": {
+    "uk": "Із вересня 2025 · Бакалаврат",
+    "zh-Hant-TW": "自2025年9月起 · 大學部"
+  },
+  "Natural Language Processing": {
+    "uk": "Обробка природної мови",
+    "zh-Hant-TW": "自然語言處理"
+  },
+  "Instructor · Ukrainian Catholic University": {
+    "uk": "Викладачка · Український католицький університет",
+    "zh-Hant-TW": "講師 · 烏克蘭天主教大學"
+  },
+  "An open NLP course taught in Ukrainian. The course connects applied tasks with research, ethics, and project-based assessment.": {
+    "uk": "Відкритий курс NLP українською мовою. Курс поєднує прикладні завдання з дослідженнями, етикою та проєктним оцінюванням.",
+    "zh-Hant-TW": "以烏克蘭語授課的開放 NLP 課程，結合應用任務、研究、倫理與專題評量。"
+  },
+  "Course materials ↗": {
+    "uk": "Матеріали курсу ↗",
+    "zh-Hant-TW": "課程教材 ↗"
+  },
+  "Our TeachNLP 2026 paper ↗": {
+    "uk": "Наша стаття на TeachNLP 2026 ↗",
+    "zh-Hant-TW": "我們的 TeachNLP 2026 論文 ↗"
+  },
+  "UCU Faculty of Applied Sciences ↗": {
+    "uk": "Факультет прикладних наук УКУ ↗",
+    "zh-Hant-TW": "UCU 應用科學學院 ↗"
+  },
+  "Spring 2025 & 2026 · Master’s · SDT 520": {
+    "uk": "Весна 2025 та 2026 · Магістратура · SDT 520",
+    "zh-Hant-TW": "2025及2026年春季 · 碩士班 · SDT 520"
+  },
+  "Web Enabled Decision Support Systems": {
+    "uk": "Веборієнтовані системи підтримки ухвалення рішень",
+    "zh-Hant-TW": "網頁式決策支援系統"
+  },
+  "Visiting lecturer · American University Kyiv (AUK)": {
+    "uk": "Запрошена викладачка · American University Kyiv (AUK)",
+    "zh-Hant-TW": "客座講師 · 基輔美國大學（AUK）"
+  },
+  "I teach in the Master of Technology Leadership & Artificial Intelligence (MTLAI) programme at AUK’s EPAM School of Digital Technologies. The course focuses on designing and developing web-based decision support systems, connecting application development with data analysis and analytical models.": {
+    "uk": "Я викладаю на магістерській програмі Technology Leadership & Artificial Intelligence (MTLAI) у школі цифрових технологій EPAM при AUK. Курс присвячений проєктуванню та розробці веборієнтованих систем підтримки ухвалення рішень і поєднує розробку застосунків з аналізом даних та аналітичними моделями.",
+    "zh-Hant-TW": "我在 AUK 的 EPAM 數位科技學院，為 Technology Leadership & Artificial Intelligence（MTLAI）碩士學程授課。課程聚焦網頁式決策支援系統的設計與開發，連結應用程式開發、資料分析及分析模型。"
+  },
+  "Alongside teaching, I have organized master’s student project defenses at AUK.": {
+    "uk": "Окрім викладання, я організовувала захисти студентських магістерських проєктів в AUK.",
+    "zh-Hant-TW": "除了授課，我也曾在 AUK 籌辦碩士生專題口試。"
+  },
+  "Programme & curriculum ↗": {
+    "uk": "Програма та навчальний план ↗",
+    "zh-Hant-TW": "學程與課程規劃 ↗"
+  },
+  "EPAM School of Digital Technologies ↗": {
+    "uk": "Школа цифрових технологій EPAM ↗",
+    "zh-Hant-TW": "EPAM 數位科技學院 ↗"
+  },
+  "Supporting researchers": {
+    "uk": "Підтримка дослідників",
+    "zh-Hant-TW": "支持研究者"
+  },
+  "Mentoring & supervision": {
+    "uk": "Менторство та керівництво роботами",
+    "zh-Hant-TW": "研究與論文指導"
+  },
+  "Current role · Mentor": {
+    "uk": "Поточна роль · Менторка",
+    "zh-Hant-TW": "現任 · 研究導師"
+  },
+  "Responsible AI for Ukraine": {
+    "uk": "Responsible AI for Ukraine",
+    "zh-Hant-TW": "Responsible AI for Ukraine"
+  },
+  "I mentor researchers in Responsible AI for Ukraine, a programme run by NYU’s Center for Responsible AI in partnership with UCU.": {
+    "uk": "Я менторка дослідників у Responsible AI for Ukraine — програмі Центру відповідального ШІ NYU у партнерстві з УКУ.",
+    "zh-Hant-TW": "我在 Responsible AI for Ukraine 擔任研究導師。這項計畫由 NYU 負責任 AI 中心與 UCU 合作推動。"
+  },
+  "Programme website ↗": {
+    "uk": "Сайт програми ↗",
+    "zh-Hant-TW": "計畫網站 ↗"
+  },
+  "Bachelor’s thesis · Ukrainian Catholic University": {
+    "uk": "Бакалаврська робота · Український католицький університет",
+    "zh-Hant-TW": "學士論文 · 烏克蘭天主教大學"
+  },
+  "Yuliia Vistak — graph neural networks": {
+    "uk": "Юлія Вісьтак — графові нейронні мережі",
+    "zh-Hant-TW": "Yuliia Vistak — 圖神經網路"
+  },
+  "I supervised Yuliia Vistak’s bachelor’s thesis on graph neural networks.": {
+    "uk": "Я керувала бакалаврською роботою Юлії Вісьтак із графових нейронних мереж.",
+    "zh-Hant-TW": "我指導了 Yuliia Vistak 關於圖神經網路的學士論文。"
+  },
+  "Our co-authored paper on Telegram disinformation ↗": {
+    "uk": "Наша спільна стаття про дезінформацію в Telegram ↗",
+    "zh-Hant-TW": "我們合著的 Telegram 不實資訊論文 ↗"
+  },
+  "Related research": {
+    "uk": "Пов’язані дослідження",
+    "zh-Hant-TW": "相關研究"
+  },
+  "Seasoning Data Modeling Education with GARLIC": {
+    "uk": "Seasoning Data Modeling Education with GARLIC",
+    "zh-Hant-TW": "Seasoning Data Modeling Education with GARLIC"
+  },
+  "Our participatory co-design framework brings role-play, collaborative modeling, and critique into data modeling education.": {
+    "uk": "Наш підхід до партисипативного спільного проєктування привносить рольову гру, спільне моделювання та критику в навчання моделювання даних.",
+    "zh-Hant-TW": "我們的參與式共同設計架構，將角色扮演、協作建模與評論帶入資料建模教育。"
+  },
+  "Talks, events, and media coverage, including Viktoriia Makovska’s machine unlearning presentation at AI HOUSE in Lviv on 20 August 2026.": {
+    "uk": "Виступи, події та медіаматеріали, зокрема доповідь Вікторії Маковської про машинне забування в AI HOUSE у Львові 20 серпня 2026.",
+    "zh-Hant-TW": "演講、活動與媒體報導，包括 Viktoriia Makovska 於2026年8月20日在利維夫 AI HOUSE 關於機器遺忘的演講。"
+  },
+  "Talks & Media · Viktoriia Makovska": {
+    "uk": "Виступи та медіа · Вікторія Маковська",
+    "zh-Hant-TW": "演講與媒體 · Viktoriia Makovska"
+  },
+  "Research in conversation": {
+    "uk": "Дослідження в діалозі",
+    "zh-Hant-TW": "研究對話"
+  },
+  "Talks & media": {
+    "uk": "Виступи та медіа",
+    "zh-Hant-TW": "演講與媒體"
+  },
+  "Sharing research on machine unlearning, responsible AI, and information integrity.": {
+    "uk": "Ділюся дослідженнями про машинне забування, відповідальний ШІ та інформаційну доброчесність.",
+    "zh-Hant-TW": "分享機器遺忘、負責任 AI 與資訊完整性的研究。"
+  },
+  "Talks ↓": {
+    "uk": "Виступи ↓",
+    "zh-Hant-TW": "演講 ↓"
+  },
+  "Media & news ↓": {
+    "uk": "Медіа та новини ↓",
+    "zh-Hant-TW": "媒體與消息 ↓"
+  },
+  "Speaking": {
+    "uk": "Виступи",
+    "zh-Hant-TW": "演講"
+  },
+  "Talks & events": {
+    "uk": "Виступи та події",
+    "zh-Hant-TW": "演講與活動"
+  },
+  "7 September 2026": {
+    "uk": "7 вересня 2026",
+    "zh-Hant-TW": "2026年9月7日"
+  },
+  "· Naples, Italy": {
+    "uk": "· Неаполь, Італія",
+    "zh-Hant-TW": "· 義大利那不勒斯"
+  },
+  "WIPE-OUT 2 / ECML PKDD 2026": {
+    "uk": "WIPE-OUT 2 / ECML PKDD 2026",
+    "zh-Hant-TW": "WIPE-OUT 2 / ECML PKDD 2026"
+  },
+  "I presented our work with George Fletcher at the 2nd Workshop on Machine Unlearning and Privacy Preservation. LENS evaluates narrative unlearning by examining targeted suppression alongside output degradation.": {
+    "uk": "Я представила нашу спільну з Джорджем Флетчером роботу на другому воркшопі з машинного забування та захисту приватності. LENS оцінює забування наративів, досліджуючи цільове пригнічення разом із погіршенням якості відповідей.",
+    "zh-Hant-TW": "我在第二屆機器遺忘與隱私保護工作坊發表了與 George Fletcher 合作的研究。LENS 透過檢視目標敘事的抑制與輸出品質退化，評估敘事遺忘。"
+  },
+  "Paper & citation": {
+    "uk": "Стаття та цитування",
+    "zh-Hant-TW": "論文與引用"
+  },
+  "20 August 2026": {
+    "uk": "20 серпня 2026",
+    "zh-Hant-TW": "2026年8月20日"
+  },
+  "· Lviv, Ukraine · In Ukrainian": {
+    "uk": "· Львів, Україна · Українською",
+    "zh-Hant-TW": "· 烏克蘭利維夫 · 烏克蘭語演講"
+  },
+  "AI HOUSE / Align, Forget, Repeat": {
+    "uk": "AI HOUSE / Align, Forget, Repeat",
+    "zh-Hant-TW": "AI HOUSE / Align, Forget, Repeat"
+  },
+  "Can we teach LLMs to forget, and why do we need to?": {
+    "uk": "Чи можна навчити LLM забувати і навіщо це потрібно?",
+    "zh-Hant-TW": "能教 LLM 遺忘嗎？為什麼需要這麼做？"
+  },
+  "Чи можна навчити LLM забувати і навіщо це потрібно?": {
+    "uk": "Чи можна навчити LLM забувати і навіщо це потрібно?",
+    "zh-Hant-TW": "Чи можна навчити LLM забувати і навіщо це потрібно?"
+  },
+  "I spoke about machine unlearning: how it works, whether knowledge can be removed without losing a model’s capabilities, and why this matters for AI safety.": {
+    "uk": "Я розповіла про машинне забування: як воно працює, чи можна видалити знання без втрати можливостей моделі та чому це важливо для безпеки ШІ.",
+    "zh-Hant-TW": "我介紹機器遺忘如何運作、是否能在不損失模型能力的情況下移除知識，以及這為何對 AI 安全重要。"
+  },
+  "Event programme": {
+    "uk": "Програма події",
+    "zh-Hant-TW": "活動議程"
+  },
+  "Related research: LENS": {
+    "uk": "Пов’язане дослідження: LENS",
+    "zh-Hant-TW": "相關研究：LENS"
+  },
+  "29 June 2026": {
+    "uk": "29 червня 2026",
+    "zh-Hant-TW": "2026年6月29日"
+  },
+  "· Research Tandems": {
+    "uk": "· Дослідницькі тандеми",
+    "zh-Hant-TW": "· Research Tandems"
+  },
+  "Research collaboration with Anastasiia Mahera": {
+    "uk": "Дослідницька співпраця з Анастасією Магерою",
+    "zh-Hant-TW": "與 Anastasiia Mahera 的研究合作"
+  },
+  "We took part in the Research Tandems programme and presented our work at its public showcase.": {
+    "uk": "Ми взяли участь у програмі «Дослідницькі тандеми» та представили нашу роботу на її публічній презентації.",
+    "zh-Hant-TW": "我們參與了 Research Tandems 計畫，並在公開發表會上介紹我們的工作。"
+  },
+  "Event announcement ↗": {
+    "uk": "Анонс події ↗",
+    "zh-Hant-TW": "活動公告 ↗"
+  },
+  "2026 · Luxembourg": {
+    "uk": "2026 · Люксембург",
+    "zh-Hant-TW": "2026年 · 盧森堡"
+  },
+  "Memory Undone at Undone Computer Science": {
+    "uk": "Memory Undone на Undone Computer Science",
+    "zh-Hant-TW": "在 Undone Computer Science 發表 Memory Undone"
+  },
+  "Conference participation and presentation of our work on knowing, not knowing, and responsible forgetting in data systems.": {
+    "uk": "Участь у конференції та представлення нашої роботи про знання, незнання й відповідальне забування в системах даних.",
+    "zh-Hant-TW": "參與研討會並發表我們關於資料系統中「知道」、「不知道」與負責任遺忘的研究。"
+  },
+  "Conference programme ↗": {
+    "uk": "Програма конференції ↗",
+    "zh-Hant-TW": "研討會議程 ↗"
+  },
+  "In the news": {
+    "uk": "У новинах",
+    "zh-Hant-TW": "新聞報導"
+  },
+  "Media & institutional news": {
+    "uk": "Медіа та університетські новини",
+    "zh-Hant-TW": "媒體與大學消息"
+  },
+  "2026 · INSCIENCE": {
+    "uk": "2026 · INSCIENCE",
+    "zh-Hant-TW": "2026 · INSCIENCE"
+  },
+  "FairForget selected for Women Led Science support": {
+    "uk": "FairForget отримав підтримку Women Led Science",
+    "zh-Hant-TW": "FairForget 獲得 Women Led Science 支持"
+  },
+  "The programme features our team’s research on fairness after machine unlearning.": {
+    "uk": "Програма висвітлює дослідження нашої команди про справедливість після машинного забування.",
+    "zh-Hant-TW": "計畫介紹了我們團隊關於機器遺忘之後公平性的研究。"
+  },
+  "UCU Research": {
+    "uk": "Дослідження УКУ",
+    "zh-Hant-TW": "UCU 研究動態"
+  },
+  "Conference": {
+    "uk": "Конференція",
+    "zh-Hant-TW": "研討會"
+  },
+  "PhD student Viktoriia Makovska took part in Undone Computer Science 2026 in Luxembourg": {
+    "uk": "Аспірантка УКУ Вікторія Маковська взяла участь у конференції Undone Computer Science 2026 у Люксембурзі",
+    "zh-Hant-TW": "UCU 博士生 Viktoriia Makovska 參與盧森堡 Undone Computer Science 2026 研討會"
+  },
+  "UCU Research, 2026.": {
+    "uk": "Дослідження УКУ, 2026.",
+    "zh-Hant-TW": "UCU 研究動態，2026年。"
+  },
+  "Institutional news item about my participation in the Undone Computer Science 2026 conference in Luxembourg.": {
+    "uk": "Університетська новина про мою участь у конференції Undone Computer Science 2026 у Люксембурзі.",
+    "zh-Hant-TW": "大學報導我參與盧森堡 Undone Computer Science 2026 研討會的消息。"
+  },
+  "Read article": {
+    "uk": "Читати матеріал",
+    "zh-Hant-TW": "閱讀報導"
+  },
+  "Texty.org.ua": {
+    "uk": "Texty.org.ua",
+    "zh-Hant-TW": "Texty.org.ua"
+  },
+  "Wikipedia research": {
+    "uk": "Дослідження Вікіпедії",
+    "zh-Hant-TW": "維基百科研究"
+  },
+  "Ukrainian student created an AI model that detects Russian propaganda in Wikipedia": {
+    "uk": "Українська студентка створила ШІ-модель, що виявляє російську пропаганду у Вікіпедії",
+    "zh-Hant-TW": "烏克蘭學生開發 AI 模型，偵測維基百科中的俄羅斯宣傳"
+  },
+  "Texty.org.ua, July 31, 2025.": {
+    "uk": "Texty.org.ua, 31 липня 2025.",
+    "zh-Hant-TW": "Texty.org.ua，2025年7月31日。"
+  },
+  "Coverage of my master's research prototype for detecting manipulative narratives in Ukrainian and Russian Wikipedia edits. The project is a research prototype, not a deployed Wikimedia moderation system.": {
+    "uk": "Матеріал про мій магістерський дослідницький прототип для виявлення маніпулятивних наративів в українських та російських редагуваннях Вікіпедії. Це дослідницький прототип, а не впроваджена система модерації Wikimedia.",
+    "zh-Hant-TW": "報導我在碩士研究中開發的原型，用於偵測烏克蘭語與俄語維基百科編輯中的操弄性敘事。此專案是研究原型，並非已部署的 Wikimedia 內容審核系統。"
+  },
+  "Slides (PDF, English)": {
+    "uk": "Слайди (PDF, англійською)",
+    "zh-Hant-TW": "簡報（PDF，英文）"
+  },
+  "September 2025": {
+    "uk": "Вересень 2025",
+    "zh-Hant-TW": "2025 年 9 月"
+  },
+  "· PhD proposal": {
+    "uk": "· Дисертаційна пропозиція",
+    "zh-Hant-TW": "· 博士研究計畫"
+  }
+}

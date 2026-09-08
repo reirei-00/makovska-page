@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="敘事不斷被改寫與轉貼時，如何追蹤它的傳播？">
+<title>Graph-Based Detection of Disinformation Narrative Diffusion between Russian and Ukrainian Telegram Channels</title>
+<link rel="canonical" href="https://reirei-00.github.io/makovska-page/zh-tw/research/telegram-narratives/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<link rel="stylesheet" href="../../../assets/css/papers.css"><!-- locale-head:start -->
+<link rel="alternate" hreflang="en" href="https://reirei-00.github.io/makovska-page/research/telegram-narratives/">
+<link rel="alternate" hreflang="uk" href="https://reirei-00.github.io/makovska-page/uk/research/telegram-narratives/">
+<link rel="alternate" hreflang="zh-Hant-TW" href="https://reirei-00.github.io/makovska-page/zh-tw/research/telegram-narratives/">
+<link rel="alternate" hreflang="x-default" href="https://reirei-00.github.io/makovska-page/research/telegram-narratives/">
+<script src="../../../assets/js/languages.js" defer></script>
+<!-- locale-head:end --></head>
+<body class="editorial-home" id="top">
+<a class="skip-link" href="#main">跳至主要內容</a>
+<header class="editorial-header"><div class="editorial-container header-inner">
+<a class="wordmark" href="../../about/" aria-label="Viktoriia Makovska 首頁">VM<span aria-hidden="true">.</span></a>
+<nav class="editorial-nav" aria-label="主要導覽"><a href="../../about/">關於我</a>
+<a href="../" aria-current="page">研究</a>
+<a href="../../teaching/">教學</a>
+<a href="../../media/">演講與媒體</a>
+<a href="../../../assets/cv/viktoriia_makovska_cv.pdf">履歷（英文） <span class="file-label">PDF</span></a>
+</nav><!-- locale-switch:start --><nav class="language-switch" aria-label="語言"><a href="../../../research/telegram-narratives/" lang="en" hreflang="en" data-language-link>English</a><a href="../../../uk/research/telegram-narratives/" lang="uk" hreflang="uk" data-language-link>Українська</a><a href="./" lang="zh-Hant-TW" hreflang="zh-Hant-TW" data-language-link aria-current="true">繁體中文（台灣）</a></nav><!-- locale-switch:end --></div></header>
+<main id="main" class="editorial-container page-content paper-explainer">
+<section class="page-intro paper-intro"><a class="back-link" href="../#telegram-narratives">← <span>所有研究</span></a><p class="editorial-eyebrow">論文導讀</p>
+<div class="paper-meta"><span class="tag"><time datetime="2026-05">2026年5月</time></span><span class="tag">UNLP 2026</span>
+              <span class="tag">ACL Anthology</span>
+              <span class="tag">不實資訊分析</span>
+            </div><h1 lang="en"><span lang="en">Graph-Based Detection of Disinformation Narrative Diffusion between Russian and Ukrainian Telegram Channels</span></h1><p class="paper-authors" lang="en">
+              Yuliia Vistak, Viktoriia Makovska, Vera Schmitt, Veronika Solopova
+            </p><p class="lead-copy">敘事不斷被改寫與轉貼時，如何追蹤它的傳播？</p>
+<nav class="detail-links" aria-label="論文導讀"><a href="#question">研究問題</a><a href="#approach">視覺導讀</a><a href="#findings">研究貢獻</a><a href="#sources">閱讀原文</a></nav></section>
+<section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">研究問題</p><h2 id="question-title">研究動機</h2></div></div><p class="explanation-copy">單則訊息只能呈現不實資訊活動的一部分。這篇論文結合敘事標籤與圖結構，研究相關說法如何在俄語及烏克蘭語 Telegram 頻道間流通。</p></section>
+<section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">研究方法</p><h2 id="approach-title">視覺導讀</h2></div></div><figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">看見連結的兩種方式</h3><div class="network-map" aria-hidden="true"><svg viewbox="0 0 720 190" focusable="false"><path class="edge-recorded" d="M110 50 L330 140 L600 50"></path><path class="edge-semantic" d="M110 50 L600 50 M330 140 L600 140"></path></svg><span class="node node-a">頻道 A</span><span class="node node-b">頻道 B</span><span class="node node-c">頻道 C</span><span class="node node-d">頻道 D</span></div><div class="network-key"><span>有記錄的轉傳</span><span>語意相似</span></div><ol class="method-diagram diagram-network"><li><span class="diagram-index" aria-hidden="true">01</span><h3>訊息</h3><p>蒐集公開貼文與轉傳中繼資料。</p></li><li><span class="diagram-index" aria-hidden="true">02</span><h3>敘事標籤</h3><p>以弱監督將相關說法對應至敘事分類。</p></li><li><span class="diagram-index" aria-hidden="true">03</span><h3>明確轉傳</h3><p>利用記錄中的來源頻道連結。</p></li><li><span class="diagram-index" aria-hidden="true">04</span><h3>語意連結</h3><p>即使沒有轉傳標記，也能找出跨頻道的相似訊息。</p></li></ol><figcaption>此為概念網路，並非實際頻道資料。實線表示有記錄的轉傳，虛線表示語意相似。 <span class="figure-source"><a href="https://aclanthology.org/2026.unlp-1.9.pdf">第 3–5 節與限制</a></span></figcaption></figure></section>
+<section class="explainer-section" id="findings" aria-labelledby="findings-title"><div class="section-heading"><h2 id="findings-title">研究貢獻</h2></div><p class="explanation-copy">語意連結能找出原生轉傳中繼資料未記錄的轉貼關係。兩個圖層呈現不同的頻道連通性，說明只追蹤明確轉傳可能低估敘事的流通。</p><p class="source-note"><a href="https://aclanthology.org/2026.unlp-1.9.pdf">第 3–5 節與限制</a></p><aside class="evidence-note" aria-labelledby="limits-title"><h3 id="limits-title">證據與限制</h3><p>弱標籤可能出錯，敘事分類也會隨時間改變。語意連結表示內容相關，不能判定誰抄襲誰，也不能證明協同行動。此框架用於研究與人工檢視。</p></aside></section>
+<section class="explainer-section" id="sources" aria-labelledby="sources-title"><div class="section-heading"><h2 id="sources-title">原始論文與資源</h2></div><p class="paper-venue">
+              收錄於 <em><span lang="en">Proceedings of the Fifth Ukrainian Natural Language Processing Conference (UNLP 2026)</span></em>，第 80–96 頁，烏克蘭利維夫。計算語言學協會。
+            </p><div class="paper-links">
+              <a class="paper-link" href="https://aclanthology.org/2026.unlp-1.9/" target="_blank" rel="noopener">ACL Anthology</a>
+              <a class="paper-link" href="https://aclanthology.org/2026.unlp-1.9.pdf" target="_blank" rel="noopener">PDF</a>
+            </div><details class="paper-details">
+              <summary>引用</summary>
+              <div class="copy-row">
+                <button class="copy-button" data-copy-target="cite-graph-disinformation">複製引用</button>
+              </div>
+              <pre class="paper-citation" id="cite-graph-disinformation" lang="en">Vistak, Y., Makovska, V., Schmitt, V., &amp; Solopova, V. (2026). Graph-Based Detection of Disinformation Narrative Diffusion between Russian and Ukrainian Telegram Channels. In Proceedings of the Fifth Ukrainian Natural Language Processing Conference (UNLP 2026), 80-96. Association for Computational Linguistics. https://aclanthology.org/2026.unlp-1.9/</pre>
+            </details><details class="paper-details">
+              <summary>BibTeX</summary>
+              <div class="copy-row">
+                <button class="copy-button" data-copy-target="bib-graph-disinformation">複製 BibTeX</button>
+              </div>
+              <pre class="paper-citation" id="bib-graph-disinformation" lang="en">@inproceedings{vistak-etal-2026-graph,
+  title = {Graph-Based Detection of Disinformation Narrative Diffusion between {R}ussian and {U}krainian {T}elegram Channels},
+  author = {Vistak, Yuliia and Makovska, Viktoriia and Schmitt, Vera and Solopova, Veronika},
+  booktitle = {Proceedings of the Fifth {U}krainian Natural Language Processing Conference ({UNLP} 2026)},
+  year = {2026},
+  address = {Lviv, Ukraine},
+  publisher = {Association for Computational Linguistics},
+  pages = {80--96},
+  url = {https://aclanthology.org/2026.unlp-1.9/}
+}</pre>
+            </details></section>
+<section class="explainer-section" id="related" aria-labelledby="related-title"><div class="section-heading"><div><p class="section-marker">繼續探索</p><h2 id="related-title">相關研究</h2></div></div><div class="related-papers"><a href="../vandalism-propaganda/"><span lang="en">Vandalism or Propaganda? Enhancing Vandalism Detection in Ukrainian and Russian Wikipedia through Knowledge Manipulation Filtering </span><span aria-hidden="true">↗</span></a><a href="../masters-thesis/"><span lang="en">Vandalism or Knowledge Manipulation? Detecting Narratives in Wikipedia Edits </span><span aria-hidden="true">↗</span></a></div></section></main><footer class="editorial-footer"><div class="editorial-container footer-grid">
+<div><p class="footer-name">Viktoriia Makovska</p><p>博士生 · 烏克蘭天主教大學<br>研究工程師 · Lapa LLM</p></div>
+<div class="footer-links" aria-label="聯絡方式與個人檔案">
+<a href="mailto:makovska.pn@ucu.edu.ua">電子郵件</a>
+<a href="https://scholar.google.com/citations?user=UUR3TbAAAAAJ&amp;hl=en">Google Scholar</a>
+<a href="https://orcid.org/0009-0003-7622-9143">ORCID</a>
+<a href="https://apps.ucu.edu.ua/en/teachers/viktoriia-makovska/">UCU 個人頁面</a>
+<a href="https://www.researchgate.net/profile/Viktoriia-Makovska">ResearchGate</a>
+<a href="https://openreview.net/profile?id=%7EViktoriia_Makovska1">OpenReview</a>
+<a href="https://github.com/reirei-00">GitHub</a>
+<a href="https://huggingface.co/reirei01">Hugging Face</a>
+<a href="https://www.linkedin.com/in/victoriadiachenko/">LinkedIn</a>
+<a href="https://t.me/forgetting_machines">Telegram · @forgetting_machines</a>
+</div></div></footer>
+
+<script src="../../../assets/js/copy.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="When a model stops repeating a narrative, has it forgotten—or stopped answering usefully?">
+<title>Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS</title>
+<link rel="canonical" href="https://reirei-00.github.io/makovska-page/research/lens/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/papers.css"><!-- locale-head:start -->
+<link rel="alternate" hreflang="en" href="https://reirei-00.github.io/makovska-page/research/lens/">
+<link rel="alternate" hreflang="uk" href="https://reirei-00.github.io/makovska-page/uk/research/lens/">
+<link rel="alternate" hreflang="zh-Hant-TW" href="https://reirei-00.github.io/makovska-page/zh-tw/research/lens/">
+<link rel="alternate" hreflang="x-default" href="https://reirei-00.github.io/makovska-page/research/lens/">
+<script src="../../assets/js/languages.js" defer></script>
+<!-- locale-head:end --></head>
+<body class="editorial-home" id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="editorial-header"><div class="editorial-container header-inner">
+<a class="wordmark" href="../../about/" aria-label="Viktoriia Makovska home">VM<span aria-hidden="true">.</span></a>
+<nav class="editorial-nav" aria-label="Primary navigation"><a href="../../about/">About</a>
+<a href="../" aria-current="page">Research</a>
+<a href="../../teaching/">Teaching</a>
+<a href="../../media/">Talks & Media</a>
+<a href="../../assets/cv/viktoriia_makovska_cv.pdf">CV <span class="file-label">PDF</span></a>
+</nav><!-- locale-switch:start --><nav class="language-switch" aria-label="Language"><a href="./" lang="en" hreflang="en" data-language-link aria-current="true">English</a><a href="../../uk/research/lens/" lang="uk" hreflang="uk" data-language-link>Українська</a><a href="../../zh-tw/research/lens/" lang="zh-Hant-TW" hreflang="zh-Hant-TW" data-language-link>繁體中文（台灣）</a></nav><!-- locale-switch:end --></div></header>
+<main id="main" class="editorial-container page-content paper-explainer">
+<section class="page-intro paper-intro"><a class="back-link" href="../#lens">← <span>All research</span></a><p class="editorial-eyebrow">Paper explained</p>
+<div class="paper-meta"><span class="tag"><time datetime="2026-07">July 2026</time></span><span class="tag">Workshop presentation</span><span class="tag">Machine unlearning</span></div><h1 lang="en">Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS</h1><p class="paper-authors">Viktoriia Makovska, George Fletcher</p><p class="lead-copy">When a model stops repeating a narrative, has it forgotten—or stopped answering usefully?</p>
+<nav class="detail-links" aria-label="Paper explained"><a href="#question">The question</a><a href="#approach">A visual guide</a><a href="#findings">What the work contributes</a><a href="#sources">Read the source</a></nav></section>
+<section class="explainer-section" id="question" aria-labelledby="question-title"><div class="section-heading"><div><p class="section-marker">The question</p><h2 id="question-title">Why this work</h2></div></div><p class="explanation-copy">LENS examines narrative reproduction after machine unlearning. The study tests four multilingual instruction models on two disinformation-aligned frames, using several ways of asking about the same underlying narrative.</p></section>
+<section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">The approach</p><h2 id="approach-title">A visual guide</h2></div></div><figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">One narrative, four prompting contexts</h3><ol class="method-diagram diagram-levels"><li><span class="diagram-index" aria-hidden="true">01</span><h3>L0 · Direct</h3><p>Ask for the target explanation directly.</p></li><li><span class="diagram-index" aria-hidden="true">02</span><h3>L1 · Attributed</h3><p>Ask about an explanation attributed to someone else.</p></li><li><span class="diagram-index" aria-hidden="true">03</span><h3>L2 · Contrastive</h3><p>Place the target frame beside a competing explanation.</p></li><li><span class="diagram-index" aria-hidden="true">04</span><h3>L3 · Abstract</h3><p>Mask actor names while preserving the causal structure.</p></li></ol><figcaption>Conceptual guide to LENS. L0 supplies the forget examples; L1–L2 test transfer; L3 probes abstraction and entity recovery. These are prompting levels, not numerical difficulty scores. <span class="figure-source"><a href="https://arxiv.org/html/2607.22657v2">Sections 4, 6–8</a></span></figcaption></figure><section class="score-explorer" id="score" aria-labelledby="score-title">
+<p class="section-marker">Illustrative calculator · 100 responses</p><h3 id="score-title">Explore the suppression score</h3>
+<p>Try changing the counts. These are hypothetical responses, not experimental results. The score rewards reduced reproduction and penalizes degraded answers.</p>
+<div class="score-layout"><div class="score-controls"><label for="sce-before"><span>Before: narrative reproduced</span><output id="value-before" for="sce-before">80</output><input id="sce-before" type="range" min="0" max="100" value="80" step="1" disabled></label><label for="sce-after"><span>After: usable answers reproducing it</span><output id="value-after" for="sce-after">20</output><input id="sce-after" type="range" min="0" max="90" value="20" step="1" disabled></label><label for="sce-degraded"><span>After: degraded answers</span><output id="value-degraded" for="sce-degraded">10</output><input id="sce-degraded" type="range" min="0" max="100" value="10" step="1" disabled></label></div><div class="score-results" aria-live="polite" aria-atomic="true"><p>Relative suppression <strong id="sce-suppression">75%</strong></p><p>Degradation rate <strong id="sce-degradation">10%</strong></p><p>SCE score <strong id="sce-result">0.608</strong></p></div></div>
+<p class="score-formula">SCE = suppression × (1 − degradation)²</p>
+<p class="figure-note">Counts are constrained to 100 responses. SCE is a checkpoint-selection aid, not proof of complete forgetting.</p>
+<noscript>Enable JavaScript to adjust the example. The displayed score uses 80 before, 20 usable reproductions after, and 10 degraded answers.</noscript></section></section>
+<section class="explainer-section" id="findings" aria-labelledby="findings-title"><div class="section-heading"><h2 id="findings-title">What the work contributes</h2></div><p class="explanation-copy">Selected checkpoints reduced narrative reproduction beyond direct training prompts while retaining substantive answers. The useful checkpoint varied by model, language, narrative, and method. Abstract prompts could still recover associated real-world actors.</p><p class="source-note"><a href="https://arxiv.org/html/2607.22657v2">Sections 4, 6–8</a></p><aside class="evidence-note" aria-labelledby="limits-title"><h3 id="limits-title">Evidence &amp; limits</h3><p>This is a behavioral diagnostic, not proof that a representation has been erased. Weak labels are noisy, utility tests are small, and the full evaluation pool includes checkpoint-selection prompts. L3 entity recovery is reported separately from L0–L2 suppression.</p></aside></section>
+<section class="explainer-section" id="sources" aria-labelledby="sources-title"><div class="section-heading"><h2 id="sources-title">Original paper &amp; resources</h2></div><p class="paper-venue">Presented at WIPE-OUT 2 — 2nd Workshop on Machine Unlearning and Privacy Preservation, ECML PKDD 2026 · 7 September 2026 · Naples, Italy.</p><p class="paper-venue">Preprint: arXiv:2607.22657 · revised 31 July 2026.</p><div class="paper-links"><a href="../../assets/slides/lens-wipe-out-2026.pdf" type="application/pdf">Slides (PDF, English) <span aria-hidden="true">↗</span></a><a href="https://aiimlab.org/events/ECML_PKDD_2026_WIPE-OUT_2_Workshop_on_Machine_Unlearning_and_Privacy_Preservation">Workshop programme <span aria-hidden="true">↗</span></a><a href="https://arxiv.org/abs/2607.22657">arXiv <span aria-hidden="true">↗</span></a><a href="https://arxiv.org/pdf/2607.22657">PDF <span aria-hidden="true">↗</span></a></div><details class="paper-details"><summary>Citation</summary><div class="copy-row"><button class="copy-button" data-copy-target="cite-lens">Copy citation</button></div><pre class="paper-citation" id="cite-lens">Makovska, V., &amp; Fletcher, G. (2026). Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS. arXiv:2607.22657. https://arxiv.org/abs/2607.22657</pre></details><details class="paper-details"><summary>BibTeX</summary><div class="copy-row"><button class="copy-button" data-copy-target="bib-lens">Copy BibTeX</button></div><pre class="paper-citation" id="bib-lens">@misc{makovska2026lens,
+  title = {Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS},
+  author = {Makovska, Viktoriia and Fletcher, George},
+  year = {2026},
+  eprint = {2607.22657},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url = {https://arxiv.org/abs/2607.22657}
+}</pre></details></section>
+<section class="explainer-section" id="related" aria-labelledby="related-title"><div class="section-heading"><div><p class="section-marker">Continue exploring</p><h2 id="related-title">Related work</h2></div></div><div class="related-papers"><a href="../phd-proposal/">Forgetting Machines: Responsibility by Design in Machine Unlearning <span aria-hidden="true">↗</span></a><a href="../memory-undone/">Memory Undone: Between Knowing and Not Knowing in Data Systems <span aria-hidden="true">↗</span></a></div></section></main><footer class="editorial-footer"><div class="editorial-container footer-grid">
+<div><p class="footer-name">Viktoriia Makovska</p><p>PhD researcher · Ukrainian Catholic University<br>Research Engineer · Lapa LLM</p></div>
+<div class="footer-links" aria-label="Contact and profiles">
+<a href="mailto:makovska.pn@ucu.edu.ua">Email</a>
+<a href="https://scholar.google.com/citations?user=UUR3TbAAAAAJ&amp;hl=en">Google Scholar</a>
+<a href="https://orcid.org/0009-0003-7622-9143">ORCID</a>
+<a href="https://apps.ucu.edu.ua/en/teachers/viktoriia-makovska/">UCU profile</a>
+<a href="https://www.researchgate.net/profile/Viktoriia-Makovska">ResearchGate</a>
+<a href="https://openreview.net/profile?id=%7EViktoriia_Makovska1">OpenReview</a>
+<a href="https://github.com/reirei-00">GitHub</a>
+<a href="https://huggingface.co/reirei01">Hugging Face</a>
+<a href="https://www.linkedin.com/in/victoriadiachenko/">LinkedIn</a>
+<a href="https://t.me/forgetting_machines">Telegram · @forgetting_machines</a>
+</div></div></footer>
+
+<script src="../../assets/js/copy.js" defer></script>
+<script src="../../assets/js/paper-explorer.js" defer></script></body>
+</html>
