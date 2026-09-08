@@ -3,8 +3,10 @@
 from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import unquote, urljoin, urlsplit
+from urllib.parse import parse_qs, unquote, urljoin, urlsplit
+import hashlib
 import posixpath
+import re
 
 from build_locales import BASE, LANGUAGES, PAGES, PAPER_DATA, route
 
@@ -41,6 +43,14 @@ def main():
              for lang in LANGUAGES for page in PAGES]
     files += [ROOT / prefix / 'index.html' for prefix in LANGUAGES.values()]
     docs = {path: Page(path.read_text()) for path in files}
+    versions = []
+    for path, doc in docs.items():
+        stamps = [attrs.get('content', '') for tag, attrs in doc.tags if tag == 'meta' and attrs.get('name') == 'site-version']
+        assert len(stamps) == 1 and re.fullmatch('[a-f0-9]{12}', stamps[0]), path
+        versions.append(stamps[0])
+    assert len(set(versions)) == 1, 'Every page must belong to the same release.'
+    release = versions[0]
+    assert {path.resolve() for path in ROOT.rglob('*.html') if not any(part.startswith('.') for part in path.relative_to(ROOT).parts)} == set(docs), 'Unexpected HTML pages outside the current site.'
     references = 0
     for path, doc in docs.items():
         assert all(n == 1 for n in Counter(doc.ids).values()), path
@@ -62,6 +72,11 @@ def main():
                 if target.is_dir():
                     target /= 'index.html'
                 assert target.exists(), (path, ref)
+                if url.path and target in docs:
+                    assert parse_qs(url.query).get('v') == [release], (path, ref, 'Stale page version')
+                elif target.is_relative_to(ROOT / 'assets'):
+                    version = hashlib.sha256(target.read_bytes()).hexdigest()[:12]
+                    assert parse_qs(url.query).get('v') == [version], (path, ref, 'Stale asset version')
                 if url.fragment and target in docs:
                     assert unquote(url.fragment) in docs[target].ids, (path, ref)
                 for prefix in ('/', '/makovska-page/'):
@@ -92,7 +107,7 @@ def main():
             assert len(switches) == 3, path
             assert [a['lang'] for a in switches if a.get('aria-current') == 'true'] == [lang], path
             for a in switches:
-                assert (path.parent / a['href']).resolve() == ROOT / route(a['lang'], page), path
+                assert (path.parent / urlsplit(a['href']).path).resolve() == ROOT / route(a['lang'], page), path
             original = docs[ROOT / page / 'index.html']
             assert doc.citations == original.citations, path
             assert set(doc.ids) == set(original.ids), path
@@ -121,7 +136,7 @@ def main():
             assert sum(t == 'figure' and a.get('class') == 'paper-visual' for t, a in doc.tags) == 1, path
             assert all(catalogue.citations.get(key) == value for key, value in doc.citations.items()), path
             assert doc.citations, path
-    print(f'PASS: {len(docs)} pages; {references} local references; locale routes, metadata, anchors, publication dates, and unchanged citations.')
+    print(f'PASS: {len(docs)} pages; {references} local references; current page/asset versions, locale routes, metadata, anchors, publication dates, and unchanged citations.')
 
 
 if __name__ == '__main__':

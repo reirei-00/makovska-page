@@ -11,6 +11,10 @@ To update content:
 
 Do not edit generated Ukrainian or Chinese HTML directly. The builder refuses missing translations and adds language navigation, localized metadata, and reciprocal `hreflang` links. Language switching preserves the current section anchor. The downloadable CV is identified as English in both translations.
 
+The builder also generates all three landing-page redirects. Every page carries the same `site-version` stamp, and internal page links include that release version. Assets use a hash of their contents in the `v` query parameter. This prevents navigation from mixing cached pages, styles, animations, or downloads from different updates. Canonical and alternate-language URLs stay clean for search engines. Version values are generated automatically; rebuild after changing an asset, and do not edit these values by hand.
+
+The checker verifies page and asset versions, checks that every local link stays inside the website, and rejects extra HTML pages outside the current route list. Paper-specific links in Teaching and Talks & Media open the paper explainers; the catalogue remains the destination for “All research” links.
+
 Interactive strings live in `assets/js/copy.js` and `assets/js/kaleidoscope.js`. Chinese prose uses Traditional characters and Taiwan terminology. A fluent Taiwan reader's editorial review is welcome before formal publication.
 
 ## Paper explainers

@@ -4,10 +4,11 @@
 Run after English content changes. Missing translations fail the build so updates
 cannot silently leave untranslated prose in the localized site.
 """
-from html import escape
+from html import escape, unescape
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urlsplit, urlunsplit
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+import hashlib
 import json
 import posixpath
 import re
@@ -52,7 +53,53 @@ def relative(source, target):
 
 
 def clean_generated(source):
-    return re.sub(r'<!-- locale-(?:head|switch):start -->.*?<!-- locale-(?:head|switch):end -->', '', source, flags=re.S)
+    source = re.sub(r'<!-- locale-(?:head|switch):start -->.*?<!-- locale-(?:head|switch):end -->', '', source, flags=re.S)
+    source = re.sub(r'<meta name="site-version" content="[a-f0-9]+">', '', source)
+    return rewrite_urls(source, lambda url: version_url(url, None))
+
+
+def version_url(value, version):
+    url = urlsplit(value)
+    if url.scheme or url.netloc or not url.path:
+        return value
+    query = [(key, item) for key, item in parse_qsl(url.query, keep_blank_values=True) if key != 'v']
+    if version:
+        query.append(('v', version))
+    return urlunsplit(('', '', url.path, urlencode(query), url.fragment))
+
+
+def rewrite_urls(source, rewrite):
+    def replace(match):
+        return match[1] + match[2] + escape(rewrite(unescape(match[3])), quote=True) + match[2]
+    return re.sub(r'''(\b(?:href|src)=)(["'])(.*?)\2''', replace, source)
+
+
+def version_pages(rendered):
+    """Keep page navigation on one release and invalidate changed asset caches."""
+    assets = {path.resolve(): hashlib.sha256(path.read_bytes()).hexdigest()[:12]
+              for path in sorted((ROOT / 'assets').rglob('*'))
+              if path.is_file() and not any(part.startswith('.') for part in path.relative_to(ROOT).parts)}
+    digest = hashlib.sha256()
+    for path, source in sorted(rendered.items()):
+        digest.update(path.relative_to(ROOT).as_posix().encode() + b'\0' + source.encode() + b'\0')
+    for path, version in assets.items():
+        digest.update(path.relative_to(ROOT).as_posix().encode() + b'\0' + version.encode())
+    release = digest.hexdigest()[:12]
+    for path, source in rendered.items():
+        def rewrite(value):
+            url = urlsplit(value)
+            if url.scheme or url.netloc or not url.path:
+                return value
+            target = (path.parent / url.path).resolve()
+            if target.is_dir():
+                target /= 'index.html'
+            version = release if target in rendered else assets.get(target)
+            return version_url(value, version) if version else value
+        source = rewrite_urls(source, rewrite)
+        source = re.sub(r'(<meta http-equiv="refresh" content="0; url=)([^"]+)',
+                        lambda m: m[1] + escape(rewrite(unescape(m[2])), quote=True), source)
+        rendered[path] = source.replace('</head>', f'<meta name="site-version" content="{release}"></head>', 1)
+    return release
 
 
 def decorate(source, lang, page):
@@ -173,13 +220,15 @@ def main():
                 # The Ukrainian heading already contains the event's original title.
                 translated = re.sub(r'<p class="original-title" lang="uk">.*?</p>', '', translated, flags=re.S)
             rendered[ROOT / LANGUAGES[lang] / page / 'index.html'] = decorate(translated, lang, page)
-    for lang in ('uk', 'zh-Hant-TW'):
-        label = 'Відкрити сайт Вікторії Маковської' if lang == 'uk' else '前往 Viktoriia Makovska 的網站'
-        rendered[ROOT / LANGUAGES[lang] / 'index.html'] = f'<!DOCTYPE html>\n<html lang="{lang}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="refresh" content="0; url=about/"><link rel="canonical" href="{BASE}{route(lang, "about")}"><title>{label}</title></head><body><p><a href="about/">{label}</a></p></body></html>\n'
+    for lang in LANGUAGES:
+        label = {'en': 'Visit Viktoriia Makovska’s website', 'uk': 'Відкрити сайт Вікторії Маковської', 'zh-Hant-TW': '前往 Viktoriia Makovska 的網站'}[lang]
+        title = 'Viktoriia Makovska' if lang == 'en' else label
+        rendered[ROOT / LANGUAGES[lang] / 'index.html'] = f'<!DOCTYPE html>\n<html lang="{lang}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="refresh" content="0; url=about/"><link rel="canonical" href="{BASE}{route(lang, "about")}"><title>{title}</title></head><body><p><a href="about/">{label}</a></p></body></html>\n'
+    release = version_pages(rendered)
     for path, content in rendered.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content)
-    print(f'Built {len(rendered)} pages, including language landing pages.')
+    print(f'Built {len(rendered)} pages, including language landing pages. Version: {release}.')
 
 
 if __name__ == '__main__':
