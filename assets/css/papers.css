@@ -81,15 +81,10 @@
 .result-track { background: var(--soft); height: 20px; }
 .result-track > span { display: block; height: 100%; background: var(--accent); }
 .result-row strong { font-family: var(--mono); font-weight: 500; text-align: end; }
-.related-papers { display: flex; flex-direction: column; gap: 18px; }
-.related-papers a { display: block; padding: 0 0 0 18px; border-left: 1px dotted var(--accent); text-decoration: underline; font: 400 19px/1.5 var(--serif); }
-.related-papers a:hover { text-decoration: underline; }
 .paper-margin { grid-column: 3; grid-row: 1; position: sticky; top: 50px; min-width: 0; max-height: calc(100vh - 80px); overflow-y: auto; scrollbar-width: thin; }
 .paper-margin h2 { font-size: 17px; margin-bottom: 14px; }
 .paper-margin a { display: block; font-size: 13px; line-height: 1.55; margin-top: 12px; text-decoration: none; }
 .paper-margin a:hover { text-decoration: underline; }
-.margin-related { margin-top: 32px; padding-top: 24px; border-top: 1px dotted var(--rule); }
-.margin-related a { font: 400 16px/1.5 var(--serif); }
 .score-explorer { border: 0; border-top: 1px dashed var(--rule); padding: 24px 0; margin-top: 28px; }
 .score-explorer h3 { margin: 8px 0 16px; font-size: 21px; }
 .score-explorer > p { max-width: 850px; }
@@ -117,7 +112,7 @@
   .paper-visual, .score-explorer { padding: 16px 0; }
   .explainer-section + .explainer-section { margin-top: 40px; }
   .explanation-copy { font-size: 17px; }
-  .method-diagram, .related-papers, .score-layout { grid-template-columns: minmax(0,1fr); }
+  .method-diagram, .score-layout { grid-template-columns: minmax(0,1fr); }
   .method-diagram li { padding: 18px 8px; }
   .diagram-pipeline li + li::before { content: '↓'; left: 50%; top: -25px; }
   .diagram-workshop { padding: 0; }

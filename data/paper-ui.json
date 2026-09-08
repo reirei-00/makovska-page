@@ -45,16 +45,6 @@
     "zh-Hant-TW": "原始論文與資源"
   },
   {
-    "en": "Continue exploring",
-    "uk": "Досліджувати далі",
-    "zh-Hant-TW": "繼續探索"
-  },
-  {
-    "en": "Related work",
-    "uk": "Пов’язані роботи",
-    "zh-Hant-TW": "相關研究"
-  },
-  {
     "en": "Source passage",
     "uk": "Фрагмент джерела",
     "zh-Hant-TW": "原文段落"
@@ -93,26 +83,6 @@
     "en": "Channel D",
     "uk": "Канал D",
     "zh-Hant-TW": "頻道 D"
-  },
-  {
-    "en": "Same text, fewer tokens",
-    "uk": "Той самий текст, менше токенів",
-    "zh-Hant-TW": "相同文字，更少 token"
-  },
-  {
-    "en": "Original model",
-    "uk": "Початкова модель",
-    "zh-Hant-TW": "原始模型"
-  },
-  {
-    "en": "Adapted model",
-    "uk": "Адаптована модель",
-    "zh-Hant-TW": "調適後模型"
-  },
-  {
-    "en": "Relative token use · adapted model = 1",
-    "uk": "Відносне використання токенів · адаптована модель = 1",
-    "zh-Hant-TW": "相對 token 用量 · 調適後模型 = 1"
   },
   {
     "en": "Ukrainian news experiment · F1",

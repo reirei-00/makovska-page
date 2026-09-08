@@ -17,7 +17,7 @@ The checker verifies page and asset versions, checks that every local link stays
 
 ## Visual style
 
-The shared layout follows a personal research notebook: a reading column, serif headings, handwritten dates, purple ink accents, and unboxed sections. Desktop navigation includes selected papers and their publication dates; paper explainers also have a margin for contents and related work. On smaller screens navigation moves above the text, and the existing links within the paper remain available.
+The shared layout follows a personal research notebook: a reading column, serif headings, handwritten dates, purple ink accents, and unboxed sections. Desktop navigation includes selected papers and their publication dates; paper explainers also have a margin for contents. On smaller screens navigation moves above the text, and the existing links within the paper remain available.
 
 `scripts/build_locales.py` generates the selected-paper margin, small pixel sprout, and common font imports inside removable `notebook-nav` and locale blocks. `scripts/build_papers.py` generates the paper margin. Keep those generated elements out of manually edited source markup. The ASCII garden and individual paper animations remain the site's own artwork.
 

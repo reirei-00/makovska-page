@@ -5,7 +5,7 @@
   if (!scene) return;
   const art = scene.querySelector('[data-ink-art]'), button = scene.querySelector('[data-ink-toggle]');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const initialTime = {garlic: reduced.matches ? 8 : 0, onion: reduced.matches ? 6 : 0};
+  const initialTime = {garlic: reduced.matches ? 11 : 0, onion: reduced.matches ? 6 : 0, 'phd-proposal': 0};
   let playing = !reduced.matches, visible = true, time = initialTime[scene.dataset.inkScene] ?? 3.5, previous = null, lastDraw = -Infinity, frame = 0, cols = 70;
   const rows = 20, TAU = Math.PI * 2;
   const clamp = (n, a = 0, b = 1) => Math.max(a, Math.min(b, n));
@@ -67,31 +67,54 @@
       connectors.forEach(([a,b])=>{put(...a,'+','accent');put(...b,'+','accent');});
     }
     function garlic() {
-      const phase=time%15;
-      const split=phase<1.5?0:phase<6.5?ease((phase-1.5)/5):phase<9?1:phase<14?1-ease((phase-9)/5):0;
-      const count=cols<56?3:5, middle=(count-1)/2, spread=Math.min((cols-10)/2,32);
-      const clove=['    . ','   /| ','  / | ',' /  | ','(   | ','(   / ',' \\_/  '];
-      const reflect={'/':'\\','\\':'/','(' : ')',')':'('};
-      const mirrored=clove.map(row=>[...row].reverse().map(c=>reflect[c]||c).join(''));
-      scene.dataset.cloveSpread=split.toFixed(3);
-      // Cloves keep their outlines as the bulb opens; the thin skin peels outward.
-      if(split<.6){
-        const peelShift=Math.round(split*10),tone=split>.2?'faint':'';
-        const left=['         /','      .-\' ','    .\'    ','   /      ','  /       ',' (        ',' (        ','  \\       ',"   '.__   "];
-        const right=left.map(row=>[...row].reverse().map(c=>reflect[c]||c).join(''));
-        sprite(cx-11-peelShift,4,left,tone);sprite(cx+1+peelShift,4,right,tone);
-        sprite(cx-2,1-Math.round(split*3),['  |  ',' \\|/ ','  |  '],tone);
-        if(split<.25)word(cx-4,15,"'._|||_.'",'faint');
+      const phase=time%20;
+      // Open the bulb, cut one clove, then gather the pieces for the next loop.
+      const opening=ease((phase-2)/3)*(1-ease((phase-16)/3));
+      const cutting=ease((phase-7)/4)*(1-ease((phase-14)/2));
+      const spread=Math.min(25,(cols-12)/2),shift=opening*spread;
+      const clove=["     ,", "   .'|", "  /  |", " /   |", "(    |", "(    /", " \\  /", "  '-'"];
+      const mirror=rows=>rows.map(row=>[...row.padEnd(7)].reverse().map(c=>({'/':'\\','\\':'/','(' : ')',')':'('}[c]||c)).join(''));
+      const stage=phase<2||phase>=19?'bulb':phase<5||phase>=16?'opening':phase<7?'cloves':phase<11?'slicing':phase<14?'pieces':'gathering';
+      scene.dataset.garlicStage=stage;
+      scene.dataset.cloveSpread=opening.toFixed(3);
+      const board=Math.min(cols-4,64),left=Math.floor((cols-board)/2);
+      word(left,17,'.'+'-'.repeat(board-2)+'.','faint');
+      word(left,18,"'"+'_'.repeat(board-2)+"'",'faint');
+      if(opening<.04){
+        sprite(cx-10,2,["           /", "          /|", "         / |", "      .-'  '-.", "    .'   /|   '.", "   /   .' | '.  \\", "  /   /   |   \\  \\", " (   (    |    )  )", " (   |    |    |  )", "  \\   \\   |   /  /", "   '.  '._|_.' .'", "     '-.____.-'", "        \\|/" ]);
+        return;
       }
-      const order=Array.from({length:count},(_,i)=>i).sort((a,b)=>Math.abs(b-middle)-Math.abs(a-middle));
-      order.forEach(i=>{
-        const direction=(i-middle)/middle;
-        const packedX=cx+direction*4,openX=cx+direction*spread;
-        const packedY=5+Math.abs(direction)*2,openY=count===3?[6,9,5][i]:[9,4,8,5,9][i];
-        const x=Math.round(packedX+(openX-packedX)*split)-3;
-        const y=Math.round(packedY+(openY-packedY)*split);
-        sprite(x,y,i>middle?mirrored:clove,i%2===0?'accent':'');
+      if(opening<.7){
+        const outer=["           /", "          /|", "         / |", "      .-'  '-.", "    .'        '.", "   /            \\", "  /              \\", " (                )", " (                )", "  \\              /", "   '.          .'", "     '-.____.-'", "        \\|/" ];
+        sprite(cx-9,2,outer,opening>.1?'faint':'');
+      }
+      [-1,0,1].forEach(side=>{
+        const x=cx+side*(4+shift*.72)-3;
+        const y=side===0?6:7+Math.round(opening);
+        if(side!==0||cutting===0){
+          sprite(x,y,side>0?mirror(clove):clove,side===0?'accent':'');
+        }else{
+          // Three intact outline fragments visibly separate along two cut lines.
+          clove.forEach((row,i)=>{
+            const part=i<3?0:i<5?1:2;
+            const dx=[-2,2,0][part]*cutting,dy=[-2,0,2][part]*cutting;
+            word(Math.round(x+dx),Math.round(y+i+dy),row,'accent');
+            if((i===2||i===4)&&cutting>.35)word(Math.round(x+dx)+2,Math.round(y+i+dy),"'--'",'accent');
+          });
+          if(cutting>.65){
+            word(Math.round(x+2*cutting)+1,9,'.---.','accent');
+            word(Math.round(x)+1,13,'.---.','accent');
+          }
+        }
       });
+      if(phase>=6&&phase<11){
+        // A slim kitchen blade makes two measured cuts across the central clove.
+        const cut=Math.min(1,Math.floor((phase-6)/2.5));
+        const stroke=ease(((phase-6)%2.5)/1.5);
+        const y=Math.round(4+cut*2+stroke*4);
+        word(cx-2,y,'________','faint');
+        word(cx-3,y+1,'\\_______|===','');
+      }
     }
     function onion() {
       const phase=time%22,clock=phase<14?phase:phase<16?14:14*(1-ease((phase-16)/6));
@@ -276,15 +299,45 @@
       for(let y=6;y<13;y+=3)word(x-3,y,'...','accent');
     }
     function forgetting() {
-      const sway=Math.sin(time*.4), spread=Math.min(cols*.33,23), phase=(1-Math.cos(time*.45))/2;
-      line([cx,18],[cx,11]);
-      for(let i=0;i<3;i++){
-        const a=[cx,11],b=[cx+(i-1)*spread,5+Math.abs(i-1)*2];
-        line(a,b,i===2?'accent':'',i===2?1-phase*.6:1);
-        if(i!==2||phase<.45)word(b[0]-1,b[1],'(o)',i===2?'accent':'');
-        if(i===1){line(b,[cx-5+sway,1]);line(b,[cx+5+sway,1]);put(cx-5+sway,1,'*','accent');put(cx+5+sway,1,'*','accent');}
+      // A fictional tape machine: the ribbon continues while selected marks fade.
+      const half=Math.min(31,Math.floor((cols-4)/2)),left=cx-half,right=cx+half;
+      const reelOffset=Math.min(12,half-4),rotation=time*.65;
+      const reel=(x,direction)=>{
+        sprite(x-4,2,["  .---.  "," /     \\ ","(   o   )"," \\     / ","  '---'  "]);
+        for(let n=0;n<3;n++){
+          const angle=rotation*direction+n*TAU/3;
+          const dx=Math.cos(angle),dy=Math.sin(angle);
+          put(x+dx*2,4+dy,Math.abs(dy)<.35?'-':dx*dy>0?'\\':'/','faint');
+        }
+        put(x,4,'o','accent');
+      };
+      reel(cx-reelOffset,1);reel(cx+reelOffset,-1);
+      line([cx-reelOffset-4,4],[left,9],'faint');
+      line([cx+reelOffset+4,4],[right,9],'faint');
+      // The open mechanism sits behind the paper ribbon.
+      sprite(cx-8,7,[" .-------------.","/               \\"]);
+      sprite(cx-8,13,["\\               /"," '-------------'", "   |_ _ _ _ _|", "   '         '"]);
+      const offset=Math.floor(time*3),period=16;
+      const marks=['o','+','*',':'];
+      let blank=0;
+      for(let x=left;x<=right;x++){
+        put(x,9,'_','faint');put(x,12,'_','faint');
+        const cell=((x-offset)%period+period)%period;
+        const targeted=cell>=8&&cell<12;
+        const char=marks[Math.floor(cell/4)];
+        for(let y=10;y<=11;y++){
+          if(cell%4===3)continue;
+          if(targeted&&x>cx+2){blank++;continue;}
+          put(x,y,targeted&&x>=cx-2?'.':char,targeted?'accent':'');
+        }
       }
-      sprite(cx-3,18,['__/|\\__','   |   '],'faint');
+      put(left,10,'|');put(left,11,'|');put(right,10,'|');put(right,11,'|');
+      // The small head stays in place; its contact flickers as the tape advances.
+      sprite(cx-2,7,[' .-. ',' | | '],'accent');
+      put(cx,9,'v','accent');
+      word(cx-3,14,'o  ---','faint');
+      put(cx+5,14,Math.floor(time*2)%2?'o':'.','accent');
+      scene.dataset.memoryStage=blank?'selective-erasure':'feeding';
     }
     function followNarrative() {
       const left=2,mid=Math.floor(cols*.4),right=cols-5;

@@ -1302,5 +1302,9 @@
   "· Master’s thesis": {
     "uk": "· Магістерська робота",
     "zh-Hant-TW": "· 碩士論文"
+  },
+  "Ukrainian LLM Leaderboard": {
+    "uk": "Рейтинг LLM для української мови",
+    "zh-Hant-TW": "烏克蘭語 LLM 排行榜"
   }
 }

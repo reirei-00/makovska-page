@@ -81,8 +81,6 @@ def visual(p):
         diagram = comparison_diagram(p)
     if kind == 'network':
         diagram = '''<div class="network-map" aria-hidden="true"><svg viewBox="0 0 720 190" focusable="false"><path class="edge-recorded" d="M110 50 L330 140 L600 50"/><path class="edge-semantic" d="M110 50 L600 50 M330 140 L600 140"/></svg><span class="node node-a">Channel A</span><span class="node node-b">Channel B</span><span class="node node-c">Channel C</span><span class="node node-d">Channel D</span></div><div class="network-key"><span>Recorded forwarding</span><span>Semantic similarity</span></div>''' + diagram
-    if kind == 'pipeline':
-        diagram += chart('Same text, fewer tokens', [('Original model', 1.5), ('Adapted model', 1)], 'Relative token use · adapted model = 1', 1.5)
     if kind == 'merge':
         diagram += chart('Ukrainian news experiment · F1', [('Vandalism features', .89), ('Manipulation features', .82), ('Combined features', .91)], 'Reported F1, from 0 to 1. Higher is better.')
     return f'<figure class="paper-visual" aria-labelledby="visual-title"><h3 id="visual-title">{text(p["visual_title"])}</h3>{diagram}<figcaption>{text(p["caption"])} <span class="figure-source">{source_link(p)}</span></figcaption></figure>'
@@ -115,7 +113,6 @@ def build(write=True):
         links = re.search(r'<div class="paper-links">.*?</div>', article, re.S)[0]
         links = re.sub(r'<a[^>]*data-explainer-link[^>]*>.*?</a>', '', links, flags=re.S)
         citation = ''.join(re.findall(r'<details class="paper-details">.*?</details>', article, re.S))
-        related = ''.join(f'<a href="../{other}/">{titles[other]} <span aria-hidden="true">↗</span></a>' for other in p['related'])
         eyebrow = text(p['project_name']) if 'project_name' in p else 'Paper explained'
         project_note = f'<p class="source-note">{text(p["project_note"])} <a href="{escape(p["project_url"], quote=True)}">Project background ↗</a></p>' if 'project_note' in p else ''
         body = f'''<main id="main" class="editorial-container page-content paper-explainer">
@@ -126,8 +123,8 @@ def build(write=True):
 <section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">The approach</p><h2 id="approach-title">A visual guide</h2></div></div>{visual(p)}{score_explorer() if slug=='lens' else ''}</section>
 <section class="explainer-section" id="findings" aria-labelledby="findings-title"><div class="section-heading"><h2 id="findings-title">What the work contributes</h2></div><p class="explanation-copy">{text(p['finding'])}</p><p class="source-note">{source_link(p)}</p></section>
 <section class="explainer-section" id="sources" aria-labelledby="sources-title"><div class="section-heading"><h2 id="sources-title">Original paper &amp; resources</h2></div>{venues}{rebase(links, page)}{citation}</section>
-<section class="explainer-section" id="related" aria-labelledby="related-title"><div class="section-heading"><div><p class="section-marker">Continue exploring</p><h2 id="related-title">Related work</h2></div></div><div class="related-papers">{related}</div></section></main>
-<aside class="paper-margin" aria-label="Paper explained"><nav aria-label="On this page"><h2>On this page</h2><a href="#question">The question</a><a href="#approach">A visual guide</a><a href="#findings">What the work contributes</a><a href="#sources">Read the source</a></nav><div class="margin-related"><h2>Related work</h2>{related}</div></aside>'''
+</main>
+<aside class="paper-margin" aria-label="Paper explained"><nav aria-label="On this page"><h2>On this page</h2><a href="#question">The question</a><a href="#approach">A visual guide</a><a href="#findings">What the work contributes</a><a href="#sources">Read the source</a></nav></aside>'''
         end = rebase(footer, page)
         if slug == 'lens':
             end = end.replace('</body>', '<script src="../../assets/js/paper-explorer.js" defer></script></body>')

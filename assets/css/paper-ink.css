@@ -6,6 +6,7 @@
 .paper-ink[data-ink-scene="ukrainian-llms"] .paper-ink-art,
 .paper-ink[data-ink-scene="nlp-education"] .paper-ink-art,
 .paper-ink[data-ink-scene="memory-undone"] .paper-ink-art,
+.paper-ink[data-ink-scene="phd-proposal"] .paper-ink-art,
 .paper-ink[data-ink-scene="onion"] .paper-ink-art,
 .paper-ink[data-ink-scene="garlic"] .paper-ink-art { font-size: 12px; line-height: 12px; height: 240px; width: min(100%, 900px); }
 .paper-ink-faint { color: #84816f; }
