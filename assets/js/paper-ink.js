@@ -5,7 +5,7 @@
   if (!scene) return;
   const art = scene.querySelector('[data-ink-art]'), button = scene.querySelector('[data-ink-toggle]');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const initialTime = {garlic: reduced.matches ? 11 : 0, onion: reduced.matches ? 6 : 0, 'phd-proposal': 0};
+  const initialTime = {garlic: reduced.matches ? 11 : 0, onion: reduced.matches ? 6 : 0, 'phd-proposal': reduced.matches ? 1.5 : 0};
   let playing = !reduced.matches, visible = true, time = initialTime[scene.dataset.inkScene] ?? 3.5, previous = null, lastDraw = -Infinity, frame = 0, cols = 70;
   const rows = 20, TAU = Math.PI * 2;
   const clamp = (n, a = 0, b = 1) => Math.max(a, Math.min(b, n));
@@ -299,45 +299,65 @@
       for(let y=6;y<13;y+=3)word(x-3,y,'...','accent');
     }
     function forgetting() {
-      // A fictional tape machine: the ribbon continues while selected marks fade.
-      const half=Math.min(31,Math.floor((cols-4)/2)),left=cx-half,right=cx+half;
-      const reelOffset=Math.min(12,half-4),rotation=time*.65;
-      const reel=(x,direction)=>{
-        sprite(x-4,2,["  .---.  "," /     \\ ","(   o   )"," \\     / ","  '---'  "]);
+      // A Turing-machine-inspired vignette: read one cell, erase *, advance.
+      const cycle=Math.floor(time/3),phase=time%3;
+      const moving=phase>=2.2,writing=phase>=1&&phase<2.2;
+      const spacing=cols<65?4:6;
+      let count=Math.min(13,Math.floor((cols-6)/spacing));
+      if(count%2===0)count--;
+      const radius=(count-1)/2,left=cx-count*spacing/2,right=cx+count*spacing/2;
+      const shift=ease((phase-2.2)/.8)*spacing;
+      const symbols=['*','1','0','*','0','1','1','*'];
+      const symbolAt=index=>symbols[((index%symbols.length)+symbols.length)%symbols.length];
+      const current=symbolAt(cycle),state=moving?'q2':writing?'q1':'q0';
+      const erased=current==='*'&&phase>=1.25;
+      const reelOffset=Math.min(24,Math.floor(cols/2)-5),rotation=(cycle+shift/spacing)*.7;
+      function reel(x,direction){
+        sprite(x-4,4,["  .---.  "," /     \\ ","(   o   )"," \\     / ","  '---'  "]);
         for(let n=0;n<3;n++){
-          const angle=rotation*direction+n*TAU/3;
-          const dx=Math.cos(angle),dy=Math.sin(angle);
-          put(x+dx*2,4+dy,Math.abs(dy)<.35?'-':dx*dy>0?'\\':'/','faint');
+          const angle=rotation*direction+n*TAU/3,dx=Math.cos(angle),dy=Math.sin(angle);
+          put(x+dx*2,6+dy,Math.abs(dy)<.35?'-':dx*dy>0?'\\':'/','faint');
         }
-        put(x,4,'o','accent');
-      };
+        put(x,6,'o','accent');
+      }
       reel(cx-reelOffset,1);reel(cx+reelOffset,-1);
-      line([cx-reelOffset-4,4],[left,9],'faint');
-      line([cx+reelOffset+4,4],[right,9],'faint');
-      // The open mechanism sits behind the paper ribbon.
-      sprite(cx-8,7,[" .-------------.","/               \\"]);
-      sprite(cx-8,13,["\\               /"," '-------------'", "   |_ _ _ _ _|", "   '         '"]);
-      const offset=Math.floor(time*3),period=16;
-      const marks=['o','+','*',':'];
-      let blank=0;
+      line([cx-reelOffset-4,6],[left,11],'faint');
+      line([cx+reelOffset+4,6],[right,11],'faint');
+      // Explicit control state and a visible write rule make the reference legible.
+      sprite(cx-6,1,['.-----------.','|           |','|           |',"'-----+-----'"]);
+      word(cx-1,2,state,'accent');
+      word(cx-3,3,current+' -> '+(current==='*'?'_':current),writing?'accent':'');
+      line([cx,5],[cx,7],'accent');
+      sprite(cx-2,8,['+---+','| | |','  v  '],moving?'faint':'accent');
+      function tapePut(x,y,char,tone=''){
+        x=Math.round(x);if(x>=left&&x<=right)put(x,y,char,tone);
+      }
       for(let x=left;x<=right;x++){
-        put(x,9,'_','faint');put(x,12,'_','faint');
-        const cell=((x-offset)%period+period)%period;
-        const targeted=cell>=8&&cell<12;
-        const char=marks[Math.floor(cell/4)];
-        for(let y=10;y<=11;y++){
-          if(cell%4===3)continue;
-          if(targeted&&x>cx+2){blank++;continue;}
-          put(x,y,targeted&&x>=cx-2?'.':char,targeted?'accent':'');
+        tapePut(x,11,'-','faint');tapePut(x,15,'-','faint');
+      }
+      for(let i=-radius-1;i<=radius+1;i++){
+        const x=cx+i*spacing+shift,boundary=x-spacing/2;
+        const original=symbolAt(cycle-i),targeted=original==='*';
+        const removed=targeted&&(i>0||(i===0&&erased));
+        let glyph=removed?' ':original;
+        if(i===0&&targeted&&writing&&!erased)glyph='.';
+        const tone=i===0&&!moving?'accent':targeted&&!removed?'accent':'';
+        tapePut(boundary,11,'+','faint');tapePut(boundary,15,'+','faint');
+        for(let y=12;y<15;y++)tapePut(boundary,y,'|','faint');
+        if(Math.round(x)>left&&Math.round(x)<right)tapePut(x,13,glyph,tone);
+      }
+      word(left-3,13,'...','faint');word(right+1,13,'...','faint');
+      // The inspected cell stays under a fixed head; the ribbon steps one cell.
+      if(!moving){
+        for(let y=12;y<15;y++){
+          tapePut(cx-spacing/2,y,'|','accent');tapePut(cx+spacing/2,y,'|','accent');
         }
       }
-      put(left,10,'|');put(left,11,'|');put(right,10,'|');put(right,11,'|');
-      // The small head stays in place; its contact flickers as the tape advances.
-      sprite(cx-2,7,[' .-. ',' | | '],'accent');
-      put(cx,9,'v','accent');
-      word(cx-3,14,'o  ---','faint');
-      put(cx+5,14,Math.floor(time*2)%2?'o':'.','accent');
-      scene.dataset.memoryStage=blank?'selective-erasure':'feeding';
+      word(cx-5,18,'---------->','faint');
+      if(moving)put(cx-5+Math.round(shift/spacing*9),18,'>','accent');
+      scene.dataset.memoryStage=moving?'advance':writing?(current==='*'?'erase':'retain'):'read';
+      scene.dataset.memorySymbol=current;
+      scene.dataset.memoryErased=String(erased);
     }
     function followNarrative() {
       const left=2,mid=Math.floor(cols*.4),right=cols-5;
