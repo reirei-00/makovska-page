@@ -15,18 +15,18 @@
     },
     "overview": {
       "en": "LENS examines narrative reproduction after machine unlearning. The study tests four multilingual instruction models on two disinformation-aligned frames, using several ways of asking about the same underlying narrative.",
-      "uk": "LENS досліджує відтворення наративів після машинного забування. У роботі перевірено чотири багатомовні інструкційні моделі на двох дезінформаційних рамках, із різними способами запитати про той самий наратив.",
+      "uk": "LENS досліджує відтворення наративів після машинного забування. У роботі оцінено чотири багатомовні моделі, навчені виконувати інструкції. Для перевірки використано дві дезінформаційні рамки та різні способи запитати про той самий наратив.",
       "zh-Hant-TW": "LENS 檢驗機器遺忘後的敘事重現。研究以兩種帶有不實資訊的敘事框架測試四個多語言指令模型，並用不同提問方式探查相同的深層敘事。"
     },
     "finding": {
-      "en": "Selected checkpoints reduced narrative reproduction beyond direct training prompts while retaining substantive answers. The useful checkpoint varied by model, language, narrative, and method. Abstract prompts could still recover associated real-world actors.",
-      "uk": "Відібрані контрольні точки зменшували відтворення наративів поза прямими навчальними запитами, зберігаючи змістовні відповіді. Вдала точка залежала від моделі, мови, наративу й методу. Абстрактні запити все ще могли відновлювати пов’язаних реальних учасників.",
-      "zh-Hant-TW": "選出的檢查點能在直接訓練提示以外降低敘事重現，同時保留有內容的回答。合適的檢查點因模型、語言、敘事與方法而異；抽象提示仍可能喚回相關的真實行動者。"
+      "en": "Selected checkpoints reduced narrative reproduction beyond direct training prompts while retaining substantive answers. The useful checkpoint varied by model, language, narrative, and method. Models could still name associated real-world actors when prompted abstractly.",
+      "uk": "Відібрані контрольні точки зменшували відтворення наративів поза прямими навчальними запитами, зберігаючи змістовні відповіді. Вдала точка залежала від моделі, мови, наративу й методу. У відповідях на абстрактні запити моделі все ще могли називати пов’язаних із наративом реальних осіб, держави чи організації.",
+      "zh-Hant-TW": "選出的檢查點能在直接訓練提示以外降低敘事重現，同時保留有內容的回答。合適的檢查點因模型、語言、敘事與方法而異；面對抽象提示時，模型仍可能說出相關真實人物、國家或組織的名稱。"
     },
     "limit": {
       "en": "This is a behavioral diagnostic, not proof that a representation has been erased. Weak labels are noisy, utility tests are small, and the full evaluation pool includes checkpoint-selection prompts. L3 entity recovery is reported separately from L0–L2 suppression.",
-      "uk": "Це поведінкова діагностика, а не доказ стирання представлення. Автоматичні мітки містять похибки, тести корисності невеликі, а повна вибірка оцінювання включає запити для відбору контрольних точок. Відновлення учасників на L3 оцінюється окремо від пригнічення на L0–L2.",
-      "zh-Hant-TW": "這是行為診斷，不能證明內部表徵已被抹除。弱標籤有雜訊，效用測試規模有限，完整評估集也包含選擇檢查點用過的提示。L3 的實體恢復與 L0–L2 的抑制結果分開呈現。"
+      "uk": "Це поведінкова діагностика, а не доказ стирання представлення. Автоматичні мітки містять похибки, тести корисності невеликі, а повна вибірка оцінювання включає запити для відбору контрольних точок. Відновлення назв та імен на L3 оцінюється окремо від пригнічення на L0–L2.",
+      "zh-Hant-TW": "這是行為診斷，不能證明內部表徵已被抹除。弱標籤有雜訊，效用測試規模有限，完整評估集也包含選擇檢查點用過的提示。L3 的實體名稱重現與 L0–L2 的抑制結果分開呈現。"
     },
     "visual_title": {
       "en": "One narrative, four prompting contexts",
@@ -35,8 +35,8 @@
     },
     "caption": {
       "en": "Conceptual guide to LENS. L0 supplies the forget examples; L1–L2 test transfer; L3 probes abstraction and entity recovery. These are prompting levels, not numerical difficulty scores.",
-      "uk": "Схема LENS: L0 дає приклади для забування; L1–L2 перевіряють перенесення ефекту; L3 досліджує абстракцію та відновлення учасників. Це рівні контексту запитів, а не числові оцінки складності.",
-      "zh-Hant-TW": "LENS 概念圖：L0 提供遺忘樣本，L1–L2 測試效果遷移，L3 探查抽象框架與實體恢復。這些是提問層次，並非量化的難度分數。"
+      "uk": "Схема LENS: L0 дає приклади для забування; L1–L2 перевіряють перенесення ефекту; L3 досліджує абстракцію та відновлення назв та імен. Це рівні контексту запитів, а не числові оцінки складності.",
+      "zh-Hant-TW": "LENS 概念圖：L0 提供遺忘樣本，L1–L2 測試效果遷移，L3 探查抽象框架與實體名稱重現。這些是提問層次，並非量化的難度分數。"
     },
     "steps": [
       {
@@ -83,7 +83,7 @@
         },
         "body": {
           "en": "Mask actor names while preserving the causal structure.",
-          "uk": "Приховати імена учасників, зберігаючи причинну структуру.",
+          "uk": "Приховати імена та назви учасників наративу, зберігаючи причинну структуру.",
           "zh-Hant-TW": "隱去行動者名稱，保留因果結構。"
         }
       }
@@ -104,19 +104,19 @@
       "zh-Hant-TW": "敘事不斷被改寫與轉貼時，如何追蹤它的傳播？"
     },
     "overview": {
-      "en": "Individual messages reveal only part of a disinformation campaign. This paper combines narrative labels with graph structure to examine how related claims circulate between Russian and Ukrainian Telegram channels.",
-      "uk": "Окремі повідомлення показують лише частину дезінформаційної кампанії. Робота поєднує мітки наративів зі структурою графа, щоб дослідити поширення споріднених тверджень між російськими та українськими Telegram-каналами.",
+      "en": "Individual messages reveal only part of a disinformation campaign. This paper combines narrative labels with graph structure to examine how related claims circulate between Russian-language and Ukrainian-language Telegram channels.",
+      "uk": "Окремі повідомлення показують лише частину дезінформаційної кампанії. Робота поєднує мітки наративів зі структурою графа, щоб дослідити поширення споріднених тверджень між російськомовними та україномовними Telegram-каналами.",
       "zh-Hant-TW": "單則訊息只能呈現不實資訊活動的一部分。這篇論文結合敘事標籤與圖結構，研究相關說法如何在俄語及烏克蘭語 Telegram 頻道間流通。"
     },
     "finding": {
-      "en": "Semantic links expose repost-like connections that native forwarding metadata misses. The two graph layers give different views of channel connectivity, revealing why tracking explicit forwards alone can understate narrative circulation.",
-      "uk": "Семантичні зв’язки виявляють повторне поширення, не зафіксоване метаданими пересилань. Два шари графа показують різні аспекти зв’язності каналів: лише явні пересилання можуть недооцінювати поширення наративів.",
-      "zh-Hant-TW": "語意連結能找出原生轉傳中繼資料未記錄的轉貼關係。兩個圖層呈現不同的頻道連通性，說明只追蹤明確轉傳可能低估敘事的流通。"
+      "en": "Semantic links identify similar content across channels even when native forwarding metadata records no connection. The two graph layers give different views of channel connectivity, showing why explicit forwards alone may understate narrative circulation.",
+      "uk": "Семантичні зв’язки виявляють подібний зміст у різних каналах, навіть коли метадані пересилань не містять зв’язку між ними. Два шари графа показують різні аспекти зв’язності каналів: урахування лише явних пересилань може призводити до недооцінки поширення наративів.",
+      "zh-Hant-TW": "即使原生轉傳中繼資料沒有記錄連結，語意連結仍能辨識不同頻道中的相似內容。兩個圖層呈現不同的頻道連通性，說明只追蹤明確轉傳可能低估敘事的流通。"
     },
     "limit": {
       "en": "Weak labels can be wrong and narrative categories change over time. A semantic connection suggests related content; it does not establish who copied whom or prove coordination. The framework supports research and human review.",
       "uk": "Слабкі мітки можуть бути помилковими, а категорії наративів змінюються з часом. Семантичний зв’язок свідчить про споріднений зміст, але не встановлює, хто кого скопіював, і не доводить координацію. Метод підтримує дослідження та перевірку людьми.",
-      "zh-Hant-TW": "弱標籤可能出錯，敘事分類也會隨時間改變。語意連結表示內容相關，不能判定誰抄襲誰，也不能證明協同行動。此框架用於研究與人工檢視。"
+      "zh-Hant-TW": "弱標籤可能出錯，敘事分類也會隨時間改變。語意連結表示內容相關，不能據此判定轉貼來源或證明協同行動。此框架用於研究與人工檢視。"
     },
     "visual_title": {
       "en": "Two ways to see a connection",
@@ -149,7 +149,7 @@
         },
         "body": {
           "en": "Assign related claims to a narrative inventory using weak supervision.",
-          "uk": "Віднести споріднені твердження до наративів за допомогою слабкого нагляду.",
+          "uk": "Віднести споріднені твердження до категорій наративів за непрямими сигналами розмічування (weak supervision).",
           "zh-Hant-TW": "以弱監督將相關說法對應至敘事分類。"
         }
       },
@@ -214,9 +214,9 @@
       "zh-Hant-TW": "資料流程的三項改進"
     },
     "caption": {
-      "en": "Conceptual adaptation pipeline. The tokenizer comparison below expresses the reported ratio, not a measured example sentence.",
-      "uk": "Концептуальна схема адаптації. Порівняння токенізації нижче відображає співвідношення зі статті, а не вимірювання окремого речення.",
-      "zh-Hant-TW": "模型在地化概念流程。下方的斷詞比較呈現論文報告的比例，並非某個例句的實測值。"
+      "en": "Conceptual adaptation pipeline. The tokenizer comparison expresses the reported ratio, not a measurement of an example sentence.",
+      "uk": "Концептуальна схема адаптації. Порівняння токенізації відображає співвідношення зі статті, а не вимірювання окремого речення.",
+      "zh-Hant-TW": "模型在地化概念流程。斷詞比較呈現論文報告的比例，並非某個例句的實測值。"
     },
     "steps": [
       {
@@ -234,7 +234,7 @@
       {
         "title": {
           "en": "Quality filtering",
-          "uk": "Фільтрування якості",
+          "uk": "Фільтрування за якістю",
           "zh-Hant-TW": "品質篩選"
         },
         "body": {
@@ -267,9 +267,9 @@
       "nlp-education"
     ],
     "question": {
-      "en": "Can students learn to design a data model by listening to the people it represents?",
-      "uk": "Чи можна навчитися моделювати дані, слухаючи людей, яких модель представляє?",
-      "zh-Hant-TW": "學生能否藉由聆聽資料所代表的人，學會設計資料模型？"
+      "en": "How can role-play teach students to represent different needs in a data model?",
+      "uk": "Як рольова гра допомагає студентам навчитися відображати різні потреби в моделі даних?",
+      "zh-Hant-TW": "如何透過角色扮演，教學生在資料模型中呈現不同需求？"
     },
     "overview": {
       "en": "GARLIC turns participatory entity–relationship modeling into a teachable workshop. A shared scenario and role cards help participants articulate conflicting needs before translating them into entities, relationships, and constraints.",
@@ -278,7 +278,7 @@
     },
     "finding": {
       "en": "Two initial 90-minute pilots, with five participants each, revealed a tendency to jump into technical solutions before representing stakeholder voices. These observations led to clearer advocacy roles, simpler starting scenarios, and more explicit checks for missing perspectives.",
-      "uk": "Два початкові 90-хвилинні пілоти по п’ять учасників виявили схильність переходити до технічних рішень до представлення голосів зацікавлених сторін. Це спонукало уточнити ролі захисту інтересів, спростити стартові сценарії та явно перевіряти відсутні перспективи.",
+      "uk": "Два початкові 90-хвилинні пілотні воркшопи по п’ять учасників виявили схильність переходити до технічних рішень, ще не врахувавши поглядів зацікавлених сторін. Це спонукало уточнити ролі захисту інтересів, спростити стартові сценарії та додати чіткі перевірки того, чи не бракує важливих поглядів.",
       "zh-Hant-TW": "兩場各五人的 90 分鐘初期試辦發現，參與者常在充分呈現利害關係人聲音前，就跳入技術解法。因此，研究團隊明確化角色的倡議立場、簡化初始情境，並加強缺漏觀點的檢查。"
     },
     "limit": {
@@ -312,7 +312,7 @@
       {
         "title": {
           "en": "Stakeholder voices",
-          "uk": "Голоси учасників",
+          "uk": "Голоси зацікавлених сторін",
           "zh-Hant-TW": "利害關係人的聲音"
         },
         "body": {
@@ -363,12 +363,12 @@
     },
     "overview": {
       "en": "This teaching report describes a 15-week bachelor-level course at UCU. Ukrainian examples, open notebooks, and locally relevant assignments connect NLP foundations to current methods and the practical work of building systems.",
-      "uk": "Цей викладацький звіт описує 15-тижневий бакалаврський курс УКУ. Українські приклади, відкриті ноутбуки й локально релевантні завдання поєднують основи NLP із сучасними методами та практикою створення систем.",
+      "uk": "Цей викладацький звіт описує 15-тижневий бакалаврський курс УКУ. Українські приклади, відкриті інтерактивні блокноти з кодом і завдання, пов’язані з місцевим контекстом, поєднують основи NLP із сучасними методами та практикою створення систем.",
       "zh-Hant-TW": "這份教學報告介紹 UCU 的 15 週大學部課程。烏克蘭語範例、開放筆記本與在地作業，將 NLP 基礎連結到當代方法及實際系統開發。"
     },
     "finding": {
       "en": "The contribution is an openly reusable course design: five progressive layers, quizzes and tests, Kaggle assignments, and a final project. Starter code and free cloud resources help accommodate students with different backgrounds.",
-      "uk": "Внесок роботи — відкритий для повторного використання дизайн курсу: п’ять послідовних рівнів, вікторини й тести, завдання Kaggle та фінальний проєкт. Стартовий код і безкоштовні хмарні ресурси підтримують студентів із різною підготовкою.",
+      "uk": "Внесок роботи — відкритий для повторного використання дизайн курсу: п’ять послідовних рівнів, короткі опитування й тести, завдання Kaggle та фінальний проєкт. Стартовий код і безкоштовні хмарні ресурси підтримують студентів із різною підготовкою.",
       "zh-Hant-TW": "主要貢獻是可公開再利用的課程設計：五個漸進層次、小測驗與考試、Kaggle 作業，以及期末專題。起始程式碼和免費雲端資源支援不同背景的學生。"
     },
     "limit": {
@@ -395,7 +395,7 @@
         },
         "body": {
           "en": "Tokenization, linguistic structure, classical NLP.",
-          "uk": "Токенізація, мовна структура, класичне NLP.",
+          "uk": "Токенізація, мовна структура, класичні методи NLP.",
           "zh-Hant-TW": "斷詞、語言結構、傳統 NLP。"
         }
       },
@@ -465,7 +465,7 @@
     },
     "overview": {
       "en": "This position paper treats forgetting as both a technical intervention and a social practice. Removing a file, changing a trained model, and never collecting a perspective can all make information unavailable, but through different mechanisms.",
-      "uk": "Ця позиційна стаття розглядає забування як технічне втручання та соціальну практику. Видалення файлу, зміна навченої моделі й рішення не збирати певну перспективу роблять інформацію недоступною різними способами.",
+      "uk": "Ця позиційна стаття розглядає забування як технічне втручання та соціальну практику. Видалення файлу, зміна навченої моделі й рішення не збирати дані про певний погляд можуть робити інформацію недоступною різними способами.",
       "zh-Hant-TW": "這篇立場論文將遺忘視為技術介入，也視為社會實踐。刪除檔案、修改已訓練模型，以及從未蒐集某種觀點，都可能讓資訊不可得，但機制各不相同。"
     },
     "finding": {
@@ -509,7 +509,7 @@
         },
         "body": {
           "en": "Intervene on learned parameters or outputs to remove or bound data influence.",
-          "uk": "Втрутитися в навчені параметри чи виходи для усунення або обмеження впливу даних.",
+          "uk": "Втрутитися в навчені параметри чи вихідні дані для усунення або обмеження впливу даних.",
           "zh-Hant-TW": "介入已學得的參數或輸出，以移除或限制資料的影響。"
         }
       },
@@ -631,7 +631,7 @@
         "title": {
           "en": "Normalize",
           "uk": "Normalize · Формалізувати",
-          "zh-Hant-TW": "Normalize · 正規化"
+          "zh-Hant-TW": "Normalize · 標準化"
         },
         "body": {
           "en": "Produce a standard ER model with external technical review.",
@@ -657,12 +657,12 @@
     },
     "overview": {
       "en": "Obvious vandalism is not the only way to distort an encyclopedia. This symposium paper explores a Russian government-backed Wikipedia fork as a source of signals about narrative changes in Russian and Ukrainian Wikipedia edits.",
-      "uk": "Очевидний вандалізм — не єдиний спосіб спотворити енциклопедію. Ця симпозіумна стаття досліджує підтримувану російською владою копію Вікіпедії як джерело сигналів про зміни наративів у російських та українських редагуваннях.",
+      "uk": "Очевидний вандалізм — не єдиний спосіб спотворити енциклопедію. Ця симпозіумна стаття досліджує підтримувану російською владою копію Вікіпедії як джерело сигналів про зміни наративів у редагуваннях російськомовної та україномовної Вікіпедії.",
       "zh-Hant-TW": "明顯的破壞並非扭曲百科全書的唯一方式。這篇研討會論文研究俄羅斯政府支持的維基百科分支，將其作為俄語及烏克蘭語維基編輯中敘事變化的訊號來源。"
     },
     "finding": {
       "en": "The exploratory analysis found overlapping edits that were accepted in the fork but frequently reverted in official Wikipedia. This supports investigating fork-derived signals as an addition to vandalism detection.",
-      "uk": "Пошуковий аналіз виявив спільні редагування, прийняті в копії, але часто скасовані в офіційній Вікіпедії. Це підтримує подальше дослідження сигналів із копії як доповнення до виявлення вандалізму.",
+      "uk": "Попередній аналіз виявив спільні редагування, прийняті в копії, але часто скасовані в офіційній Вікіпедії. Це підтримує подальше дослідження сигналів із копії як доповнення до виявлення вандалізму.",
       "zh-Hant-TW": "探索性分析發現，分支接受的部分相同編輯，在正式維基百科中經常被撤銷。這支持進一步研究如何以分支衍生的訊號補充破壞行為偵測。"
     },
     "limit": {
@@ -747,12 +747,12 @@
     },
     "overview": {
       "en": "This PhD proposal connects the meaning of forgetting to the engineering of systems that can unlearn. It asks how to integrate unlearning into data workflows, test its limits, and make future removal intentional and accountable.",
-      "uk": "Ця дисертаційна пропозиція пов’язує значення забування з інженерією систем, здатних забувати. Вона запитує, як інтегрувати забування в роботу з даними, перевірити його межі й зробити майбутнє видалення цілеспрямованим та підзвітним.",
+      "uk": "Цей план дисертаційного дослідження пов’язує значення забування з інженерією систем, здатних забувати. Він ставить питання про те, як інтегрувати забування в роботу з даними, перевірити його межі й зробити майбутнє видалення цілеспрямованим та підзвітним.",
       "zh-Hant-TW": "這份博士研究計畫將遺忘的意義連結到能夠遺忘的系統工程，探討如何將機器遺忘納入資料流程、檢驗其限制，並使未來的移除具有明確目的與可問責性。"
     },
     "finding": {
       "en": "The proposed agenda combines statistical and mechanistic verification with architectural choices such as source separation, provenance tracking, and retained training updates. Mechanistic interpretability is proposed as one way to examine traces that behavior alone may miss.",
-      "uk": "Запропонована програма поєднує статистичну та механістичну перевірку з архітектурними рішеннями: розділенням джерел, відстеженням походження й збереженням оновлень навчання. Механістична інтерпретованість є одним зі способів дослідити сліди, непомітні лише в поведінці.",
+      "uk": "Запропонована програма поєднує статистичну та механістичну перевірку з архітектурними рішеннями: розділенням джерел, відстеженням походження й збереженням змін параметрів під час навчання. Механістична інтерпретованість є одним зі способів дослідити сліди, які може не виявити саме лише спостереження за поведінкою.",
       "zh-Hant-TW": "研究議程結合統計與機制層面的驗證，以及來源分離、來源追蹤和保留訓練更新等架構選擇。機制可解釋性被提出為一種途徑，用來檢查僅觀察行為可能遺漏的痕跡。"
     },
     "limit": {
@@ -829,13 +829,13 @@
       "zh-Hant-TW": "本論文建立獨立的操弄與破壞行為訊號，再與修訂特徵結合。俄羅斯政府支持的維基百科分支提供候選操弄樣本；主要評估則使用俄語及烏克蘭語維基百科。"
     },
     "finding": {
-      "en": "Combined signals improved aspects of agreement and calibration in the Wikipedia experiments. On a separate Ukrainian news propaganda dataset, the combined classifier reached F1 0.91, compared with 0.89 using vandalism features and 0.82 using manipulation features alone.",
-      "uk": "Поєднані сигнали поліпшили окремі показники узгодженості й калібрування в експериментах із Вікіпедією. На окремому українському наборі новин про пропаганду комбінований класифікатор досяг F1 0,91 проти 0,89 для ознак вандалізму та 0,82 лише для ознак маніпуляції.",
-      "zh-Hant-TW": "合併訊號改善了維基百科實驗中的部分一致性與校準表現。在另一個烏克蘭語新聞宣傳資料集上，合併分類器的 F1 為 0.91，使用破壞特徵為 0.89，僅用操弄特徵則為 0.82。"
+      "en": "Combined signals improved aspects of agreement and calibration in the Wikipedia experiments. On a separate Ukrainian-language news dataset labeled for propaganda, the combined classifier reached F1 0.91, compared with 0.89 using vandalism features and 0.82 using manipulation features alone.",
+      "uk": "Поєднані сигнали поліпшили окремі показники узгодженості й калібрування в експериментах із Вікіпедією. На окремому наборі українськомовних новин для виявлення пропаганди комбінований класифікатор досяг F1 0,91 проти 0,89 для ознак вандалізму та 0,82 лише для ознак маніпуляції.",
+      "zh-Hant-TW": "合併訊號改善了維基百科實驗中的部分一致性與校準表現。在另一個用於宣傳偵測的烏克蘭語新聞資料集上，合併分類器的 F1 為 0.91，使用破壞特徵為 0.89，僅用操弄特徵則為 0.82。"
     },
     "limit": {
       "en": "Reverts are imperfect supervision: editors undo changes for many reasons, and subtle manipulation may remain unreverted. The reported models cover two languages. The news results are a separate transfer experiment, not Wikipedia scores.",
-      "uk": "Скасування — недосконале джерело нагляду: редактори скасовують зміни з різних причин, а тонкі маніпуляції можуть лишатися. Моделі охоплюють дві мови. Результати на новинах — окремий експеримент перенесення, а не показники Вікіпедії.",
+      "uk": "Скасування — недосконале джерело навчальних міток: редактори скасовують зміни з різних причин, а тонкі маніпуляції можуть лишатися. Моделі охоплюють дві мови. Результати на новинах — окремий експеримент перенесення, а не показники Вікіпедії.",
       "zh-Hant-TW": "撤銷紀錄不是完美的監督訊號：編輯者撤回修改的原因很多，細微操弄也可能未被撤銷。模型涵蓋兩種語言。新聞結果是獨立的遷移實驗，並非維基百科分數。"
     },
     "visual_title": {

@@ -121,7 +121,7 @@
   },
   "I presented": {
     "uk": "Я представила статтю",
-    "zh-Hant-TW": "我發表了"
+    "zh-Hant-TW": "我在那不勒斯舉行的第二屆機器遺忘與隱私保護工作坊發表了"
   },
   "Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS": {
     "uk": "Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS",
@@ -129,7 +129,7 @@
   },
   ", co-authored with George Fletcher, at the 2nd Workshop on Machine Unlearning and Privacy Preservation in Naples.": {
     "uk": ", написану спільно з Джорджем Флетчером, на другому воркшопі з машинного забування та захисту приватності в Неаполі.",
-    "zh-Hant-TW": "，這篇與 George Fletcher 合著的論文於那不勒斯舉行的第二屆機器遺忘與隱私保護工作坊發表。"
+    "zh-Hant-TW": "，這篇論文由我與 George Fletcher 合著。"
   },
   "Presentation details": {
     "uk": "Докладніше про доповідь",
@@ -211,10 +211,6 @@
     "uk": "Пам’ять, стирання та відповідальність у великих мовних моделях.",
     "zh-Hant-TW": "大型語言模型中的記憶、抹除與責任。"
   },
-  "My PhD asks when an LLM can be said to know something, what changes when that knowledge is targeted for removal, and how forgetting can be verified rather than merely claimed. I study both the technical process of machine unlearning and the responsibilities that follow from deciding what a model should no longer retain. A central question is how mechanistic interpretability can inform unlearning.": {
-    "uk": "У своїй дисертації я запитую, коли можна сказати, що LLM щось знає, що змінюється під час цілеспрямованого видалення цього знання та як перевірити забування, а не лише заявити про нього. Я досліджую і технічний процес машинного забування, і відповідальність, що постає з рішення про те, чого модель більше не має зберігати. Одне з головних питань — як механістична інтерпретованість може допомогти машинному забуванню.",
-    "zh-Hant-TW": "我的博士研究探討：何時能說一個 LLM「知道」某件事？當我們試圖移除這項知識時，會改變什麼？又該如何驗證遺忘確實發生，而非僅僅宣稱如此？我研究機器遺忘的技術過程，也關注決定模型不應再保留哪些內容所帶來的責任。核心問題之一，是機制可解釋性如何為機器遺忘提供依據。"
-  },
   "Read the PhD proposal": {
     "uk": "Читати дисертаційну пропозицію",
     "zh-Hant-TW": "閱讀博士研究計畫"
@@ -241,7 +237,7 @@
   },
   "Information integrity": {
     "uk": "Інформаційна доброчесність",
-    "zh-Hant-TW": "資訊完整性"
+    "zh-Hant-TW": "資訊完整性與可信度"
   },
   "Disinformation mitigation, narrative unlearning, and reducing bias through unlearning.": {
     "uk": "Протидія дезінформації, забування наративів і зменшення упереджень через машинне забування.",
@@ -427,14 +423,6 @@
     "uk": "Що означає для моделі забути?",
     "zh-Hant-TW": "模型的「遺忘」意味著什麼？"
   },
-  "Deleting a record from storage does not necessarily remove its effect from a trained model. It helps to separate four related ideas: erasure removes or disables access to an artifact; unlearning attempts to remove its influence from a model; exclusion prevents collection in the first place; and forgetting describes the wider technical and institutional process.": {
-    "uk": "Видалення запису зі сховища не обов’язково усуває його вплив на навчену модель. Варто розрізняти чотири пов’язані поняття: стирання видаляє артефакт або закриває доступ до нього; машинне забування намагається прибрати його вплив на модель; виключення запобігає збиранню даних від самого початку; а забування охоплює ширший технічний та інституційний процес.",
-    "zh-Hant-TW": "從儲存空間刪除一筆紀錄，不一定能消除它對已訓練模型的影響。我們可以區分四個相關概念：抹除是移除資料產物或停止存取；機器遺忘試圖移除其對模型的影響；排除是在一開始就不蒐集資料；而遺忘則涵蓋更廣泛的技術與制度過程。"
-  },
-  "The practical problem is verification. A responsible system needs evidence that the requested influence is no longer available, while also documenting what was changed, by whom, and with what effect on the retained model.": {
-    "uk": "Практична проблема полягає в перевірці. Відповідальна система потребує доказів, що цільовий вплив більше не проявляється, а також документації про те, що було змінено, ким і як це позначилося на моделі.",
-    "zh-Hant-TW": "實務上的難題在於驗證。負責任的系統需要證據，證明指定移除的影響已不再存在，同時記錄改了什麼、由誰修改，以及對保留模型造成什麼影響。"
-  },
   "Related paper": {
     "uk": "Пов’язана стаття",
     "zh-Hant-TW": "相關論文"
@@ -470,10 +458,6 @@
   "A data model is not a neutral inventory. Decisions about entities, relationships, and levels of abstraction determine what a system can record and what remains invisible.": {
     "uk": "Модель даних — не нейтральний перелік. Рішення про сутності, зв’язки та рівні абстракції визначають, що система може зафіксувати, а що залишиться невидимим.",
     "zh-Hant-TW": "資料模型並非中立的清單。關於實體、關係與抽象層次的決定，會界定系統能記錄什麼，以及哪些事物仍不可見。"
-  },
-  "ONION and GARLIC use structured participation to surface those decisions earlier, when a model can still be challenged and revised by the people it represents.": {
-    "uk": "ONION і GARLIC використовують структуровану участь, щоб зробити ці рішення видимими раніше — коли люди, яких представляє модель, ще можуть поставити її під сумнів і змінити.",
-    "zh-Hant-TW": "ONION 與 GARLIC 透過有結構的參與過程，讓這些決定更早浮現，使模型所代表的人仍有機會提出質疑並參與修訂。"
   },
   "Background": {
     "uk": "Освіта та досвід",
@@ -530,10 +514,6 @@
   "AUK course details": {
     "uk": "Докладніше про курс AUK",
     "zh-Hant-TW": "AUK 課程詳情"
-  },
-  "I completed my M.Sc. in Data Science with honors at UCU in June 2025 and began my PhD there in October 2025. I also hold a master’s degree in Radio Engineering from Kharkiv National University of Radio Electronics. Before beginning my PhD, I spent eight years in software engineering and technical leadership, including work at Artur’In.": {
-    "uk": "У червні 2025 року я здобула ступінь магістра наук про дані з відзнакою в УКУ, а в жовтні 2025 року розпочала там навчання в аспірантурі. Також маю ступінь магістра радіотехніки Харківського національного університету радіоелектроніки. До аспірантури я вісім років працювала в розробці програмного забезпечення та технічному керівництві, зокрема в Artur’In.",
-    "zh-Hant-TW": "我於 2025 年 6 月以優異成績取得 UCU 資料科學碩士學位，並於同年 10 月開始博士班研究。我也持有哈爾科夫國立無線電電子大學的無線電工程碩士學位。攻讀博士之前，我有八年的軟體工程與技術領導經驗，包括在 Artur’In 的工作。"
   },
   "Curriculum vitae": {
     "uk": "Резюме (англійською)",
@@ -704,12 +684,12 @@
     "zh-Hant-TW": "arXiv"
   },
   "Citation": {
-    "uk": "Цитування",
-    "zh-Hant-TW": "引用"
+    "uk": "Бібліографічний опис",
+    "zh-Hant-TW": "引用格式"
   },
   "Copy citation": {
-    "uk": "Копіювати цитування",
-    "zh-Hant-TW": "複製引用"
+    "uk": "Копіювати бібліографічний опис",
+    "zh-Hant-TW": "複製引用格式"
   },
   "BibTeX": {
     "uk": "BibTeX",
@@ -743,10 +723,6 @@
     "uk": ", с. 80–96, Львів, Україна. Асоціація комп’ютерної лінгвістики.",
     "zh-Hant-TW": "，第 80–96 頁，烏克蘭利維夫。計算語言學協會。"
   },
-  "This work combines weak supervision with propagation-graph analysis to group semantically related claims and study how disinformation narratives move across Russian and Ukrainian Telegram channels.": {
-    "uk": "Ця робота поєднує слабке навчання з учителем та аналіз графів поширення, щоб групувати семантично пов’язані твердження й досліджувати рух дезінформаційних наративів між російськими та українськими Telegram-каналами.",
-    "zh-Hant-TW": "這項研究結合弱監督學習與傳播圖分析，將語意相關的主張分組，並探討不實資訊敘事如何在俄語及烏克蘭語 Telegram 頻道間流動。"
-  },
   "Ukrainian LLMs": {
     "uk": "Українські LLM",
     "zh-Hant-TW": "烏克蘭語 LLM"
@@ -756,7 +732,7 @@
     "zh-Hant-TW": "，第 155–168 頁，烏克蘭利維夫。計算語言學協會。"
   },
   "A reproducible data-centric pipeline for adapting multilingual language models to Ukrainian through vocabulary surgery, cross-lingual quality filtering, and translated and synthetic instruction data.": {
-    "uk": "Відтворюваний підхід до адаптації багатомовних мовних моделей до української мови, зосереджений на даних: модифікація словника, міжмовна фільтрація якості та перекладені й синтетичні інструктивні дані.",
+    "uk": "Відтворюваний підхід до адаптації багатомовних мовних моделей до української мови, зосереджений на даних: модифікація словника, міжмовна фільтрація якості та перекладені й синтетичні інструкційні дані.",
     "zh-Hant-TW": "以資料為核心、可重現的多語言模型烏克蘭語調適流程，結合詞彙表調整、跨語言品質篩選，以及翻譯與合成的指令資料。"
   },
   "DataEd 2026": {
@@ -814,10 +790,6 @@
   "Undone CS 2026": {
     "uk": "Undone CS 2026",
     "zh-Hant-TW": "Undone CS 2026"
-  },
-  "arXiv preprint arXiv:2602.21180 [cs.CY], submitted February 24, 2026. Presented at Undone Computer Science 2026.": {
-    "uk": "Препринт arXiv:2602.21180 [cs.CY], подано 24 лютого 2026. Представлено на Undone Computer Science 2026.",
-    "zh-Hant-TW": "arXiv 預印本 arXiv:2602.21180 [cs.CY]，於2026年2月24日提交。曾於 Undone Computer Science 2026 發表。"
   },
   "This position paper distinguishes erasure, unlearning, exclusion, and forgetting, and argues that machine unlearning should be evaluated not only by model utility but also by transparency, accountability, and governance.": {
     "uk": "Ця позиційна стаття розрізняє стирання, машинне забування, виключення та забування й обстоює оцінювання машинного забування не лише за корисністю моделі, а й за прозорістю, підзвітністю та врядуванням.",
@@ -936,7 +908,7 @@
     "zh-Hant-TW": "研究基礎"
   },
   "Thesis & PhD proposal": {
-    "uk": "Магістерська робота та дисертаційна пропозиція",
+    "uk": "Магістерська робота та план дисертаційного дослідження",
     "zh-Hant-TW": "碩士論文與博士研究計畫"
   },
   "· Month unspecified": {
@@ -944,7 +916,7 @@
     "zh-Hant-TW": "· 月份未確認"
   },
   "PhD proposal": {
-    "uk": "Дисертаційна пропозиція",
+    "uk": "План дисертаційного дослідження",
     "zh-Hant-TW": "博士研究計畫"
   },
   "Responsible AI": {
@@ -1026,10 +998,6 @@
   "Visiting lecturer · American University Kyiv (AUK)": {
     "uk": "Запрошена викладачка · American University Kyiv (AUK)",
     "zh-Hant-TW": "客座講師 · 基輔美國大學（AUK）"
-  },
-  "I teach in the Master of Technology Leadership & Artificial Intelligence (MTLAI) programme at AUK’s EPAM School of Digital Technologies. The course focuses on designing and developing web-based decision support systems, connecting application development with data analysis and analytical models.": {
-    "uk": "Я викладаю на магістерській програмі Technology Leadership & Artificial Intelligence (MTLAI) у школі цифрових технологій EPAM при AUK. Курс присвячений проєктуванню та розробці веборієнтованих систем підтримки ухвалення рішень і поєднує розробку застосунків з аналізом даних та аналітичними моделями.",
-    "zh-Hant-TW": "我在 AUK 的 EPAM 數位科技學院，為 Technology Leadership & Artificial Intelligence（MTLAI）碩士學程授課。課程聚焦網頁式決策支援系統的設計與開發，連結應用程式開發、資料分析及分析模型。"
   },
   "Alongside teaching, I have organized master’s student project defenses at AUK.": {
     "uk": "Окрім викладання, я організовувала захисти студентських магістерських проєктів в AUK.",
@@ -1280,7 +1248,7 @@
     "zh-Hant-TW": "Texty.org.ua，2025年7月31日。"
   },
   "Coverage of my master's research prototype for detecting manipulative narratives in Ukrainian and Russian Wikipedia edits. The project is a research prototype, not a deployed Wikimedia moderation system.": {
-    "uk": "Матеріал про мій магістерський дослідницький прототип для виявлення маніпулятивних наративів в українських та російських редагуваннях Вікіпедії. Це дослідницький прототип, а не впроваджена система модерації Wikimedia.",
+    "uk": "Матеріал про мій магістерський дослідницький прототип для виявлення маніпулятивних наративів у редагуваннях україномовної та російськомовної Вікіпедії. Це дослідницький прототип, а не впроваджена система модерації Wikimedia.",
     "zh-Hant-TW": "報導我在碩士研究中開發的原型，用於偵測烏克蘭語與俄語維基百科編輯中的操弄性敘事。此專案是研究原型，並非已部署的 Wikimedia 內容審核系統。"
   },
   "Slides (PDF, English)": {
@@ -1292,7 +1260,55 @@
     "zh-Hant-TW": "2025 年 9 月"
   },
   "· PhD proposal": {
-    "uk": "· Дисертаційна пропозиція",
+    "uk": "· План дисертаційного дослідження",
     "zh-Hant-TW": "· 博士研究計畫"
+  },
+  "My PhD research asks when an LLM can be said to know something, what changes when that knowledge is targeted for removal, and how forgetting can be verified rather than merely claimed. I study both the technical process of machine unlearning and the responsibilities that follow from deciding what a model should no longer retain. A central question is how mechanistic interpretability can inform unlearning.": {
+    "uk": "У своїй дисертації я запитую, коли можна сказати, що LLM щось знає, що змінюється під час цілеспрямованого видалення цього знання та як перевірити забування, а не лише заявити про нього. Я досліджую і технічний процес машинного забування, і відповідальність, що постає з рішення про те, чого модель більше не має зберігати. Одне з головних питань — як механістична інтерпретованість може допомогти машинному забуванню.",
+    "zh-Hant-TW": "我的博士研究探討：何時能說一個 LLM「知道」某件事？當我們試圖移除這項知識時，會改變什麼？又該如何驗證遺忘確實發生，而非僅僅宣稱如此？我研究機器遺忘的技術過程，也關注決定模型不應再保留哪些內容所帶來的責任。核心問題之一，是機制可解釋性如何為機器遺忘提供依據。"
+  },
+  "I completed my M.Sc. in Data Science with honors at UCU in June 2025 and began my PhD there in October 2025. I also hold a master’s degree in Radio Engineering from Kharkiv National University of Radio Electronics. Before beginning my PhD, I spent more than seven years in software engineering and technical leadership, including work at Artur’In.": {
+    "uk": "У червні 2025 року я здобула ступінь магістра наук про дані з відзнакою в УКУ, а в жовтні 2025 року розпочала там навчання в аспірантурі. Також маю ступінь магістра радіотехніки Харківського національного університету радіоелектроніки. До аспірантури я понад сім років працювала в розробці програмного забезпечення та технічному керівництві, зокрема в Artur’In.",
+    "zh-Hant-TW": "我於 2025 年 6 月以優異成績取得 UCU 資料科學碩士學位，並於同年 10 月開始博士班研究。我也持有哈爾科夫國立無線電電子大學的無線電工程碩士學位。攻讀博士之前，我有超過七年的軟體工程與技術領導經驗，包括在 Artur’In 的工作。"
+  },
+  "Deleting a record from storage does not necessarily remove its effect from a trained model. It helps to separate four related ideas: erasure removes or disables access to an artifact; unlearning aims to remove or limit its influence on a model; exclusion concerns what is not collected, labeled, or included; and forgetting describes the wider technical and institutional process.": {
+    "uk": "Видалення запису зі сховища не обов’язково усуває його вплив на навчену модель. Варто розрізняти чотири пов’язані поняття: стирання видаляє об’єкт або закриває доступ до нього; машинне забування має на меті усунути або обмежити його вплив на модель; виключення стосується рішень про те, що не збирати, не розмічувати або не включати; а забування охоплює ширший технічний та інституційний процес.",
+    "zh-Hant-TW": "從儲存空間刪除一筆紀錄，不一定能消除它對已訓練模型的影響。我們可以區分四個相關概念：抹除是刪除資料物件或停用存取；機器遺忘旨在移除或限制其對模型的影響；排除涉及哪些內容不蒐集、不標註或不納入；而遺忘則涵蓋更廣泛的技術與制度過程。"
+  },
+  "The practical problem is verification. Evaluation needs to establish how much targeted influence remains and what the tests can detect. It also needs a record of what changed, who made the changes, and how they affected the model’s remaining capabilities.": {
+    "uk": "Практична проблема полягає в перевірці. Оцінювання має встановити, наскільки зберігся цільовий вплив і що саме здатні виявити тести. Також потрібно документувати, що змінилося, хто вніс зміни та як вони позначилися на решті можливостей моделі.",
+    "zh-Hant-TW": "實務上的難題在於驗證。評估需要釐清目標影響還剩多少，以及測試能偵測到什麼。同時，也需要記錄改了什麼、由誰修改，以及這些改動如何影響模型保留的其他能力。"
+  },
+  "ONION makes these decisions visible through stakeholder participation. GARLIC adapts that approach for teaching, using role-play to help students examine whose needs a model represents and where it needs revision.": {
+    "uk": "ONION робить ці рішення видимими завдяки участі зацікавлених сторін. GARLIC адаптує цей підхід для навчання: рольова гра допомагає студентам з’ясувати, чиї потреби відображає модель і що в ній потрібно змінити.",
+    "zh-Hant-TW": "ONION 透過利害關係人的參與，讓這些決策變得可見。GARLIC 將此方法用於教學，透過角色扮演協助學生檢視模型呈現了誰的需求，以及哪些地方需要修訂。"
+  },
+  "This work combines weak supervision with propagation-graph analysis to group semantically related claims and study how disinformation narratives move across Russian-language and Ukrainian-language Telegram channels.": {
+    "uk": "Ця робота поєднує навчання зі слабким наглядом (weak supervision) та аналіз графів поширення, щоб групувати семантично пов’язані твердження й досліджувати поширення дезінформаційних наративів між російськомовними та україномовними Telegram-каналами.",
+    "zh-Hant-TW": "這項研究結合弱監督學習與傳播圖分析，將語意相關的主張分組，並探討不實資訊敘事如何在俄語及烏克蘭語 Telegram 頻道間流動。"
+  },
+  "In spring 2025 and 2026, I taught in the Master of Technology Leadership & Artificial Intelligence (MTLAI) programme at AUK’s EPAM School of Digital Technologies. The course focuses on designing and developing web-based decision support systems, connecting application development with data analysis and analytical models.": {
+    "uk": "Навесні 2025 та 2026 років я викладала на магістерській програмі Technology Leadership & Artificial Intelligence (MTLAI) у школі цифрових технологій EPAM при AUK. Курс присвячений проєктуванню та розробці веборієнтованих систем підтримки ухвалення рішень і поєднує розробку застосунків з аналізом даних та аналітичними моделями.",
+    "zh-Hant-TW": "2025 及 2026 年春季，我在 AUK 的 EPAM 數位科技學院，為 Technology Leadership & Artificial Intelligence（MTLAI）碩士學程授課。課程聚焦網頁式決策支援系統的設計與開發，連結應用程式開發、資料分析及分析模型。"
+  },
+  "arXiv preprint arXiv:2602.21180 [cs.CY], submitted February 24, 2026. Presented at Undone Computer Science on 24 March 2026.": {
+    "uk": "Препринт arXiv:2602.21180 [cs.CY], подано 24 лютого 2026. Представлено на Undone Computer Science 24 березня 2026.",
+    "zh-Hant-TW": "arXiv 預印本 arXiv:2602.21180 [cs.CY]，於 2026 年 2 月 24 日提交。2026 年 3 月 24 日於 Undone Computer Science 發表。"
+  },
+  "24 March 2026": {
+    "uk": "24 березня 2026",
+    "zh-Hant-TW": "2026 年 3 月 24 日"
+  },
+  "· Luxembourg": {
+    "uk": "· Люксембург",
+    "zh-Hant-TW": "· 盧森堡"
+  },
+  "· LENS preprint": {
+    "uk": "· Препринт LENS",
+    "zh-Hant-TW": "· LENS 預印本"
+  },
+  "Listed by publication month, newest first. Presentation dates are given separately; the master’s thesis record specifies only the year.": {
+    "uk": "Роботи впорядковано за місяцем публікації, від новіших до старіших. Дати виступів зазначено окремо; у записі магістерської роботи вказано лише рік.",
+    "zh-Hant-TW": "依出版月份由新到舊排列。發表演講的日期另行標示；碩士論文的典藏紀錄僅提供年份。"
   }
 }
