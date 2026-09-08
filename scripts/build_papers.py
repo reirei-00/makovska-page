@@ -92,6 +92,7 @@ def build(write=True):
     papers = json.loads((ROOT / 'data/papers.json').read_text())
     catalogue = (ROOT / 'research/index.html').read_text()
     catalogue = re.sub(r'<!-- locale-(?:head|switch):start -->.*?<!-- locale-(?:head|switch):end -->', '', catalogue, flags=re.S)
+    catalogue = re.sub(r'<!-- notebook-nav:start -->.*?<!-- notebook-nav:end -->', '', catalogue, flags=re.S)
     articles = {m[1]: m[0] for m in re.finditer(r'<article class="research-item" id="([^"]+)".*?</article>', catalogue, re.S)}
     assert set(articles) == {p['slug'] for p in papers}, 'Every publication needs one explainer.'
     header = catalogue.split('<main ', 1)[0]
@@ -125,7 +126,8 @@ def build(write=True):
 <section class="explainer-section" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="section-marker">The approach</p><h2 id="approach-title">A visual guide</h2></div></div>{visual(p)}{score_explorer() if slug=='lens' else ''}</section>
 <section class="explainer-section" id="findings" aria-labelledby="findings-title"><div class="section-heading"><h2 id="findings-title">What the work contributes</h2></div><p class="explanation-copy">{text(p['finding'])}</p><p class="source-note">{source_link(p)}</p></section>
 <section class="explainer-section" id="sources" aria-labelledby="sources-title"><div class="section-heading"><h2 id="sources-title">Original paper &amp; resources</h2></div>{venues}{rebase(links, page)}{citation}</section>
-<section class="explainer-section" id="related" aria-labelledby="related-title"><div class="section-heading"><div><p class="section-marker">Continue exploring</p><h2 id="related-title">Related work</h2></div></div><div class="related-papers">{related}</div></section></main>'''
+<section class="explainer-section" id="related" aria-labelledby="related-title"><div class="section-heading"><div><p class="section-marker">Continue exploring</p><h2 id="related-title">Related work</h2></div></div><div class="related-papers">{related}</div></section></main>
+<aside class="paper-margin" aria-label="Paper explained"><nav aria-label="On this page"><h2>On this page</h2><a href="#question">The question</a><a href="#approach">A visual guide</a><a href="#findings">What the work contributes</a><a href="#sources">Read the source</a></nav><div class="margin-related"><h2>Related work</h2>{related}</div></aside>'''
         end = rebase(footer, page)
         if slug == 'lens':
             end = end.replace('</body>', '<script src="../../assets/js/paper-explorer.js" defer></script></body>')

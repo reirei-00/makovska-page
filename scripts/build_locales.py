@@ -20,6 +20,7 @@ LANGUAGES = {'en': '', 'uk': 'uk', 'zh-Hant-TW': 'zh-tw'}
 LABELS = {'en': 'English', 'uk': 'Українська', 'zh-Hant-TW': '繁體中文（台灣）'}
 NAV_LABELS = {'en': 'Language', 'uk': 'Мова', 'zh-Hant-TW': '語言'}
 BASE = 'https://reirei-00.github.io/makovska-page/'
+FONTS = 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600&family=Caveat:wght@400;500&family=DM+Serif+Display&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap'
 TRANSLATIONS = json.loads((ROOT / 'locales/translations.json').read_text())
 
 
@@ -55,6 +56,8 @@ def relative(source, target):
 def clean_generated(source):
     source = re.sub(r'<!-- locale-(?:head|switch):start -->.*?<!-- locale-(?:head|switch):end -->', '', source, flags=re.S)
     source = re.sub(r'<meta name="site-version" content="[a-f0-9]+">', '', source)
+    source = re.sub(r'<!-- notebook-nav:start -->.*?<!-- notebook-nav:end -->', '', source, flags=re.S)
+    source = re.sub(r'<link\b[^>]*href="https://fonts.googleapis.com/[^\"]*"[^>]*>', '', source)
     return rewrite_urls(source, lambda url: version_url(url, None))
 
 
@@ -107,14 +110,25 @@ def decorate(source, lang, page):
     alternates = ''.join(f'<link rel="alternate" hreflang="{code}" href="{BASE}{route(code, page)}">\n' for code in LANGUAGES)
     alternates += f'<link rel="alternate" hreflang="x-default" href="{BASE}{route("en", page)}">\n'
     script = relative(current, 'assets/js/languages.js')
-    source = source.replace('</head>', f'<!-- locale-head:start -->\n{alternates}<script src="{script}" defer></script>\n<!-- locale-head:end --></head>', 1)
+    source = source.replace('</head>', f'<!-- locale-head:start -->\n<link rel="stylesheet" href="{escape(FONTS, quote=True)}">\n{alternates}<script src="{script}" defer></script>\n<!-- locale-head:end --></head>', 1)
     links = []
     for code in LANGUAGES:
         active = ' aria-current="true"' if code == lang else ''
         links.append(f'<a href="{relative(current, route(code, page))}" lang="{code}" hreflang="{code}" data-language-link{active}>{LABELS[code]}</a>')
     nav = f'<!-- locale-switch:start --><nav class="language-switch" aria-label="{NAV_LABELS[lang]}">' + ''.join(links) + '</nav><!-- locale-switch:end -->'
+    catalogue = (ROOT / 'research/index.html').read_text()
+    paths = []
+    for slug, label in [('lens', 'LENS'), ('ukrainian-llms', 'Lapa LLM'), ('memory-undone', 'Memory Undone')]:
+        article = re.search(rf'<article class="research-item" id="{slug}".*?</article>', catalogue, re.S)[0]
+        date = re.search(r'<time datetime="([^"]+)">([^<]+)</time>', article)
+        date_label = date[2] if lang == 'en' else TRANSLATIONS[date[2]][lang]
+        paths.append(f'<li><a href="{relative(current, route(lang, "research/" + slug))}">{label}</a><time datetime="{date[1]}">{date_label}</time></li>')
+    heading = 'Selected research' if lang == 'en' else TRANSLATIONS['Selected research'][lang]
+    notebook = '<!-- notebook-nav:start --><div class="notebook-paths"><h2>' + heading + '</h2><ul>' + ''.join(paths) + '</ul></div><!-- notebook-nav:end -->'
+    sprout = '''<!-- notebook-nav:start --><svg class="notebook-sprout" viewBox="0 0 24 28" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11 10h2v14h-2z M5 24h14v2H5z M3 6h6v2h2v6H7v-2H5V10H3z M15 2h6v6h-2v2h-6V6h2z"/><path class="sprout-accent" d="M3 20h2v2H3z M20 15h2v2h-2z M7 2h2v2H7z"/></svg><!-- notebook-nav:end -->'''
+    source = re.sub(r'(<a class="wordmark"[^>]*>)', lambda m: m[1] + sprout, source, count=1)
     assert '</div></header>' in source
-    return source.replace('</div></header>', nav + '</div></header>', 1)
+    return source.replace('</div></header>', nav + notebook + '</div></header>', 1)
 
 
 class Translator(HTMLParser):
