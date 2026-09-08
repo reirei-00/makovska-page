@@ -3,6 +3,7 @@
 .paper-ink-art { font: 400 11px/10px "IBM Plex Mono", "Courier New", monospace; font-variant-ligatures: none; letter-spacing: 0; white-space: pre; text-align: center; margin: 0 auto; padding: 0; border: 0; background: transparent; color: var(--ink); width: min(100%, 800px); height: 200px; overflow: hidden; user-select: none; }
 .paper-ink-accent { color: var(--accent); }
 .paper-ink-still { display: inline-block; text-align: left; }
+.paper-ink[data-ink-scene="lens"] .paper-ink-art,
 .paper-ink[data-ink-scene="ukrainian-llms"] .paper-ink-art,
 .paper-ink[data-ink-scene="nlp-education"] .paper-ink-art,
 .paper-ink[data-ink-scene="memory-undone"] .paper-ink-art,
@@ -10,6 +11,7 @@
 .paper-ink[data-ink-scene="onion"] .paper-ink-art,
 .paper-ink[data-ink-scene="garlic"] .paper-ink-art { font-size: 12px; line-height: 12px; height: 240px; width: min(100%, 900px); }
 .paper-ink-faint { color: #84816f; }
+.paper-ink[data-ink-scene="lens"] .paper-ink-faint { color: var(--muted); }
 .paper-ink-controls { display: flex; justify-content: flex-end; border-bottom: 1px solid var(--rule); padding: 0 0 8px; min-height: 45px; }
 .paper-ink-toggle { color: var(--muted); background: transparent; border: 0; padding: 8px 0 8px 8px; min-height: 44px; font: 400 12px/1.4 var(--sans); text-decoration: underline; text-underline-offset: 4px; }
 .paper-ink-toggle:hover { color: var(--accent); }

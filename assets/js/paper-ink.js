@@ -5,7 +5,7 @@
   if (!scene) return;
   const art = scene.querySelector('[data-ink-art]'), button = scene.querySelector('[data-ink-toggle]');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const initialTime = {garlic: reduced.matches ? 11 : 0, onion: reduced.matches ? 6 : 0, 'phd-proposal': reduced.matches ? 1.5 : 0};
+  const initialTime = {lens: 0, garlic: reduced.matches ? 11 : 0, onion: reduced.matches ? 6 : 0, 'phd-proposal': reduced.matches ? 1.5 : 0};
   let playing = !reduced.matches, visible = true, time = initialTime[scene.dataset.inkScene] ?? 3.5, previous = null, lastDraw = -Infinity, frame = 0, cols = 70;
   const rows = 20, TAU = Math.PI * 2;
   const clamp = (n, a = 0, b = 1) => Math.max(a, Math.min(b, n));
@@ -42,29 +42,71 @@
       const edge=Math.min(Math.floor(distance),path.length-2),part=clamp(distance-edge),a=nodes[path[edge]],b=nodes[path[edge+1]];
       put(a[0]+(b[0]-a[0])*part,a[1]+(b[1]-a[1])*part,'*','accent');
     }
-    function narrative() {
-      const phase=(time%12)/12, erasure=ease((phase-.18)/.4)*(1-ease((phase-.78)/.2));
-      const threadY=(row,x)=>Math.round(4+row*5+Math.sin(x/cols*TAU+row+time*.17)*1.2);
-      const links=[[0,.08,.12],[1,.12,.08],[0,.86,.92],[1,.92,.86]];
-      if(cols>=55)links.push([0,.46,.52],[1,.52,.46]);
-      const connectors=links.map(([row,from,to])=>{
-        const x0=Math.round(from*(cols-1)),x1=Math.round(to*(cols-1));
-        return [[x0,threadY(row,x0)],[x1,threadY(row+1,x1)]];
-      });
-      // Anchor each connector to the same moving curve used by its thread.
-      connectors.forEach(([a,b])=>line(a,b));
-      for(let row=0;row<3;row++){
-        for(let x=2;x<cols-2;x++){
-          const y=threadY(row,x);
-          if(row!==1||hash(x,row)>.65*erasure)put(x,y,x%4===0?'.':'~',row===1?'accent':'faint');
-        }
-        const words=row===0?['story','story']:row===1?['memory','memory']:['trace','trace'];
-        words.forEach((text,i)=>{
-          const x=Math.round(cols*(i?.69:.22))-Math.floor(text.length/2),y=threadY(row,x);
-          [...text].forEach((c,j)=>put(x+j,y,row===1&&hash(j+3,i) < erasure*.85?'.':c,row===1?'accent':''));
-        });
+    function lensStudy() {
+      // A magnifying glass inspects four prompting contexts, not model internals.
+      const active=Math.floor(time/3)%4,beat=(time%3)/3;
+      const collapsed=Math.floor(time/12)%2===1;
+      const radius=Math.min(15,Math.floor((cols-12)/2));
+      const sweep=Math.max(0,Math.min(14,(cols-48)/4));
+      const x=Math.round(cx+Math.sin(time*.22)*sweep),y=8;
+      const traceStart=7,traceEnd=cols-3,traceRows=[4,7,10,13];
+      const inside=(px,py)=>Math.pow((px-x)/radius,2)+Math.pow((py-y)/7,2)<.94;
+      function trace(px,py,char,tone='faint'){
+        if(!inside(px,py))put(px,py,char,tone);
       }
-      connectors.forEach(([a,b])=>{put(...a,'+','accent');put(...b,'+','accent');});
+      // Keep the L0–L3 context labels and their shared frame visible at the left.
+      traceRows.forEach((row,i)=>{
+        word(0,row,'L'+i,i===active?'accent':'faint');
+        for(let px=traceStart;px<traceEnd;px++){
+          const position=(px-traceStart+i*2)%12;
+          const char=collapsed?(position%3===0?'.':position===7?':':' '):position===4?'o':position===9?' ':'-';
+          trace(px,row,char,i===active?'':'faint');
+        }
+        trace(4,row,'+','faint');trace(5,row,'-','faint');trace(6,row,'-','faint');
+        if(i<3)for(let dy=1;dy<3;dy++)trace(4,row+dy,'|','faint');
+      });
+      // Hand-drawn, row-based contours stay crisp at the small ASCII type size.
+      for(let dy=-5;dy<=5;dy++){
+        const extent=Math.round(radius*Math.sqrt(1-dy*dy/49));
+        const left=dy<-2?'/':dy>2?'\\':'|',right=dy<-2?'\\':dy>2?'/':'|';
+        put(x-extent,y+dy,left);put(x+extent,y+dy,right);
+      }
+      const cap=Math.round(radius/3),shoulder=Math.round(radius*Math.sqrt(13/49));
+      word(x-cap,1,'.'+'-'.repeat(cap*2-1)+'.');
+      word(x-shoulder,2,'.'+'-'.repeat(Math.max(0,shoulder-cap-2))+"'");
+      word(x+cap+2,2,"'"+'-'.repeat(Math.max(0,shoulder-cap-2))+'.');
+      word(x-shoulder,14,"'"+'-'.repeat(Math.max(0,shoulder-cap-2))+'.');
+      word(x+cap+2,14,'.'+'-'.repeat(Math.max(0,shoulder-cap-2))+"'");
+      word(x-cap,15,"'"+'-'.repeat(cap*2-1)+"'");
+      // The level in focus changes independently of the answer-quality example.
+      word(x-2,3,'LENS','accent');
+      word(x-1,5,'L'+active,'accent');
+      const span=Math.max(4,Math.min(8,radius-3));
+      if(!collapsed){
+        // A coherent answer can survive even when one highlighted trace is absent.
+        word(x-span-1,8,'(o)');word(x+span-1,8,'(o)');
+        for(let px=x-span+2;px<x+span-1;px++){
+          if(Math.abs(px-x)>2)put(px,8,'-','faint');
+        }
+        word(x-1,8,'[ ]','accent');
+        line([x-span,9],[x-2,11],'faint');line([x+span,9],[x+2,11],'faint');
+        word(x-1,11,'(o)');
+      }else{
+        // An already fragmented answer is magnified as fragments, not as success.
+        word(x-span,8,'. :','faint');word(x+span-2,8,': .','faint');
+        word(x-1,8,'[ ]','accent');
+        word(x-4,11,'. . : .','faint');
+      }
+      const glint=Math.floor(beat*3);
+      if(glint<2)put(x-radius+3+glint,6-glint,'/', 'faint');
+      // A double-line handle makes the lens silhouette unmistakable.
+      const gripX=x+Math.round(radius*.72),gripY=13;
+      for(let n=0;n<5;n++){
+        put(gripX+n,gripY+n,'\\');put(gripX+n+2,gripY+n,'\\');
+      }
+      word(gripX+5,18,"'_'",'accent');
+      scene.dataset.lensLevel='L'+active;
+      scene.dataset.lensView=collapsed?'fragmented-answer':'coherent-answer';
     }
     function garlic() {
       const phase=time%20;
@@ -372,7 +414,7 @@
       line(from,joint,'accent',Math.min(1,phase*2));if(phase>.5)line(joint,to,'accent',t);
       put(a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,'*','accent');
     }
-    const scenes={'lens':narrative,'telegram-narratives':network,'ukrainian-llms':lapa,'garlic':garlic,'nlp-education':book,'memory-undone':undone,'onion':onion,'vandalism-propaganda':edits,'phd-proposal':forgetting,'masters-thesis':followNarrative};
+    const scenes={'lens':lensStudy,'telegram-narratives':network,'ukrainian-llms':lapa,'garlic':garlic,'nlp-education':book,'memory-undone':undone,'onion':onion,'vandalism-propaganda':edits,'phd-proposal':forgetting,'masters-thesis':followNarrative};
     scenes[scene.dataset.inkScene]();
     const fragment=document.createDocumentFragment();
     grid.forEach((row,index)=>{
